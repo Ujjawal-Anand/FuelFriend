@@ -17,38 +17,26 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import org.json.XML;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+
 import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private TextView mPriceView;
+    private Town mTown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +45,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mPriceView = (TextView) findViewById(R.id.petrol_price);
+        mTown = new Town("Bihar", "Patna");
+
         updatePrice();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -76,6 +66,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -135,14 +126,23 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void updatePrice() {
-        String url = "http://hproroute.hpcl.co.in/StateDistrictMap_4/fetchmshsdprice.jsp?param=T&statecode=BR?1498641924017";
+        String stateCode = mTown.getStateCode();
+        String urlPart = "http://hproroute.hpcl.co.in/StateDistrictMap_4/fetchmshsdprice.jsp?param=T&statecode=";
+        urlPart += stateCode;
+        long time = System.currentTimeMillis();
+        String fullUrl = urlPart+"?"+time;
         OkHttpHandler okHttpHandler= new OkHttpHandler();
-        okHttpHandler.execute(url);
+        okHttpHandler.execute(fullUrl);
     }
 
     public class OkHttpHandler extends AsyncTask<String, Void, String> {
 
         OkHttpClient client = new OkHttpClient();
+        private int dieselPrice;
+        private int petrolPrice;
+        private int townCode;
+        private int lan;
+        private int lat;
 
         private String parseXml(String xmlString) {
             String[] separated = xmlString.split("townname=\"Patna\"");
@@ -157,6 +157,36 @@ public class MainActivity extends AppCompatActivity
 
         }
 
+        private JSONArray parseXmlToJson(String xmlString) throws JSONException {
+            JSONObject mainObject = XML.toJSONObject(xmlString);
+            JSONObject dataObject = mainObject.getJSONObject("markers");
+            return dataObject.getJSONArray("marker");
+        }
+
+        private String getDataFromXMLString(String xmlString) throws JSONException {
+            JSONArray jsonArray = parseXmlToJson(xmlString);
+            for(int i = 0; i<jsonArray.length(); i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                String townName = jsonObject.getString("townname");
+                if(townName.equals(mTown.getTownName())) {
+                    mTown.setDieselPrice(jsonObject.getDouble("hsd"));
+                    mTown.setPetrolPrice(jsonObject.getDouble("ms"));
+                    mTown.setTownCode(jsonObject.getInt("towncode"));
+                    mTown.setLat(jsonObject.getDouble("lat"));
+                    mTown.setLon(jsonObject.getDouble("lng"));
+                    if(jsonObject.getString("is_metro").equals("Y")) {
+                        mTown.setIsMetro(true);
+                    } else {
+                        mTown.setIsMetro(false);
+                    }
+                    return "Diesel Price =" + mTown.getmDieselPrice() +
+                            "\n Petrol Price =" + mTown.getPetrolPrice();
+                }
+            }
+            return null;
+        }
+
+
         @Override
         protected String doInBackground(String...params) {
 
@@ -166,7 +196,9 @@ public class MainActivity extends AppCompatActivity
 
             try {
                 Response response = client.newCall(request).execute();
-                return parseXml(response.body().string());
+//                return parseXml(response.body().string());
+                return getDataFromXMLString(response.body().string());
+
             }catch (Exception e){
                 e.printStackTrace();
             }

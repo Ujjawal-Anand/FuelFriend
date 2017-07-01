@@ -1,0 +1,2046 @@
+[{
+ "town_name" :"Machilipatnam",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Kurnool",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Eluru",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Guntur",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Vizianagaram",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Anantapur",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Kadapa",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Vizag",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Ongole",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Nellore",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Chittoor",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Kakinada",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Srikakulam",
+ "state_name" :"Andhra Pradesh",
+ "state_code" : "AP1"
+},{
+ "town_name" :"Nalbari",
+ "state_name" :"Assam",
+ "state_code" : "AS"
+},{
+ "town_name" :"Nagaon",
+ "state_name" :"Assam",
+ "state_code" : "AS"
+},{
+ "town_name" :"Silchar",
+ "state_name" :"Assam",
+ "state_code" : "AS"
+},{
+ "town_name" :"Dibrugarh",
+ "state_name" :"Assam",
+ "state_code" : "AS"
+},{
+ "town_name" :"Jorhat",
+ "state_name" :"Assam",
+ "state_code" : "AS"
+},{
+ "town_name" :"Barpeta",
+ "state_name" :"Assam",
+ "state_code" : "AS"
+},{
+ "town_name" :"Golaghat",
+ "state_name" :"Assam",
+ "state_code" : "AS"
+},{
+ "town_name" :"GUWAHATI",
+ "state_name" :"Assam",
+ "state_code" : "AS"
+},{
+ "town_name" :"Tezpur",
+ "state_name" :"Assam",
+ "state_code" : "AS"
+},{
+ "town_name" :"Sibsagar",
+ "state_name" :"Assam",
+ "state_code" : "AS"
+},{
+ "town_name" :"Purnia",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Motihari",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Lakhisarai",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Jamui",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Siwan",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Muzaffarpur",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Madhubani",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Banka",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Hajipur",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Supaul",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Patna",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Nawada",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Buxar",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Bettiah",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Sheikhpura",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Madhepura",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Chhapra",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Bihar Sharif",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Kishanganj",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Sasaram",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Munger",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Bhagalpur",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Araria",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Gaya",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Aurangabad",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Samastipur",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Darbhanga",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Begusarai",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Arrah",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Khagaria",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Katihar",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Jehanabad",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Sitamarhi",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Sheohar",
+ "state_name" :"Bihar",
+ "state_code" : "BR"
+},{
+ "town_name" :"Chandigarh",
+ "state_name" :"Chandigarh",
+ "state_code" : "CH"
+},{
+ "town_name" :"Raigarh",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Durg",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Bilaspur",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Narayanpur",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Korba",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Mahasamund",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Jagdalpur",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Surajpur",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Dhamtari",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Kanker",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Rajnandgaon",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Raipur",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Naila Janjgir",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Dantewada",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Ambikapur",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Jashpur",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Kawardha",
+ "state_name" :"Chhattishgarh",
+ "state_code" : "CT"
+},{
+ "town_name" :"Silvassa",
+ "state_name" :"Dadar and Nagara Haveli",
+ "state_code" : "DN"
+},{
+ "town_name" :"Daman",
+ "state_name" :"Daman and Diu",
+ "state_code" : "DD"
+},{
+ "town_name" :"Panaji",
+ "state_name" :"Goa",
+ "state_code" : "GA"
+},{
+ "town_name" :"Margao",
+ "state_name" :"Goa",
+ "state_code" : "GA"
+},{
+ "town_name" :"Kheda",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Himmatnagar",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Vadodara",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Surendranagar",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Anand",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Godhra",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Mehsana",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Amreli",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Gandhinagar",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Palanpur",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Dahod",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Surat",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Porbandar",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Bhuj",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Bhavnagar",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Bharuch",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Jamnagar",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Patan",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Rajkot",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Navsari",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Ahmedabad",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Junagadh",
+ "state_name" :"Gujarat",
+ "state_code" : "GJ"
+},{
+ "town_name" :"Panchkula",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Panipat",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Nuh",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Rohtak",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Palwal",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Bhiwani",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Karnal",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Kaithal",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Jind",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Jhajjar",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Faridabad",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Ambala",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Hissar",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Rewari",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Gurgaon",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Yamuna Nagar",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Kurukshetra",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Sirsa",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Fatehabad",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Sonepat",
+ "state_name" :"Haryana",
+ "state_code" : "HR"
+},{
+ "town_name" :"Chamba",
+ "state_name" :"Himachal Pradesh",
+ "state_code" : "HP"
+},{
+ "town_name" :"Mandi",
+ "state_name" :"Himachal Pradesh",
+ "state_code" : "HP"
+},{
+ "town_name" :"Solan",
+ "state_name" :"Himachal Pradesh",
+ "state_code" : "HP"
+},{
+ "town_name" :"Kullu",
+ "state_name" :"Himachal Pradesh",
+ "state_code" : "HP"
+},{
+ "town_name" :"Bilaspur",
+ "state_name" :"Himachal Pradesh",
+ "state_code" : "HP"
+},{
+ "town_name" :"Una",
+ "state_name" :"Himachal Pradesh",
+ "state_code" : "HP"
+},{
+ "town_name" :"Shimla",
+ "state_name" :"Himachal Pradesh",
+ "state_code" : "HP"
+},{
+ "town_name" :"Nahan",
+ "state_name" :"Himachal Pradesh",
+ "state_code" : "HP"
+},{
+ "town_name" :"Hamirpur",
+ "state_name" :"Himachal Pradesh",
+ "state_code" : "HP"
+},{
+ "town_name" :"Shopian",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Rajauri",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Badgam",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Kishtwar",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Kupwara",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Kathua",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Leh",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Srinagar",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Samba",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Poonch",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Doda",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Anantnag",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Jammu",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Kargil",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Udhampur",
+ "state_name" :"Jammu and Kashmir",
+ "state_code" : "JK"
+},{
+ "town_name" :"Daltonganj",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Godda",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Hazaribag",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Dumka",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Dhanbad",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Giridih",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Deoghar",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Bokaro",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Ramgarh",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Koderma",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Pakur",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Chaibasa",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"RANCHI-FDZ",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Jamshedpur",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Gumla",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Seraikela",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Lohardaga",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Garhwa",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Ranchi",
+ "state_name" :"Jharkhand",
+ "state_code" : "JH"
+},{
+ "town_name" :"Dharwad",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Davanagere",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Chamarajanagar",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Bijapur",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Koppal",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Bengaluru",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Bellary",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Bagalkot",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Karwar",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Haveri",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Raichur",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Mangalore",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Mandya",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Chikballapur",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Bidar",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Belgaum",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Tumkur",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Chitradurga",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Hassan",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Gadag",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Udupi",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Kolar",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Ramanagara",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Shimoga",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Mysore",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Gulbarga",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Yadgir",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Chikmagalur",
+ "state_name" :"Karnataka",
+ "state_code" : "KA"
+},{
+ "town_name" :"Thiruvananthapuram",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Pathanamthitta",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Painavu",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Kannur",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Palakkad",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Kollam",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Kasaragod",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Kozhikode",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Kakkanad",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Thrissur",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Kottayam",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Malappuram",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Kalpetta",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Alappuzha",
+ "state_name" :"Kerala",
+ "state_code" : "KL"
+},{
+ "town_name" :"Narsinghpur",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Khargone",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Jhabua",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Jabalpur",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Vidisha",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Rewa",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Bhind",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Ashok Nagar",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Alirajpur",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Gwalior",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Tikamgarh",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Singrauli",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Sagar",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Ratlam",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Neemuch",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Dewas",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Balaghat",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Anuppur",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Guna",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Umaria",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Seoni",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Sehore",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Raisen",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Panna",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Mandsaur",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Chhatarpur",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Bhopal",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Betul",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Datia",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Barwani",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Katni",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Sidhi",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Shahdol",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Rajgarh",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Dindori",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Burhanpur",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Ujjain",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Satna",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Morena",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Chhindwara",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Khandwa",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Indore",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Hoshangabad",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Harda",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Shivpuri",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Shajapur",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Mandla",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Dhar",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Damoh",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Sheopur",
+ "state_name" :"Madhya Pradesh",
+ "state_code" : "MP"
+},{
+ "town_name" :"Nandurbar",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Latur",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Chandrapur",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Amravati",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Kolhapur",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Thane",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Bhandara",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Jalna",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Wardha",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Nanded",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Nagpur",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Mumbai",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Pune",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Osmanabad",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Alibag",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Akola",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Jalgaon",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Sangli",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Ratnagiri",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Gadchiroli",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Nashik",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Buldhana",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Ahmednagar",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Gondia",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Satara",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Dhule",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Beed",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Hingoli",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Washim",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Parbhani",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Aurangabad",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Solapur",
+ "state_name" :"Maharashtra",
+ "state_code" : "MH"
+},{
+ "town_name" :"Imphal",
+ "state_name" :"Manipur",
+ "state_code" : "MN"
+},{
+ "town_name" :"Nongstoin",
+ "state_name" :"Meghalaya",
+ "state_code" : "ML"
+},{
+ "town_name" :"Tura",
+ "state_name" :"Meghalaya",
+ "state_code" : "ML"
+},{
+ "town_name" :"Jowai",
+ "state_name" :"Meghalaya",
+ "state_code" : "ML"
+},{
+ "town_name" :"Shillong",
+ "state_name" :"Meghalaya",
+ "state_code" : "ML"
+},{
+ "town_name" :"Aizawl",
+ "state_name" :"Mizoram",
+ "state_code" : "MZ"
+},{
+ "town_name" :"Kohima",
+ "state_name" :"Nagaland",
+ "state_code" : "NL"
+},{
+ "town_name" :"Dimapur",
+ "state_name" :"Nagaland",
+ "state_code" : "NL"
+},{
+ "town_name" :"Shahdara",
+ "state_name" :"New Delhi",
+ "state_code" : "DL"
+},{
+ "town_name" :"Saket",
+ "state_name" :"New Delhi",
+ "state_code" : "DL"
+},{
+ "town_name" :"Rajouri Garden",
+ "state_name" :"New Delhi",
+ "state_code" : "DL"
+},{
+ "town_name" :"Sadar Bazar",
+ "state_name" :"New Delhi",
+ "state_code" : "DL"
+},{
+ "town_name" :"Vasant Vihar",
+ "state_name" :"New Delhi",
+ "state_code" : "DL"
+},{
+ "town_name" :"Preet Vihar",
+ "state_name" :"New Delhi",
+ "state_code" : "DL"
+},{
+ "town_name" :"Delhi",
+ "state_name" :"New Delhi",
+ "state_code" : "DL"
+},{
+ "town_name" :"Kanjhawala",
+ "state_name" :"New Delhi",
+ "state_code" : "DL"
+},{
+ "town_name" :"Delhi",
+ "state_name" :"New Delhi",
+ "state_code" : "DL"
+},{
+ "town_name" :"Cuttack",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Koraput",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Gajapati",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Sundargarh",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Sambalpur",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Puri",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Nayagarh",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Bhadrak",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Baripada",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Dhenkanal",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Bargarh",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Jharsuguda",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Malkangiri",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Bhubaneswar",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Rayagada",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Balangir",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Angul",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Phulbani",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Bhawanipatna",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Balasore",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Kendujhar",
+ "state_name" :"Orrisa",
+ "state_code" : "OR"
+},{
+ "town_name" :"Pandakkal",
+ "state_name" :"Pondicherry",
+ "state_code" : "PY"
+},{
+ "town_name" :"Pondicherry",
+ "state_name" :"Pondicherry",
+ "state_code" : "PY"
+},{
+ "town_name" :"Karaikal",
+ "state_name" :"Pondicherry",
+ "state_code" : "PY"
+},{
+ "town_name" :"Yanam",
+ "state_name" :"Pondicherry",
+ "state_code" : "PY"
+},{
+ "town_name" :"Mansa",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Amritsar",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Sri Muktsar Sahib",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Sangrur",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Ludhiana",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Gurdaspur",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Fazilka",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Pathankot",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Moga",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Hoshiarpur",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Firozpur",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Mohali",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Bathinda",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Patiala",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Barnala",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Kapurthala",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Tarn Taran Sahib",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Shahid Bhagat Singh Nagar",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Jalandhar",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Faridkot",
+ "state_name" :"Punjab",
+ "state_code" : "PB"
+},{
+ "town_name" :"Nagaur",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Dungapur",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Bharatpur",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Dausa",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Chittorgarh",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Bikaner",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Ajmer",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Jodhpur",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Jhunjhunu",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Karauli",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Sirohi",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Kota",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Dholpur",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Churu",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Bundi",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Ganganagar",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Udaipur",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Tonk",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Sawai Madhopur",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Bhilwara",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Baran",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Banswara",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Jaisalmer",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Jaipur",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Sikar",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Pali",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Barmer",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Alwar",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Jalore",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Hanumangarh",
+ "state_name" :"Rajasthan",
+ "state_code" : "RJ"
+},{
+ "town_name" :"Namchi",
+ "state_name" :"Sikkim",
+ "state_code" : "SK"
+},{
+ "town_name" :"Geyzing",
+ "state_name" :"Sikkim",
+ "state_code" : "SK"
+},{
+ "town_name" :"Gangtok",
+ "state_name" :"Sikkim",
+ "state_code" : "SK"
+},{
+ "town_name" :"Erode",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Coimbatore",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Chennai",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Vellore",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Tiruvarur",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Salem",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Perambalur",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Nagapattinam",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Dindigul",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Virudhunagar",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Pudukkottai",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Namakkal",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Thiruvallur",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Madurai",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Tirunelveli",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Viluppuram",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Udagamandalam",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Thoothukudi",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Theni",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Sivaganga",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Nagercoil",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Karur",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Tiruvannamalai",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Tiruppur",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Thanjavur",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Dharmapuri",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Cuddalore",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Ariyalur",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Kanchipuram",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Tiruchirappalli",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Ramanathapuram",
+ "state_name" :"Tamilnadu",
+ "state_code" : "TN"
+},{
+ "town_name" :"Hyderabad",
+ "state_name" :"Telangana",
+ "state_code" : "TG"
+},{
+ "town_name" :"Warangal",
+ "state_name" :"Telangana",
+ "state_code" : "TG"
+},{
+ "town_name" :"Mahabubnagar",
+ "state_name" :"Telangana",
+ "state_code" : "TG"
+},{
+ "town_name" :"Khammam",
+ "state_name" :"Telangana",
+ "state_code" : "TG"
+},{
+ "town_name" :"Sangareddi",
+ "state_name" :"Telangana",
+ "state_code" : "TG"
+},{
+ "town_name" :"Adilabad",
+ "state_name" :"Telangana",
+ "state_code" : "TG"
+},{
+ "town_name" :"Karimnagar",
+ "state_name" :"Telangana",
+ "state_code" : "TG"
+},{
+ "town_name" :"Nizamabad",
+ "state_name" :"Telangana",
+ "state_code" : "TG"
+},{
+ "town_name" :"Nalgonda",
+ "state_name" :"Telangana",
+ "state_code" : "TG"
+},{
+ "town_name" :"Agartala",
+ "state_name" :"Tripura",
+ "state_code" : "TR"
+},{
+ "town_name" :"Noida",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Muzaffarnagar",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Moradabad",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Meerut",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Mainpuri",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Barabanki",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Agra",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Kanpur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Gorakhpur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Ghaziabad",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Mirzapur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Deoria",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Budaun",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Jhansi",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Hardoi",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Gauriganj",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Sultanpur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Lucknow",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Bareilly",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Banda",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Balrampur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Jyotiba_Phule_Nagar",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Jaunpur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Ghazipur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Varanasi",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Saharanpur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Robertsganj",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Rampur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Mathura",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Bahraich",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Bagpat",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Raebareli",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Pilibhit",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Mahamaya-Nagar",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Etawah",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Etah",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Bulandshahr",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Bijnor",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Auraiya",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Aligarh",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Fatehpur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Sant_Kabir_Nagar",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Pratapgarh",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Kushinagar",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Chandauli",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Ballia",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Kaushambi",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Gonda",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Shahjahanpur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Basti",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Firozabad",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Faizabad",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Sitapur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Orai",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Mau",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Mahoba",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Maharajganj",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Lalitpur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Lakhimpur-Kheri",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Allahabad",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Akbarpur",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Kasganj",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Kannauj",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Unnao",
+ "state_name" :"Uttar Pradesh",
+ "state_code" : "UP"
+},{
+ "town_name" :"Pithoragarh",
+ "state_name" :"Uttrakhand",
+ "state_code" : "UT"
+},{
+ "town_name" :"Almora",
+ "state_name" :"Uttrakhand",
+ "state_code" : "UT"
+},{
+ "town_name" :"Dehradun",
+ "state_name" :"Uttrakhand",
+ "state_code" : "UT"
+},{
+ "town_name" :"Rudrapur",
+ "state_name" :"Uttrakhand",
+ "state_code" : "UT"
+},{
+ "town_name" :"New Tehri",
+ "state_name" :"Uttrakhand",
+ "state_code" : "UT"
+},{
+ "town_name" :"Nainital",
+ "state_name" :"Uttrakhand",
+ "state_code" : "UT"
+},{
+ "town_name" :"Haridwar",
+ "state_name" :"Uttrakhand",
+ "state_code" : "UT"
+},{
+ "town_name" :"Midnapore",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Bankura",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Alipore",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Raiganj",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Kolkata",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Tamluk",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"English Bazar (Malda)",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Baharampur",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Cooch Behar",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Barasat",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Purulia",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Bardhaman",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Suri",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Howrah",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Krishnanagar",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+},{
+ "town_name" :"Hoogly",
+ "state_name" :"West Bengal",
+ "state_code" : "WB"
+}
+]

@@ -59,9 +59,9 @@ git pull upstream master
 Then update your feature branch from your local copy of master, and push it!
 
 ```sh
-git checkout 325-add-japanese-translations
+git checkout 123-add-progress-bar
 git rebase master
-git push --set-upstream origin 325-add-japanese-translations
+git push --set-upstream origin 123-add-progress-bar
 ```
 
 Finally, go to GitHub and

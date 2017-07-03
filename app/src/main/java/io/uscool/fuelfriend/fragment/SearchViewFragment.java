@@ -112,7 +112,7 @@ public class SearchViewFragment extends BaseSearchFragment {
             public void onSuggestionClicked(final SearchSuggestion searchSuggestion) {
 
                 TownSuggestion townSuggestion = (TownSuggestion) searchSuggestion;
-                TownDataHelper.findColors(getActivity(), townSuggestion.getBody(),
+                TownDataHelper.findTown(getActivity(), townSuggestion.getBody(),
                         new TownDataHelper.OnFindColorsListener() {
 
                             @Override
@@ -134,7 +134,7 @@ public class SearchViewFragment extends BaseSearchFragment {
             public void onSearchAction(String query) {
                 mLastQuery = query;
 
-                TownDataHelper.findColors(getActivity(), query,
+                TownDataHelper.findTown(getActivity(), query,
                         new TownDataHelper.OnFindColorsListener() {
 
                             @Override

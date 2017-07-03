@@ -140,6 +140,19 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
             return dataObject.getJSONArray("marker");
         }
 
+        private String parseXml(String xmlString, String townName) {
+            String[] separated = xmlString.split("townname=\"" + townName + "\"");
+            String petrolPrice;
+            String dieselPrice;
+            String subString = separated[1].split("ms=")[1];
+            String[] str2 = subString.split("hsd");
+            petrolPrice = str2[0];
+            dieselPrice = str2[1].split("is_metro")[0];
+            return "Petrol Price = "+ petrolPrice +
+                    "\nDiesel Price" + dieselPrice;
+
+        }
+
         private String getDataFromXMLString(String xmlString, String townName) throws JSONException {
             JSONArray jsonArray = parseXmlToJson(xmlString);
             for(int i = 0; i<jsonArray.length(); i++) {
@@ -166,8 +179,8 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
 
             try {
                 Response response = client.newCall(request).execute();
-//                return parseXml(response.body().string());
-                return getDataFromXMLString(response.body().string(), townName);
+                return parseXml(response.body().string(), townName);
+//                return getDataFromXMLString(response.body().string(), townName);
 
             }catch (Exception e){
                 e.printStackTrace();

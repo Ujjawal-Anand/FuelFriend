@@ -1,4 +1,4 @@
-# FuelFriend
+# FuelFriend  [![Build Status](https://travis-ci.org/andy1729/FuelFriend.svg?branch=master)](https://travis-ci.org/andy1729/FuelFriend)
 
 Get updated Fuel(Petrol and Diesel) price on your android phone (India only)
 

@@ -125,7 +125,7 @@ public class SearchViewFragment extends BaseSearchFragment {
                 Log.d(TAG, "onSuggestionClicked()");
                 mSearchView.setSearchFocused(false);
                 mSearchView.clearSuggestions();
-                
+
 
                 mLastQuery = searchSuggestion.getBody();
             }
@@ -179,18 +179,33 @@ public class SearchViewFragment extends BaseSearchFragment {
 
                 if (item.getItemId() == R.id.action_change_colors) {
 
-                    mIsDarkSearchTheme = true;
+                  //  mIsDarkSearchTheme = true;
+                    if (mIsDarkSearchTheme) {
+                        mIsDarkSearchTheme = false;
+                        //demonstrate setting colors for items
+                        mSearchView.setBackgroundColor(Color.parseColor("#787878"));
+                        mSearchView.setViewTextColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setHintTextColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setActionMenuOverflowColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setMenuItemIconColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setClearBtnColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setDividerColor(Color.parseColor("#BEBEBE"));
+                        mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
+                    } else {
 
-                    //demonstrate setting colors for items
-                    mSearchView.setBackgroundColor(Color.parseColor("#787878"));
-                    mSearchView.setViewTextColor(Color.parseColor("#e9e9e9"));
-                    mSearchView.setHintTextColor(Color.parseColor("#e9e9e9"));
-                    mSearchView.setActionMenuOverflowColor(Color.parseColor("#e9e9e9"));
-                    mSearchView.setMenuItemIconColor(Color.parseColor("#e9e9e9"));
-                    mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
-                    mSearchView.setClearBtnColor(Color.parseColor("#e9e9e9"));
-                    mSearchView.setDividerColor(Color.parseColor("#BEBEBE"));
-                    mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
+                        // Change color as per need
+                        mIsDarkSearchTheme = true;
+                        mSearchView.setBackgroundColor(Color.parseColor("#ffffff"));
+                        mSearchView.setViewTextColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setHintTextColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setActionMenuOverflowColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setMenuItemIconColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setClearBtnColor(Color.parseColor("#e9e9e9"));
+                        mSearchView.setDividerColor(Color.parseColor("#BEBEBE"));
+                        mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
+                    }
                 } else {
 
                     //just print action

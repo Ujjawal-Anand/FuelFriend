@@ -3,8 +3,7 @@
 Get updated Fuel(Petrol and Diesel) price on your android phone (India only)
 
 
-<img src="screenshots/search.jpg" alt="Screen 1" width="180px" height="320px">
-<img src="screenshots/result.jpg" alt="Screen 1" width="180px" height="320px">
+<img src="screenshots/search.jpg" alt="Screen 1" width="180px" height="320px"> <img src="screenshots/result.jpg" alt="Screen 1" width="180px" height="320px">
 
 ## Task List For Maintainers And Contributors.
 - [x] Implement a town search bar.

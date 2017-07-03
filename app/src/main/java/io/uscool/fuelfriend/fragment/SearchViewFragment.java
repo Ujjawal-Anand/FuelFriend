@@ -1,8 +1,13 @@
 package io.uscool.fuelfriend.fragment;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -23,7 +28,6 @@ import com.arlib.floatingsearchview.util.Util;
 
 import java.util.List;
 
-
 import io.uscool.fuelfriend.Data.TownDataHelper;
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.adapter.TownSearchListAdapter;
@@ -40,6 +44,7 @@ public class SearchViewFragment extends BaseSearchFragment {
     public static final long FIND_SUGGESTION_SIMULATION_DELAY = 250;
     private FloatingSearchView mSearchView;
     private RecyclerView mSearchResultsList;
+    private LocationManager locationManager;
 
     private TownSearchListAdapter mSearchResultsAdapter;
 
@@ -177,42 +182,41 @@ public class SearchViewFragment extends BaseSearchFragment {
             @Override
             public void onActionMenuItemSelected(MenuItem item) {
 
-                if (item.getItemId() == R.id.action_change_colors) {
+                switch (item.getItemId()) {
+                    case R.id.action_change_colors :
+                        if (mIsDarkSearchTheme) {
+                            mIsDarkSearchTheme = false;
+                            //demonstrate setting colors for items
+                            mSearchView.setBackgroundColor(Color.parseColor("#787878"));
+                            mSearchView.setViewTextColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setHintTextColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setActionMenuOverflowColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setMenuItemIconColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setClearBtnColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setDividerColor(Color.parseColor("#BEBEBE"));
+                            mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
+                        } else {
 
-                  //  mIsDarkSearchTheme = true;
-                    if (mIsDarkSearchTheme) {
-                        mIsDarkSearchTheme = false;
-                        //demonstrate setting colors for items
-                        mSearchView.setBackgroundColor(Color.parseColor("#787878"));
-                        mSearchView.setViewTextColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setHintTextColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setActionMenuOverflowColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setMenuItemIconColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setClearBtnColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setDividerColor(Color.parseColor("#BEBEBE"));
-                        mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
-                    } else {
+                            // Change color as per need
+                            mIsDarkSearchTheme = true;
+                            mSearchView.setBackgroundColor(Color.parseColor("#ffffff"));
+                            mSearchView.setViewTextColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setHintTextColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setActionMenuOverflowColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setMenuItemIconColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setClearBtnColor(Color.parseColor("#e9e9e9"));
+                            mSearchView.setDividerColor(Color.parseColor("#BEBEBE"));
+                            mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
+                        }
+                        break;
+                    case R.id.action_location:
 
-                        // Change color as per need
-                        mIsDarkSearchTheme = true;
-                        mSearchView.setBackgroundColor(Color.parseColor("#ffffff"));
-                        mSearchView.setViewTextColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setHintTextColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setActionMenuOverflowColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setMenuItemIconColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setClearBtnColor(Color.parseColor("#e9e9e9"));
-                        mSearchView.setDividerColor(Color.parseColor("#BEBEBE"));
-                        mSearchView.setLeftActionIconColor(Color.parseColor("#e9e9e9"));
-                    }
-                } else {
-
-                    //just print action
-                    Toast.makeText(getActivity().getApplicationContext(), item.getTitle(),
-                            Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        Toast.makeText(getActivity(),"WIP",Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 
@@ -312,4 +316,39 @@ public class SearchViewFragment extends BaseSearchFragment {
     }
 
 
+    /**
+     * Method to check GPS status
+     * @return true if GPS on else false
+     */
+    public boolean checkGpsStatus() {
+        if (locationManager == null) {
+            locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        }
+        final boolean isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        if (isGPSEnabled) {
+            return true;
+        } else {
+            DoubleBtnDialog.with(getActivity())
+                    .setHeading(getActivity().getString(lable_gps_off))
+                    .setMessage(getActivity().getString(lable_gps_off_message))
+                    .setCallback(new DoubleBtnDialog.OnActionPerformed() {
+                        @Override
+                        public void positive() {
+                            final Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                            startActivityForResult(intent, TURN_GPS_ON);
+                        }
+                        @Override
+                        public void negative() {
+                            Snackbar.make(findViewById(R.id.activity_home),getResources().getString(R.string.location_access_reqd), Snackbar.LENGTH_INDEFINITE)
+                                    .setAction(getResources().getString(R.string.retry), new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(final View v) {
+                                            checkGpsStatus();
+                                        }
+                                    }).show();
+                        }
+                    }).show();
+            return false;
+        }
+    }
 }

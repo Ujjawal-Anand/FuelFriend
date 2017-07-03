@@ -42,7 +42,3 @@ Third party libraries used in this project
   * [okhttp](https://github.com/square/okhttp) - to fetch data from [hpcl website](http://hproroute.hpcl.co.in)
   * [FloatingSearchView](https://github.com/arimorty/floatingsearchview) to display a search box for searching towns.
   * [Gson](https://github.com/google/gson) to convert json objects into java objects
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc

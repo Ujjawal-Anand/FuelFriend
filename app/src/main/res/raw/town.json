@@ -1,2670 +1,3265 @@
 [
  {
- "statecode" : "AP1",
+ "state_code" : "AP1",
 "statename" : "Andhra Pradesh",
  "town" : [
  {
  "town_name" : "Machilipatnam",
  "town_code" : "393100",
  "lat" : "16.18438",
- "lon" : "81.134933"
+ "lon" : "81.134933",
+ "is_metro" :"N"
  },{
  "town_name" : "Kurnool",
  "town_code" : "343000",
  "lat" : "15.8155688",
- "lon" : "78.0354453"
+ "lon" : "78.0354453",
+ "is_metro" :"N"
  },{
  "town_name" : "Eluru",
  "town_code" : "168900",
  "lat" : "16.7",
- "lon" : "81.1"
+ "lon" : "81.1",
+ "is_metro" :"N"
  },{
  "town_name" : "Guntur",
  "town_code" : "204000",
  "lat" : "16.29851",
- "lon" : "80.433647"
+ "lon" : "80.433647",
+ "is_metro" :"N"
  },{
  "town_name" : "Vizianagaram",
  "town_code" : "769000",
  "lat" : "18.113831",
- "lon" : "83.409348"
+ "lon" : "83.409348",
+ "is_metro" :"N"
  },{
  "town_name" : "Anantapur",
  "town_code" : "023000",
  "lat" : "14.6707094",
- "lon" : "77.5907443"
+ "lon" : "77.5907443",
+ "is_metro" :"N"
  },{
  "town_name" : "Kadapa",
  "town_code" : "133000",
  "lat" : "14.47022",
- "lon" : "78.82058"
+ "lon" : "78.82058",
+ "is_metro" :"N"
  },{
  "town_name" : "Vizag",
  "town_code" : "768000",
  "lat" : "17.6868159",
- "lon" : "83.2184815"
+ "lon" : "83.2184815",
+ "is_metro" :"N"
  },{
  "town_name" : "Ongole",
  "town_code" : "483000",
  "lat" : "15.5",
- "lon" : " 80.05"
+ "lon" : " 80.05",
+ "is_metro" :"N"
  },{
  "town_name" : "Nellore",
  "town_code" : "463000",
  "lat" : "14.4166667",
- "lon" : "79.9666667"
+ "lon" : "79.9666667",
+ "is_metro" :"N"
  },{
  "town_name" : "Chittoor",
  "town_code" : "123000",
  "lat" : "13.21139",
- "lon" : "79.094856"
+ "lon" : "79.094856",
+ "is_metro" :"N"
  },{
  "town_name" : "Kakinada",
  "town_code" : "249000",
  "lat" : "16.945181",
- "lon" : "82.238647"
+ "lon" : "82.238647",
+ "is_metro" :"N"
  },{
  "town_name" : "Srikakulam",
  "town_code" : "645500",
  "lat" : "18.3",
- "lon" : "83.9"
+ "lon" : "83.9",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "AS",
+ "state_code" : "AS",
 "statename" : "Assam",
  "town" : [
  {
  "town_name" : "Nalbari",
  "town_code" : "709900",
  "lat" : "26.442756",
- "lon" : "91.441011"
+ "lon" : "91.441011",
+ "is_metro" :"N"
  },{
  "town_name" : "Nagaon",
  "town_code" : "749900",
  "lat" : "26.350037",
- "lon" : "92.692337"
+ "lon" : "92.692337",
+ "is_metro" :"N"
  },{
  "town_name" : "Silchar",
  "town_code" : "923300",
  "lat" : "24.8179",
- "lon" : "92.790871"
+ "lon" : "92.790871",
+ "is_metro" :"N"
  },{
  "town_name" : "Dibrugarh",
  "town_code" : "289700",
  "lat" : "27.472486",
- "lon" : "94.91209"
+ "lon" : "94.91209",
+ "is_metro" :"N"
  },{
  "town_name" : "Jorhat",
  "town_code" : "483200",
  "lat" : "26.755421",
- "lon" : "94.209824"
+ "lon" : "94.209824",
+ "is_metro" :"N"
  },{
  "town_name" : "Barpeta",
  "town_code" : "089700",
  "lat" : "26.31719",
- "lon" : "91.004906"
+ "lon" : "91.004906",
+ "is_metro" :"N"
  },{
  "town_name" : "Golaghat",
  "town_code" : "299400",
  "lat" : "26.508829",
- "lon" : "93.969669"
+ "lon" : "93.969669",
+ "is_metro" :"N"
  },{
  "town_name" : "GUWAHATI",
  "town_code" : "336100",
  "lat" : "26.182158",
- "lon" : "91.749505"
+ "lon" : "91.749505",
+ "is_metro" :"N"
  },{
  "town_name" : "Tezpur",
  "town_code" : "971000",
  "lat" : "26.652061",
- "lon" : "92.792244"
+ "lon" : "92.792244",
+ "is_metro" :"N"
  },{
  "town_name" : "Sibsagar",
  "town_code" : "919500",
  "lat" : "26.98297",
- "lon" : "94.639664"
+ "lon" : "94.639664",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "BR",
+ "state_code" : "BR",
 "statename" : "Bihar",
  "town" : [
  {
  "town_name" : "Purnia",
  "town_code" : "804400",
  "lat" : "25.77918",
- "lon" : "87.470055"
+ "lon" : "87.470055",
+ "is_metro" :"N"
  },{
  "town_name" : "Motihari",
  "town_code" : "690700",
  "lat" : "26.64976",
- "lon" : "84.920197"
+ "lon" : "84.920197",
+ "is_metro" :"N"
  },{
  "town_name" : "Lakhisarai",
  "town_code" : "588500",
  "lat" : "25.169834",
- "lon" : "86.102772"
+ "lon" : "86.102772",
+ "is_metro" :"N"
  },{
  "town_name" : "Jamui",
  "town_code" : "645400",
  "lat" : "24.925049",
- "lon" : "86.22448"
+ "lon" : "86.22448",
+ "is_metro" :"N"
  },{
  "town_name" : "Siwan",
  "town_code" : "901700",
  "lat" : "26.219673",
- "lon" : "84.358006"
+ "lon" : "84.358006",
+ "is_metro" :"N"
  },{
  "town_name" : "Muzaffarpur",
  "town_code" : "698700",
  "lat" : "26.121843",
- "lon" : "85.379906"
+ "lon" : "85.379906",
+ "is_metro" :"N"
  },{
  "town_name" : "Madhubani",
  "town_code" : "615500",
  "lat" : "26.346652",
- "lon" : "86.071529"
+ "lon" : "86.071529",
+ "is_metro" :"N"
  },{
  "town_name" : "Banka",
  "town_code" : "060000",
  "lat" : "24.88",
- "lon" : "86.92"
+ "lon" : "86.92",
+ "is_metro" :"N"
  },{
  "town_name" : "Hajipur",
  "town_code" : "383900",
  "lat" : "25.682839",
- "lon" : "85.211849"
+ "lon" : "85.211849",
+ "is_metro" :"N"
  },{
  "town_name" : "Supaul",
  "town_code" : "949500",
  "lat" : "26.11614",
- "lon" : "86.590462"
+ "lon" : "86.590462",
+ "is_metro" :"N"
  },{
  "town_name" : "Patna",
  "town_code" : "784900",
  "lat" : "25.6125",
- "lon" : "85.1283333"
+ "lon" : "85.1283333",
+ "is_metro" :"N"
  },{
  "town_name" : "Nawada",
  "town_code" : "729800",
  "lat" : "24.878494",
- "lon" : "85.538349"
+ "lon" : "85.538349",
+ "is_metro" :"N"
  },{
  "town_name" : "Buxar",
  "town_code" : "196900",
  "lat" : "25.563814",
- "lon" : "83.977776"
+ "lon" : "83.977776",
+ "is_metro" :"N"
  },{
  "town_name" : "Bettiah",
  "town_code" : "120100",
  "lat" : "26.799405",
- "lon" : "84.504089"
+ "lon" : "84.504089",
+ "is_metro" :"N"
  },{
  "town_name" : "Sheikhpura",
  "town_code" : "913900",
  "lat" : "25.141788",
- "lon" : "85.863047"
+ "lon" : "85.863047",
+ "is_metro" :"N"
  },{
  "town_name" : "Madhepura",
  "town_code" : "617100",
  "lat" : "25.916519",
- "lon" : "86.789417"
+ "lon" : "86.789417",
+ "is_metro" :"N"
  },{
  "town_name" : "Chhapra",
  "town_code" : "229000",
  "lat" : "25.783662",
- "lon" : "84.727764"
+ "lon" : "84.727764",
+ "is_metro" :"N"
  },{
  "town_name" : "Bihar Sharif",
  "town_code" : "148900",
  "lat" : "25.198728",
- "lon" : "85.521698"
+ "lon" : "85.521698",
+ "is_metro" :"N"
  },{
  "town_name" : "Kishanganj",
  "town_code" : "369800",
  "lat" : "26.106044",
- "lon" : "87.956715"
+ "lon" : "87.956715",
+ "is_metro" :"N"
  },{
  "town_name" : "Sasaram",
  "town_code" : "900100",
  "lat" : "24.944818",
- "lon" : "84.015026"
+ "lon" : "84.015026",
+ "is_metro" :"N"
  },{
  "town_name" : "Munger",
  "town_code" : "685900",
  "lat" : "25.372413",
- "lon" : "86.490211"
+ "lon" : "86.490211",
+ "is_metro" :"N"
  },{
  "town_name" : "Bhagalpur",
  "town_code" : "128100",
  "lat" : "25.24003",
- "lon" : "86.984512"
+ "lon" : "86.984512",
+ "is_metro" :"N"
  },{
  "town_name" : "Araria",
  "town_code" : "026400",
  "lat" : "26.134634",
- "lon" : "87.464399"
+ "lon" : "87.464399",
+ "is_metro" :"N"
  },{
  "town_name" : "Gaya",
  "town_code" : "339300",
  "lat" : "24.77863",
- "lon" : "84.981308"
+ "lon" : "84.981308",
+ "is_metro" :"N"
  },{
  "town_name" : "Aurangabad",
  "town_code" : "044100",
  "lat" : "24.74839",
- "lon" : "84.376663"
+ "lon" : "84.376663",
+ "is_metro" :"N"
  },{
  "town_name" : "Samastipur",
  "town_code" : "885700",
  "lat" : "25.862467",
- "lon" : "85.780735"
+ "lon" : "85.780735",
+ "is_metro" :"N"
  },{
  "town_name" : "Darbhanga",
  "town_code" : "264100",
  "lat" : "26.168997",
- "lon" : "85.896778"
+ "lon" : "85.896778",
+ "is_metro" :"N"
  },{
  "town_name" : "Begusarai",
  "town_code" : "104100",
  "lat" : "25.42",
- "lon" : "86.13"
+ "lon" : "86.13",
+ "is_metro" :"N"
  },{
  "town_name" : "Arrah",
  "town_code" : "028900",
  "lat" : " 25.558797",
- "lon" : "84.667097"
+ "lon" : "84.667097",
+ "is_metro" :"N"
  },{
  "town_name" : "Khagaria",
  "town_code" : "547300",
  "lat" : "25.505573",
- "lon" : "86.473045"
+ "lon" : "86.473045",
+ "is_metro" :"N"
  },{
  "town_name" : "Katihar",
  "town_code" : "536100",
  "lat" : "25.536866",
- "lon" : "87.566528"
+ "lon" : "87.566528",
+ "is_metro" :"N"
  },{
  "town_name" : "Jehanabad",
  "town_code" : "465300",
  "lat" : "25.216356",
- "lon" : "84.983282"
+ "lon" : "84.983282",
+ "is_metro" :"N"
  },{
  "town_name" : "Sitamarhi",
  "town_code" : "935200",
  "lat" : "26.597814",
- "lon" : "85.495434"
+ "lon" : "85.495434",
+ "is_metro" :"N"
  },{
  "town_name" : "Sheohar",
  "town_code" : "357000",
  "lat" : "26.513207",
- "lon" : "85.294247"
+ "lon" : "85.294247",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "CH",
+ "state_code" : "CH",
 "statename" : "Chandigarh",
  "town" : [
  {
  "town_name" : "Chandigarh",
  "town_code" : "153100",
  "lat" : "30.7333148",
- "lon" : "76.7794179"
+ "lon" : "76.7794179",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "CT",
+ "state_code" : "CT",
 "statename" : "Chhattishgarh",
  "town" : [
  {
  "town_name" : "Raigarh",
  "town_code" : "582300",
  "lat" : "21.894951",
- "lon" : "83.395844"
+ "lon" : "83.395844",
+ "is_metro" :"N"
  },{
  "town_name" : "Durg",
  "town_code" : "161400",
  "lat" : "21.189214",
- "lon" : "81.282692"
+ "lon" : "81.282692",
+ "is_metro" :"N"
  },{
  "town_name" : "Bilaspur",
  "town_code" : "082200",
  "lat" : "22.079277",
- "lon" : "82.139282"
+ "lon" : "82.139282",
+ "is_metro" :"N"
  },{
  "town_name" : "Narayanpur",
  "town_code" : "518400",
  "lat" : "24.043799",
- "lon" : "86.61629"
+ "lon" : "86.61629",
+ "is_metro" :"N"
  },{
  "town_name" : "Korba",
  "town_code" : "312700",
  "lat" : "22.350711",
- "lon" : "82.750397"
+ "lon" : "82.750397",
+ "is_metro" :"N"
  },{
  "town_name" : "Mahasamund",
  "town_code" : "360700",
  "lat" : "21.107723",
- "lon" : "82.097139"
+ "lon" : "82.097139",
+ "is_metro" :"N"
  },{
  "town_name" : "Jagdalpur",
  "town_code" : "227700",
  "lat" : "19.082884",
- "lon" : "82.027016"
+ "lon" : "82.027016",
+ "is_metro" :"N"
  },{
  "town_name" : "Surajpur",
  "town_code" : "651300",
  "lat" : "23.222417",
- "lon" : "82.849417"
+ "lon" : "82.849417",
+ "is_metro" :"N"
  },{
  "town_name" : "Dhamtari",
  "town_code" : "142500",
  "lat" : "20.707629",
- "lon" : "81.54808"
+ "lon" : "81.54808",
+ "is_metro" :"N"
  },{
  "town_name" : "Kanker",
  "town_code" : "528000",
  "lat" : "20.26727",
- "lon" : "81.493235"
+ "lon" : "81.493235",
+ "is_metro" :"N"
  },{
  "town_name" : "Rajnandgaon",
  "town_code" : "584500",
  "lat" : "21.096993",
- "lon" : "81.030178"
+ "lon" : "81.030178",
+ "is_metro" :"N"
  },{
  "town_name" : "Raipur",
  "town_code" : "582500",
  "lat" : "21.2513844",
- "lon" : "81.6296413"
+ "lon" : "81.6296413",
+ "is_metro" :"N"
  },{
  "town_name" : "Naila Janjgir",
  "town_code" : "231500",
  "lat" : "22.023193",
- "lon" : "82.564573"
+ "lon" : "82.564573",
+ "is_metro" :"N"
  },{
  "town_name" : "Dantewada",
  "town_code" : "100356",
  "lat" : "18.900684",
- "lon" : "81.349883"
+ "lon" : "81.349883",
+ "is_metro" :"N"
  },{
  "town_name" : "Ambikapur",
  "town_code" : "018100",
  "lat" : "23.12268",
- "lon" : "83.19397"
+ "lon" : "83.19397",
+ "is_metro" :"N"
  },{
  "town_name" : "Jashpur",
  "town_code" : "100657",
  "lat" : "22.88519",
- "lon" : "84.144359"
+ "lon" : "84.144359",
+ "is_metro" :"N"
  },{
  "town_name" : "Kawardha",
  "town_code" : "285900",
  "lat" : "22.009984",
- "lon" : "81.232567"
+ "lon" : "81.232567",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "DN",
+ "state_code" : "DN",
 "statename" : "Dadar and Nagara Haveli",
  "town" : [
  {
  "town_name" : "Silvassa",
  "town_code" : "687300",
  "lat" : "20.2655816",
- "lon" : "72.9992013"
+ "lon" : "72.9992013",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "DD",
+ "state_code" : "DD",
 "statename" : "Daman and Diu",
  "town" : [
  {
  "town_name" : "Daman",
  "town_code" : "185800",
  "lat" : "20.42",
- "lon" : "72.85"
+ "lon" : "72.85",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "GA",
+ "state_code" : "GA",
 "statename" : "Goa",
  "town" : [
  {
  "town_name" : "Panaji",
  "town_code" : "561600",
  "lat" : "15.495602",
- "lon" : "73.825209"
+ "lon" : "73.825209",
+ "is_metro" :"N"
  },{
  "town_name" : "Margao",
  "town_code" : "473300",
  "lat" : "15.2719444",
- "lon" : "73.9583333"
+ "lon" : "73.9583333",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "GJ",
+ "state_code" : "GJ",
 "statename" : "Gujarat",
  "town" : [
  {
  "town_name" : "Kheda",
  "town_code" : "333000",
  "lat" : "22.700505",
- "lon" : "72.866549"
+ "lon" : "72.866549",
+ "is_metro" :"N"
  },{
  "town_name" : "Himmatnagar",
  "town_code" : "284500",
  "lat" : "23.594959",
- "lon" : "72.962227"
+ "lon" : "72.962227",
+ "is_metro" :"N"
  },{
  "town_name" : "Vadodara",
  "town_code" : "082500",
  "lat" : "22.3073095",
- "lon" : "73.1810976"
+ "lon" : "73.1810976",
+ "is_metro" :"N"
  },{
  "town_name" : "Surendranagar",
  "town_code" : "703500",
  "lat" : "22.7187291",
- "lon" : "71.6376694"
+ "lon" : "71.6376694",
+ "is_metro" :"N"
  },{
  "town_name" : "Anand",
  "town_code" : "026000",
  "lat" : "22.560869",
- "lon" : "72.954773"
+ "lon" : "72.954773",
+ "is_metro" :"N"
  },{
  "town_name" : "Godhra",
  "town_code" : "256500",
  "lat" : "22.767951",
- "lon" : "73.617668"
+ "lon" : "73.617668",
+ "is_metro" :"N"
  },{
  "town_name" : "Mehsana",
  "town_code" : "488000",
  "lat" : "23.5880706",
- "lon" : "72.3770281"
+ "lon" : "72.3770281",
+ "is_metro" :"N"
  },{
  "town_name" : "Amreli",
  "town_code" : "024000",
  "lat" : "21.602871",
- "lon" : "71.21817"
+ "lon" : "71.21817",
+ "is_metro" :"N"
  },{
  "town_name" : "Gandhinagar",
  "town_code" : "241000",
  "lat" : "23.229391",
- "lon" : "72.651974"
+ "lon" : "72.651974",
+ "is_metro" :"N"
  },{
  "town_name" : "Palanpur",
  "town_code" : "551500",
  "lat" : "24.171181",
- "lon" : "72.438393"
+ "lon" : "72.438393",
+ "is_metro" :"N"
  },{
  "town_name" : "Dahod",
  "town_code" : "222500",
  "lat" : "22.8323",
- "lon" : "74.253464"
+ "lon" : "74.253464",
+ "is_metro" :"N"
  },{
  "town_name" : "Surat",
  "town_code" : "704000",
  "lat" : "21.195",
- "lon" : "72.819444"
+ "lon" : "72.819444",
+ "is_metro" :"N"
  },{
  "town_name" : "Porbandar",
  "town_code" : "588000",
  "lat" : "21.643419",
- "lon" : "69.611832"
+ "lon" : "69.611832",
+ "is_metro" :"N"
  },{
  "town_name" : "Bhuj",
  "town_code" : "119500",
  "lat" : "23.251671",
- "lon" : "69.66256"
+ "lon" : "69.66256",
+ "is_metro" :"N"
  },{
  "town_name" : "Bhavnagar",
  "town_code" : "103000",
  "lat" : "21.7644725",
- "lon" : "72.1519304"
+ "lon" : "72.1519304",
+ "is_metro" :"N"
  },{
  "town_name" : "Bharuch",
  "town_code" : "137500",
  "lat" : "21.724864",
- "lon" : "73.0013097"
+ "lon" : "73.0013097",
+ "is_metro" :"N"
  },{
  "town_name" : "Jamnagar",
  "town_code" : "311500",
  "lat" : "22.4666667",
- "lon" : "70.0666667"
+ "lon" : "70.0666667",
+ "is_metro" :"N"
  },{
  "town_name" : "Patan",
  "town_code" : "571000",
  "lat" : "23.850809",
- "lon" : "72.114838"
+ "lon" : "72.114838",
+ "is_metro" :"N"
  },{
  "town_name" : "Rajkot",
  "town_code" : "600005",
  "lat" : "22.2833333",
- "lon" : "70.8"
+ "lon" : "70.8",
+ "is_metro" :"N"
  },{
  "town_name" : "Navsari",
  "town_code" : "528400",
  "lat" : "20.951851",
- "lon" : "72.921463"
+ "lon" : "72.921463",
+ "is_metro" :"N"
  },{
  "town_name" : "Ahmedabad",
  "town_code" : "006000",
  "lat" : "23.0395677",
- "lon" : "72.5660045"
+ "lon" : "72.5660045",
+ "is_metro" :"N"
  },{
  "town_name" : "Junagadh",
  "town_code" : "326500",
  "lat" : "21.515471",
- "lon" : "70.456444"
+ "lon" : "70.456444",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "HR",
+ "state_code" : "HR",
 "statename" : "Haryana",
  "town" : [
  {
  "town_name" : "Panchkula",
  "town_code" : "268201",
  "lat" : "30.690774",
- "lon" : "76.847649"
+ "lon" : "76.847649",
+ "is_metro" :"N"
  },{
  "town_name" : "Panipat",
  "town_code" : "561400",
  "lat" : "29.389654",
- "lon" : "76.969528"
+ "lon" : "76.969528",
+ "is_metro" :"N"
  },{
  "town_name" : "Nuh",
  "town_code" : "540500",
  "lat" : "28.104086",
- "lon" : "77.004444"
+ "lon" : "77.004444",
+ "is_metro" :"N"
  },{
  "town_name" : "Rohtak",
  "town_code" : "620200",
  "lat" : "28.892178",
- "lon" : "76.59256"
+ "lon" : "76.59256",
+ "is_metro" :"N"
  },{
  "town_name" : "Palwal",
  "town_code" : "556500",
  "lat" : "28.148292",
- "lon" : "77.327168"
+ "lon" : "77.327168",
+ "is_metro" :"N"
  },{
  "town_name" : "Bhiwani",
  "town_code" : "116100",
  "lat" : "28.799254",
- "lon" : "76.133366"
+ "lon" : "76.133366",
+ "is_metro" :"N"
  },{
  "town_name" : "Karnal",
  "town_code" : "353800",
  "lat" : "29.685667",
- "lon" : "76.990128"
+ "lon" : "76.990128",
+ "is_metro" :"N"
  },{
  "town_name" : "Kaithal",
  "town_code" : "333300",
  "lat" : "29.794474",
- "lon" : "76.399269"
+ "lon" : "76.399269",
+ "is_metro" :"N"
  },{
  "town_name" : "Jind",
  "town_code" : "322900",
  "lat" : "29.310651",
- "lon" : "76.306572"
+ "lon" : "76.306572",
+ "is_metro" :"N"
  },{
  "town_name" : "Jhajjar",
  "town_code" : "319600",
  "lat" : "28.603664",
- "lon" : "76.65513"
+ "lon" : "76.65513",
+ "is_metro" :"N"
  },{
  "town_name" : "Faridabad",
  "town_code" : "235400",
  "lat" : "28.381735",
- "lon" : "77.302551"
+ "lon" : "77.302551",
+ "is_metro" :"N"
  },{
  "town_name" : "Ambala",
  "town_code" : "019600",
  "lat" : "30.349324",
- "lon" : "76.832199"
+ "lon" : "76.832199",
+ "is_metro" :"N"
  },{
  "town_name" : "Hissar",
  "town_code" : "286200",
  "lat" : "29.152161",
- "lon" : "75.717361"
+ "lon" : "75.717361",
+ "is_metro" :"N"
  },{
  "town_name" : "Rewari",
  "town_code" : "618400",
  "lat" : "28.187487",
- "lon" : "76.611958"
+ "lon" : "76.611958",
+ "is_metro" :"N"
  },{
  "town_name" : "Gurgaon",
  "town_code" : "268100",
  "lat" : "28.459033",
- "lon" : "77.02652"
+ "lon" : "77.02652",
+ "is_metro" :"N"
  },{
  "town_name" : "Yamuna Nagar",
  "town_code" : "793200",
  "lat" : "30.130578",
- "lon" : "77.285213"
+ "lon" : "77.285213",
+ "is_metro" :"N"
  },{
  "town_name" : "Kurukshetra",
  "town_code" : "418800",
  "lat" : "29.976052",
- "lon" : "76.892624"
+ "lon" : "76.892624",
+ "is_metro" :"N"
  },{
  "town_name" : "Sirsa",
  "town_code" : "693100",
  "lat" : "29.529554",
- "lon" : "75.020142"
+ "lon" : "75.020142",
+ "is_metro" :"N"
  },{
  "town_name" : "Fatehabad",
  "town_code" : "235500",
  "lat" : "29.513123",
- "lon" : "75.453243"
+ "lon" : "75.453243",
+ "is_metro" :"N"
  },{
  "town_name" : "Sonepat",
  "town_code" : "699200",
  "lat" : "28.999733",
- "lon" : "77.014452"
+ "lon" : "77.014452",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "HP",
+ "state_code" : "HP",
 "statename" : "Himachal Pradesh",
  "town" : [
  {
  "town_name" : "Chamba",
  "town_code" : "149900",
  "lat" : "32.553325",
- "lon" : "76.125813"
+ "lon" : "76.125813",
+ "is_metro" :"N"
  },{
  "town_name" : "Mandi",
  "town_code" : "375700",
  "lat" : "31.708089",
- "lon" : "76.931334"
+ "lon" : "76.931334",
+ "is_metro" :"N"
  },{
  "town_name" : "Solan",
  "town_code" : "697401",
  "lat" : "30.903698",
- "lon" : "77.096815"
+ "lon" : "77.096815",
+ "is_metro" :"N"
  },{
  "town_name" : "Kullu",
  "town_code" : "413300",
  "lat" : "31.958716",
- "lon" : "77.10959"
+ "lon" : "77.10959",
+ "is_metro" :"N"
  },{
  "town_name" : "Bilaspur",
  "town_code" : "911200",
  "lat" : "31.345281",
- "lon" : "76.759844"
+ "lon" : "76.759844",
+ "is_metro" :"N"
  },{
  "town_name" : "Una",
  "town_code" : "719300",
  "lat" : "31.468277",
- "lon" : "76.270781"
+ "lon" : "76.270781",
+ "is_metro" :"N"
  },{
  "town_name" : "Shimla",
  "town_code" : "687800",
  "lat" : "31.0886523",
- "lon" : "77.1797796"
+ "lon" : "77.1797796",
+ "is_metro" :"N"
  },{
  "town_name" : "Nahan",
  "town_code" : "450200",
  "lat" : "30.560561",
- "lon" : "77.295334"
+ "lon" : "77.295334",
+ "is_metro" :"N"
  },{
  "town_name" : "Hamirpur",
  "town_code" : "226300",
  "lat" : "31.685962",
- "lon" : "76.52132"
+ "lon" : "76.52132",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "JK",
+ "state_code" : "JK",
 "statename" : "Jammu and Kashmir",
  "town" : [
  {
  "town_name" : "Shopian",
  "town_code" : "778600",
  "lat" : "33.85217",
- "lon" : "74.810577"
+ "lon" : "74.810577",
+ "is_metro" :"N"
  },{
  "town_name" : "Rajauri",
  "town_code" : "600700",
  "lat" : "33.38272",
- "lon" : "74.290667"
+ "lon" : "74.290667",
+ "is_metro" :"N"
  },{
  "town_name" : "Badgam",
  "town_code" : "138400",
  "lat" : "34.016811",
- "lon" : "74.785892"
+ "lon" : "74.785892",
+ "is_metro" :"N"
  },{
  "town_name" : "Kishtwar",
  "town_code" : "397300",
  "lat" : "33.312168",
- "lon" : "75.771881"
+ "lon" : "75.771881",
+ "is_metro" :"N"
  },{
  "town_name" : "Kupwara",
  "town_code" : "880500",
  "lat" : "34.527631",
- "lon" : "74.258602"
+ "lon" : "74.258602",
+ "is_metro" :"N"
  },{
  "town_name" : "Kathua",
  "town_code" : "364100",
  "lat" : "32.367348",
- "lon" : "75.523624"
+ "lon" : "75.523624",
+ "is_metro" :"N"
  },{
  "town_name" : "Leh",
  "town_code" : "432900",
  "lat" : "34.152727",
- "lon" : "77.576866"
+ "lon" : "77.576866",
+ "is_metro" :"N"
  },{
  "town_name" : "Srinagar",
  "town_code" : "700200",
  "lat" : "34.0836581",
- "lon" : "74.7973681"
+ "lon" : "74.7973681",
+ "is_metro" :"N"
  },{
  "town_name" : "Samba",
  "town_code" : "607400",
  "lat" : "32.553469",
- "lon" : "75.110264"
+ "lon" : "75.110264",
+ "is_metro" :"N"
  },{
  "town_name" : "Poonch",
  "town_code" : "752000",
  "lat" : "33.774439",
- "lon" : "74.093428"
+ "lon" : "74.093428",
+ "is_metro" :"N"
  },{
  "town_name" : "Doda",
  "town_code" : "149800",
  "lat" : "33.146391",
- "lon" : "75.548859"
+ "lon" : "75.548859",
+ "is_metro" :"N"
  },{
  "town_name" : "Anantnag",
  "town_code" : "026200",
  "lat" : "33.732335",
- "lon" : "75.160303"
+ "lon" : "75.160303",
+ "is_metro" :"N"
  },{
  "town_name" : "Jammu",
  "town_code" : "312100",
  "lat" : "32.7266016",
- "lon" : "74.8570259"
+ "lon" : "74.8570259",
+ "is_metro" :"N"
  },{
  "town_name" : "Kargil",
  "town_code" : "766600",
  "lat" : "34.5405",
- "lon" : "76.138344"
+ "lon" : "76.138344",
+ "is_metro" :"N"
  },{
  "town_name" : "Udhampur",
  "town_code" : "739200",
  "lat" : "32.918935",
- "lon" : "75.131378"
+ "lon" : "75.131378",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "JH",
+ "state_code" : "JH",
 "statename" : "Jharkhand",
  "town" : [
  {
  "town_name" : "Daltonganj",
  "town_code" : "259300",
  "lat" : "24.038626",
- "lon" : "84.072533"
+ "lon" : "84.072533",
+ "is_metro" :"N"
  },{
  "town_name" : "Godda",
  "town_code" : "352900",
  "lat" : "24.82756",
- "lon" : "87.211704"
+ "lon" : "87.211704",
+ "is_metro" :"N"
  },{
  "town_name" : "Hazaribag",
  "town_code" : "406600",
  "lat" : "23.995349",
- "lon" : "85.366516"
+ "lon" : "85.366516",
+ "is_metro" :"N"
  },{
  "town_name" : "Dumka",
  "town_code" : "315500",
  "lat" : "24.264337",
- "lon" : "87.245522"
+ "lon" : "87.245522",
+ "is_metro" :"N"
  },{
  "town_name" : "Dhanbad",
  "town_code" : "280200",
  "lat" : "23.795398",
- "lon" : "86.43013"
+ "lon" : "86.43013",
+ "is_metro" :"N"
  },{
  "town_name" : "Giridih",
  "town_code" : "272101",
  "lat" : "24.179331",
- "lon" : "86.306877"
+ "lon" : "86.306877",
+ "is_metro" :"N"
  },{
  "town_name" : "Deoghar",
  "town_code" : "043400",
  "lat" : "24.488086",
- "lon" : "86.691399"
+ "lon" : "86.691399",
+ "is_metro" :"N"
  },{
  "town_name" : "Bokaro",
  "town_code" : "173800",
  "lat" : "23.689176",
- "lon" : "86.113586"
+ "lon" : "86.113586",
+ "is_metro" :"N"
  },{
  "town_name" : "Ramgarh",
  "town_code" : "605700",
  "lat" : "23.623136",
- "lon" : "85.520325"
+ "lon" : "85.520325",
+ "is_metro" :"N"
  },{
  "town_name" : "Koderma",
  "town_code" : "298700",
  "lat" : "24.46801",
- "lon" : "85.591478"
+ "lon" : "85.591478",
+ "is_metro" :"N"
  },{
  "town_name" : "Pakur",
  "town_code" : "758000",
  "lat" : "24.637031",
- "lon" : "87.847366"
+ "lon" : "87.847366",
+ "is_metro" :"N"
  },{
  "town_name" : "Chaibasa",
  "town_code" : "203200",
  "lat" : "22.551087",
- "lon" : "85.805111"
+ "lon" : "85.805111",
+ "is_metro" :"N"
  },{
  "town_name" : "RANCHI-FDZ",
  "town_code" : "834700",
  "lat" : "23.349956",
- "lon" : "85.335291"
+ "lon" : "85.335291",
+ "is_metro" :"N"
  },{
  "town_name" : "Jamshedpur",
  "town_code" : "448500",
  "lat" : "22.803402",
- "lon" : "86.20285"
+ "lon" : "86.20285",
+ "is_metro" :"N"
  },{
  "town_name" : "Gumla",
  "town_code" : "370200",
  "lat" : "23.043326",
- "lon" : "84.546576"
+ "lon" : "84.546576",
+ "is_metro" :"N"
  },{
  "town_name" : "Seraikela",
  "town_code" : "649400",
  "lat" : "22.700188",
- "lon" : "85.927505"
+ "lon" : "85.927505",
+ "is_metro" :"N"
  },{
  "town_name" : "Lohardaga",
  "town_code" : "343900",
  "lat" : "23.432694",
- "lon" : "84.680386"
+ "lon" : "84.680386",
+ "is_metro" :"N"
  },{
  "town_name" : "Garhwa",
  "town_code" : "394900",
  "lat" : "24.17197",
- "lon" : "83.808689"
+ "lon" : "83.808689",
+ "is_metro" :"N"
  },{
  "town_name" : "Ranchi",
  "town_code" : "834600",
  "lat" : "23.3440997",
- "lon" : "85.309562"
+ "lon" : "85.309562",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "KA",
+ "state_code" : "KA",
 "statename" : "Karnataka",
  "town" : [
  {
  "town_name" : "Dharwad",
  "town_code" : "212000",
  "lat" : "15.465067",
- "lon" : "75.003481"
+ "lon" : "75.003481",
+ "is_metro" :"N"
  },{
  "town_name" : "Davanagere",
  "town_code" : "138700",
  "lat" : "14.45372",
- "lon" : "75.91893"
+ "lon" : "75.91893",
+ "is_metro" :"N"
  },{
  "town_name" : "Chamarajanagar",
  "town_code" : "095000",
  "lat" : "11.928073",
- "lon" : "76.940161"
+ "lon" : "76.940161",
+ "is_metro" :"N"
  },{
  "town_name" : "Bijapur",
  "town_code" : "124000",
  "lat" : "16.824095",
- "lon" : "75.715542"
+ "lon" : "75.715542",
+ "is_metro" :"N"
  },{
  "town_name" : "Koppal",
  "town_code" : "310700",
  "lat" : "15.33957",
- "lon" : "76.153347"
+ "lon" : "76.153347",
+ "is_metro" :"N"
  },{
  "town_name" : "Bengaluru",
  "town_code" : "056000",
  "lat" : "12.9715987",
- "lon" : "77.5945627"
+ "lon" : "77.5945627",
+ "is_metro" :"Y"
  },{
  "town_name" : "Bellary",
  "town_code" : "066000",
  "lat" : "15.13854",
- "lon" : "76.918732"
+ "lon" : "76.918732",
+ "is_metro" :"N"
  },{
  "town_name" : "Bagalkot",
  "town_code" : "053500",
  "lat" : "16.185011",
- "lon" : "75.696243"
+ "lon" : "75.696243",
+ "is_metro" :"N"
  },{
  "town_name" : "Karwar",
  "town_code" : "359100",
  "lat" : "14.81276",
- "lon" : "74.130951"
+ "lon" : "74.130951",
+ "is_metro" :"N"
  },{
  "town_name" : "Haveri",
  "town_code" : "283000",
  "lat" : "14.8",
- "lon" : "75.4"
+ "lon" : "75.4",
+ "is_metro" :"N"
  },{
  "town_name" : "Raichur",
  "town_code" : "582000",
  "lat" : "16.20702",
- "lon" : "77.354362"
+ "lon" : "77.354362",
+ "is_metro" :"N"
  },{
  "town_name" : "Mangalore",
  "town_code" : "379000",
  "lat" : "12.9141417",
- "lon" : "74.8559568"
+ "lon" : "74.8559568",
+ "is_metro" :"N"
  },{
  "town_name" : "Mandya",
  "town_code" : "375800",
  "lat" : "12.5241667",
- "lon" : "76.8958333"
+ "lon" : "76.8958333",
+ "is_metro" :"N"
  },{
  "town_name" : "Chikballapur",
  "town_code" : "106000",
  "lat" : "13.42608",
- "lon" : "77.730401"
+ "lon" : "77.730401",
+ "is_metro" :"N"
  },{
  "town_name" : "Bidar",
  "town_code" : "147600",
  "lat" : "17.90737",
- "lon" : "77.527138"
+ "lon" : "77.527138",
+ "is_metro" :"N"
  },{
  "town_name" : "Belgaum",
  "town_code" : "089900",
  "lat" : "15.85036",
- "lon" : "74.504669"
+ "lon" : "74.504669",
+ "is_metro" :"N"
  },{
  "town_name" : "Tumkur",
  "town_code" : "717000",
  "lat" : "13.3422222",
- "lon" : "77.1016667"
+ "lon" : "77.1016667",
+ "is_metro" :"N"
  },{
  "town_name" : "Chitradurga",
  "town_code" : "120500",
  "lat" : "14.22209",
- "lon" : "76.40036"
+ "lon" : "76.40036",
+ "is_metro" :"N"
  },{
  "town_name" : "Hassan",
  "town_code" : "210000",
  "lat" : "13.0072",
- "lon" : "76.094543"
+ "lon" : "76.094543",
+ "is_metro" :"N"
  },{
  "town_name" : "Gadag",
  "town_code" : "238000",
  "lat" : "15.42878",
- "lon" : "75.631279"
+ "lon" : "75.631279",
+ "is_metro" :"N"
  },{
  "town_name" : "Udupi",
  "town_code" : "721500",
  "lat" : "13.3322222",
- "lon" : "74.7461111"
+ "lon" : "74.7461111",
+ "is_metro" :"N"
  },{
  "town_name" : "Kolar",
  "town_code" : "302900",
  "lat" : "13.1357369",
- "lon" : "78.1325603"
+ "lon" : "78.1325603",
+ "is_metro" :"N"
  },{
  "town_name" : "Ramanagara",
  "town_code" : "586900",
  "lat" : "12.720679",
- "lon" : "77.2826476"
+ "lon" : "77.2826476",
+ "is_metro" :"N"
  },{
  "town_name" : "Shimoga",
  "town_code" : "628500",
  "lat" : "13.92225",
- "lon" : "75.570374"
+ "lon" : "75.570374",
+ "is_metro" :"N"
  },{
  "town_name" : "Mysore",
  "town_code" : "430000",
  "lat" : "12.303534",
- "lon" : "76.64611"
+ "lon" : "76.64611",
+ "is_metro" :"N"
  },{
  "town_name" : "Gulbarga",
  "town_code" : "265002",
  "lat" : "17.329731",
- "lon" : "76.8342957"
+ "lon" : "76.8342957",
+ "is_metro" :"N"
  },{
  "town_name" : "Yadgir",
  "town_code" : "784000",
  "lat" : "16.764987",
- "lon" : "77.140538"
+ "lon" : "77.140538",
+ "is_metro" :"N"
  },{
  "town_name" : "Chikmagalur",
  "town_code" : "107000",
  "lat" : "13.31232",
- "lon" : "75.770889"
+ "lon" : "75.770889",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "KL",
+ "state_code" : "KL",
 "statename" : "Kerala",
  "town" : [
  {
  "town_name" : "Thiruvananthapuram",
  "town_code" : "713000",
  "lat" : "8.487495",
- "lon" : "76.948623"
+ "lon" : "76.948623",
+ "is_metro" :"N"
  },{
  "town_name" : "Pathanamthitta",
  "town_code" : "524000",
  "lat" : "9.2587225",
- "lon" : "76.7831792"
+ "lon" : "76.7831792",
+ "is_metro" :"N"
  },{
  "town_name" : "Painavu",
  "town_code" : "223400",
  "lat" : "9.8537771",
- "lon" : "76.9481023"
+ "lon" : "76.9481023",
+ "is_metro" :"N"
  },{
  "town_name" : "Kannur",
  "town_code" : "091000",
  "lat" : "11.8688889",
- "lon" : "75.3555556"
+ "lon" : "75.3555556",
+ "is_metro" :"N"
  },{
  "town_name" : "Palakkad",
  "town_code" : "496000",
  "lat" : "10.7791667",
- "lon" : "76.6547222"
+ "lon" : "76.6547222",
+ "is_metro" :"N"
  },{
  "town_name" : "Kollam",
  "town_code" : "579900",
  "lat" : "8.88119",
- "lon" : "76.6369097"
+ "lon" : "76.6369097",
+ "is_metro" :"N"
  },{
  "town_name" : "Kasaragod",
  "town_code" : "280000",
  "lat" : "12.5013889",
- "lon" : "74.99"
+ "lon" : "74.99",
+ "is_metro" :"N"
  },{
  "town_name" : "Kozhikode",
  "town_code" : "090000",
  "lat" : "11.2554",
- "lon" : "75.781212"
+ "lon" : "75.781212",
+ "is_metro" :"N"
  },{
  "town_name" : "Kakkanad",
  "town_code" : "173000",
  "lat" : "10.016187",
- "lon" : "76.341591"
+ "lon" : "76.341591",
+ "is_metro" :"N"
  },{
  "town_name" : "Thrissur",
  "town_code" : "708800",
  "lat" : "10.5230675",
- "lon" : "76.2222106"
+ "lon" : "76.2222106",
+ "is_metro" :"N"
  },{
  "town_name" : "Kottayam",
  "town_code" : "323200",
  "lat" : "9.5987205",
- "lon" : "76.5288966"
+ "lon" : "76.5288966",
+ "is_metro" :"N"
  },{
  "town_name" : "Malappuram",
  "town_code" : "643000",
  "lat" : "11.0416667",
- "lon" : "76.0794444"
+ "lon" : "76.0794444",
+ "is_metro" :"N"
  },{
  "town_name" : "Kalpetta",
  "town_code" : "258100",
  "lat" : "11.610034",
- "lon" : "76.082182"
+ "lon" : "76.082182",
+ "is_metro" :"N"
  },{
  "town_name" : "Alappuzha",
  "town_code" : "011000",
  "lat" : "9.49",
- "lon" : "76.33"
+ "lon" : "76.33",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "MP",
+ "state_code" : "MP",
 "statename" : "Madhya Pradesh",
  "town" : [
  {
  "town_name" : "Narsinghpur",
  "town_code" : "519000",
  "lat" : "22.94453",
- "lon" : "79.193916"
+ "lon" : "79.193916",
+ "is_metro" :"N"
  },{
  "town_name" : "Khargone",
  "town_code" : "384500",
  "lat" : "21.823366",
- "lon" : "75.610364"
+ "lon" : "75.610364",
+ "is_metro" :"N"
  },{
  "town_name" : "Jhabua",
  "town_code" : "319000",
  "lat" : "22.769326",
- "lon" : "74.592511"
+ "lon" : "74.592511",
+ "is_metro" :"N"
  },{
  "town_name" : "Jabalpur",
  "town_code" : "326000",
  "lat" : "23.165586",
- "lon" : "79.94303"
+ "lon" : "79.94303",
+ "is_metro" :"N"
  },{
  "town_name" : "Vidisha",
  "town_code" : "110400",
  "lat" : "23.524019",
- "lon" : "77.806007"
+ "lon" : "77.806007",
+ "is_metro" :"N"
  },{
  "town_name" : "Rewa",
  "town_code" : "847000",
  "lat" : "24.53",
- "lon" : "81.3"
+ "lon" : "81.3",
+ "is_metro" :"N"
  },{
  "town_name" : "Bhind",
  "town_code" : "126100",
  "lat" : "26.56",
- "lon" : "78.79"
+ "lon" : "78.79",
+ "is_metro" :"N"
  },{
  "town_name" : "Ashok Nagar",
  "town_code" : "040700",
  "lat" : "22.6970844",
- "lon" : "75.8722765"
+ "lon" : "75.8722765",
+ "is_metro" :"N"
  },{
  "town_name" : "Alirajpur",
  "town_code" : "015000",
  "lat" : "22.3053",
- "lon" : "74.3525"
+ "lon" : "74.3525",
+ "is_metro" :"N"
  },{
  "town_name" : "Gwalior",
  "town_code" : "268500",
  "lat" : "26.224447",
- "lon" : "78.178711"
+ "lon" : "78.178711",
+ "is_metro" :"N"
  },{
  "town_name" : "Tikamgarh",
  "town_code" : "100677",
  "lat" : "24.743557",
- "lon" : "78.831167"
+ "lon" : "78.831167",
+ "is_metro" :"N"
  },{
  "town_name" : "Singrauli",
  "town_code" : "784400",
  "lat" : "24.064569",
- "lon" : "82.623961"
+ "lon" : "82.623961",
+ "is_metro" :"N"
  },{
  "town_name" : "Sagar",
  "town_code" : "627200",
  "lat" : "23.832294",
- "lon" : "78.744917"
+ "lon" : "78.744917",
+ "is_metro" :"N"
  },{
  "town_name" : "Ratlam",
  "town_code" : "622500",
  "lat" : "23.330412",
- "lon" : "75.044315"
+ "lon" : "75.044315",
+ "is_metro" :"N"
  },{
  "town_name" : "Neemuch",
  "town_code" : "530000",
  "lat" : "24.465285",
- "lon" : "74.871128"
+ "lon" : "74.871128",
+ "is_metro" :"N"
  },{
  "town_name" : "Dewas",
  "town_code" : "202000",
  "lat" : "22.961227",
- "lon" : "76.051411"
+ "lon" : "76.051411",
+ "is_metro" :"N"
  },{
  "town_name" : "Balaghat",
  "town_code" : "061500",
  "lat" : "21.815906",
- "lon" : "80.189526"
+ "lon" : "80.189526",
+ "is_metro" :"N"
  },{
  "town_name" : "Anuppur",
  "town_code" : "009400",
  "lat" : "23.103418",
- "lon" : "81.697583"
+ "lon" : "81.697583",
+ "is_metro" :"N"
  },{
  "town_name" : "Guna",
  "town_code" : "267000",
  "lat" : "24.64488",
- "lon" : "77.310158"
+ "lon" : "77.310158",
+ "is_metro" :"N"
  },{
  "town_name" : "Umaria",
  "town_code" : "065300",
  "lat" : "23.4076",
- "lon" : "78.661957"
+ "lon" : "78.661957",
+ "is_metro" :"N"
  },{
  "town_name" : "Seoni",
  "town_code" : "666500",
  "lat" : "22.088284",
- "lon" : "79.551864"
+ "lon" : "79.551864",
+ "is_metro" :"N"
  },{
  "town_name" : "Sehore",
  "town_code" : "665000",
  "lat" : "23.20012",
- "lon" : "77.081901"
+ "lon" : "77.081901",
+ "is_metro" :"N"
  },{
  "town_name" : "Raisen",
  "town_code" : "597600",
  "lat" : "23.330545",
- "lon" : "77.783907"
+ "lon" : "77.783907",
+ "is_metro" :"N"
  },{
  "town_name" : "Panna",
  "town_code" : "562200",
  "lat" : "24.722441",
- "lon" : "80.187115"
+ "lon" : "80.187115",
+ "is_metro" :"N"
  },{
  "town_name" : "Mandsaur",
  "town_code" : "466600",
  "lat" : "24.071568",
- "lon" : "75.06693"
+ "lon" : "75.06693",
+ "is_metro" :"N"
  },{
  "town_name" : "Chhatarpur",
  "town_code" : "241800",
  "lat" : "24.912439",
- "lon" : "79.587851"
+ "lon" : "79.587851",
+ "is_metro" :"N"
  },{
  "town_name" : "Bhopal",
  "town_code" : "117500",
  "lat" : "23.2599333",
- "lon" : "77.412615"
+ "lon" : "77.412615",
+ "is_metro" :"N"
  },{
  "town_name" : "Betul",
  "town_code" : "092500",
  "lat" : "21.903865",
- "lon" : "77.903453"
+ "lon" : "77.903453",
+ "is_metro" :"N"
  },{
  "town_name" : "Datia",
  "town_code" : "190800",
  "lat" : "25.66823",
- "lon" : "78.455704"
+ "lon" : "78.455704",
+ "is_metro" :"N"
  },{
  "town_name" : "Barwani",
  "town_code" : "084100",
  "lat" : "22.03",
- "lon" : " 74.9"
+ "lon" : " 74.9",
+ "is_metro" :"N"
  },{
  "town_name" : "Katni",
  "town_code" : "365000",
  "lat" : "23.836081",
- "lon" : "80.39547"
+ "lon" : "80.39547",
+ "is_metro" :"N"
  },{
  "town_name" : "Sidhi",
  "town_code" : "920200",
  "lat" : "24.396434",
- "lon" : "81.879841"
+ "lon" : "81.879841",
+ "is_metro" :"N"
  },{
  "town_name" : "Shahdol",
  "town_code" : "907900",
  "lat" : "23.463246",
- "lon" : "81.600494"
+ "lon" : "81.600494",
+ "is_metro" :"N"
  },{
  "town_name" : "Rajgarh",
  "town_code" : "598500",
  "lat" : "24.0078819",
- "lon" : "76.7278803"
+ "lon" : "76.7278803",
+ "is_metro" :"N"
  },{
  "town_name" : "Dindori",
  "town_code" : "037500",
  "lat" : "22.942639",
- "lon" : "81.075179"
+ "lon" : "81.075179",
+ "is_metro" :"N"
  },{
  "town_name" : "Burhanpur",
  "town_code" : "140500",
  "lat" : "21.307373",
- "lon" : "76.230416"
+ "lon" : "76.230416",
+ "is_metro" :"N"
  },{
  "town_name" : "Ujjain",
  "town_code" : "742500",
  "lat" : "23.177169",
- "lon" : "75.782888"
+ "lon" : "75.782888",
+ "is_metro" :"N"
  },{
  "town_name" : "Satna",
  "town_code" : "900900",
  "lat" : "24.58",
- "lon" : "80.83"
+ "lon" : "80.83",
+ "is_metro" :"N"
  },{
  "town_name" : "Morena",
  "town_code" : "496900",
  "lat" : "26.501257",
- "lon" : "77.993365"
+ "lon" : "77.993365",
+ "is_metro" :"N"
  },{
  "town_name" : "Chhindwara",
  "town_code" : "168500",
  "lat" : "22.057437",
- "lon" : "78.9381729"
+ "lon" : "78.9381729",
+ "is_metro" :"N"
  },{
  "town_name" : "Khandwa",
  "town_code" : "379500",
  "lat" : "21.82214",
- "lon" : "76.346832"
+ "lon" : "76.346832",
+ "is_metro" :"N"
  },{
  "town_name" : "Indore",
  "town_code" : "298001",
  "lat" : "22.72489",
- "lon" : "75.856419"
+ "lon" : "75.856419",
+ "is_metro" :"N"
  },{
  "town_name" : "Hoshangabad",
  "town_code" : "291000",
  "lat" : "22.746128",
- "lon" : "77.719356"
+ "lon" : "77.719356",
+ "is_metro" :"N"
  },{
  "town_name" : "Harda",
  "town_code" : "276000",
  "lat" : "22.343789",
- "lon" : "77.095976"
+ "lon" : "77.095976",
+ "is_metro" :"N"
  },{
  "town_name" : "Shivpuri",
  "town_code" : "680700",
  "lat" : "25.42329",
- "lon" : "77.653633"
+ "lon" : "77.653633",
+ "is_metro" :"N"
  },{
  "town_name" : "Shajapur",
  "town_code" : "670500",
  "lat" : "23.426589",
- "lon" : "76.275573"
+ "lon" : "76.275573",
+ "is_metro" :"N"
  },{
  "town_name" : "Mandla",
  "town_code" : "465500",
  "lat" : "22.593203",
- "lon" : "80.375082"
+ "lon" : "80.375082",
+ "is_metro" :"N"
  },{
  "town_name" : "Dhar",
  "town_code" : "206000",
  "lat" : "22.6",
- "lon" : "75.3"
+ "lon" : "75.3",
+ "is_metro" :"N"
  },{
  "town_name" : "Damoh",
  "town_code" : "186000",
  "lat" : "23.83997",
- "lon" : "79.449158"
+ "lon" : "79.449158",
+ "is_metro" :"N"
  },{
  "town_name" : "Sheopur",
  "town_code" : "182400",
  "lat" : "25.67",
- "lon" : "76.7"
+ "lon" : "76.7",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "MH",
+ "state_code" : "MH",
 "statename" : "Maharashtra",
  "town" : [
  {
  "town_name" : "Nandurbar",
  "town_code" : "517500",
  "lat" : "21.37",
- "lon" : "74.25"
+ "lon" : "74.25",
+ "is_metro" :"N"
  },{
  "town_name" : "Latur",
  "town_code" : "431500",
  "lat" : "18.39768",
- "lon" : "76.580971"
+ "lon" : "76.580971",
+ "is_metro" :"N"
  },{
  "town_name" : "Chandrapur",
  "town_code" : "152000",
  "lat" : "19.95",
- "lon" : "79.3"
+ "lon" : "79.3",
+ "is_metro" :"N"
  },{
  "town_name" : "Amravati",
  "town_code" : "023500",
  "lat" : "20.930679",
- "lon" : "77.758713"
+ "lon" : "77.758713",
+ "is_metro" :"N"
  },{
  "town_name" : "Kolhapur",
  "town_code" : "401000",
  "lat" : "16.7",
- "lon" : "74.2333"
+ "lon" : "74.2333",
+ "is_metro" :"N"
  },{
  "town_name" : "Thane",
  "town_code" : "726500",
  "lat" : "19.23184",
- "lon" : "72.967178"
+ "lon" : "72.967178",
+ "is_metro" :"N"
  },{
  "town_name" : "Bhandara",
  "town_code" : "099000",
  "lat" : "21.170519",
- "lon" : "79.664692"
+ "lon" : "79.664692",
+ "is_metro" :"N"
  },{
  "town_name" : "Jalna",
  "town_code" : "306000",
  "lat" : "19.838949",
- "lon" : "75.887177"
+ "lon" : "75.887177",
+ "is_metro" :"N"
  },{
  "town_name" : "Wardha",
  "town_code" : "787000",
  "lat" : "20.744209",
- "lon" : "78.602661"
+ "lon" : "78.602661",
+ "is_metro" :"N"
  },{
  "town_name" : "Nanded",
  "town_code" : "514100",
  "lat" : "19.153061",
- "lon" : "77.305847"
+ "lon" : "77.305847",
+ "is_metro" :"N"
  },{
  "town_name" : "Nagpur",
  "town_code" : "511001",
  "lat" : "21.1458004",
- "lon" : "79.0881546"
+ "lon" : "79.0881546",
+ "is_metro" :"N"
  },{
  "town_name" : "Mumbai",
  "town_code" : "132000",
  "lat" : "19.0176147",
- "lon" : "72.8561644"
+ "lon" : "72.8561644",
+ "is_metro" :"Y"
  },{
  "town_name" : "Pune",
  "town_code" : "587000",
  "lat" : "18.5204303",
- "lon" : "73.8567437"
+ "lon" : "73.8567437",
+ "is_metro" :"N"
  },{
  "town_name" : "Osmanabad",
  "town_code" : "544500",
  "lat" : "18.17",
- "lon" : "76.05"
+ "lon" : "76.05",
+ "is_metro" :"N"
  },{
  "town_name" : "Alibag",
  "town_code" : "013500",
  "lat" : "18.655491",
- "lon" : "72.86792"
+ "lon" : "72.86792",
+ "is_metro" :"N"
  },{
  "town_name" : "Akola",
  "town_code" : "011500",
  "lat" : "20.70388",
- "lon" : "76.997093"
+ "lon" : "76.997093",
+ "is_metro" :"N"
  },{
  "town_name" : "Jalgaon",
  "town_code" : "305000",
  "lat" : "21.013321",
- "lon" : "75.563972"
+ "lon" : "75.563972",
+ "is_metro" :"N"
  },{
  "town_name" : "Sangli",
  "town_code" : "641500",
  "lat" : "16.85438",
- "lon" : "74.564171"
+ "lon" : "74.564171",
+ "is_metro" :"N"
  },{
  "town_name" : "Ratnagiri",
  "town_code" : "616000",
  "lat" : "16.99202",
- "lon" : "73.292313"
+ "lon" : "73.292313",
+ "is_metro" :"N"
  },{
  "town_name" : "Gadchiroli",
  "town_code" : "238200",
  "lat" : "20.1824052",
- "lon" : "80.0031833"
+ "lon" : "80.0031833",
+ "is_metro" :"N"
  },{
  "town_name" : "Nashik",
  "town_code" : "524500",
  "lat" : "19.9974533",
- "lon" : "73.7898023"
+ "lon" : "73.7898023",
+ "is_metro" :"N"
  },{
  "town_name" : "Buldhana",
  "town_code" : "139000",
  "lat" : "20.532184",
- "lon" : "76.184323"
+ "lon" : "76.184323",
+ "is_metro" :"N"
  },{
  "town_name" : "Ahmednagar",
  "town_code" : "006500",
  "lat" : "19.0952075",
- "lon" : "74.7495916"
+ "lon" : "74.7495916",
+ "is_metro" :"N"
  },{
  "town_name" : "Gondia",
  "town_code" : "260000",
  "lat" : " 21.45985",
- "lon" : "80.198181"
+ "lon" : "80.198181",
+ "is_metro" :"N"
  },{
  "town_name" : "Satara",
  "town_code" : "656500",
  "lat" : "17.691401",
- "lon" : "74.000938"
+ "lon" : "74.000938",
+ "is_metro" :"N"
  },{
  "town_name" : "Dhule",
  "town_code" : "219000",
  "lat" : "20.901951",
- "lon" : "74.770866"
+ "lon" : "74.770866",
+ "is_metro" :"N"
  },{
  "town_name" : "Beed",
  "town_code" : "113000",
  "lat" : "18.9833333",
- "lon" : "75.7666667"
+ "lon" : "75.7666667",
+ "is_metro" :"N"
  },{
  "town_name" : "Hingoli",
  "town_code" : "285100",
  "lat" : "19.72",
- "lon" : "77.15"
+ "lon" : "77.15",
+ "is_metro" :"N"
  },{
  "town_name" : "Washim",
  "town_code" : "085000",
  "lat" : "20.09907",
- "lon" : "77.136703"
+ "lon" : "77.136703",
+ "is_metro" :"N"
  },{
  "town_name" : "Parbhani",
  "town_code" : "565600",
  "lat" : "19.25779",
- "lon" : "76.773743"
+ "lon" : "76.773743",
+ "is_metro" :"N"
  },{
  "town_name" : "Aurangabad",
  "town_code" : "043500",
  "lat" : "19.8761653",
- "lon" : "75.3433139"
+ "lon" : "75.3433139",
+ "is_metro" :"N"
  },{
  "town_name" : "Solapur",
  "town_code" : "682000",
  "lat" : "17.68",
- "lon" : "75.92"
+ "lon" : "75.92",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "MN",
+ "state_code" : "MN",
 "statename" : "Manipur",
  "town" : [
  {
  "town_name" : "Imphal",
  "town_code" : "296800",
  "lat" : "24.806299",
- "lon" : "93.948197"
+ "lon" : "93.948197",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "ML",
+ "state_code" : "ML",
 "statename" : "Meghalaya",
  "town" : [
  {
  "town_name" : "Nongstoin",
  "town_code" : "349600",
  "lat" : "25.519052",
- "lon" : "91.266174"
+ "lon" : "91.266174",
+ "is_metro" :"N"
  },{
  "town_name" : "Tura",
  "town_code" : "374300",
  "lat" : "25.513784",
- "lon" : "90.203075"
+ "lon" : "90.203075",
+ "is_metro" :"N"
  },{
  "town_name" : "Jowai",
  "town_code" : "282500",
  "lat" : "25.44312",
- "lon" : "92.203789"
+ "lon" : "92.203789",
+ "is_metro" :"N"
  },{
  "town_name" : "Shillong",
  "town_code" : "916900",
  "lat" : "25.5723613",
- "lon" : "91.8997827"
+ "lon" : "91.8997827",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "MZ",
+ "state_code" : "MZ",
 "statename" : "Mizoram",
  "town" : [
  {
  "town_name" : "Aizawl",
  "town_code" : "274200",
  "lat" : "23.727107",
- "lon" : "92.7176389"
+ "lon" : "92.7176389",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "NL",
+ "state_code" : "NL",
 "statename" : "Nagaland",
  "town" : [
  {
  "town_name" : "Kohima",
  "town_code" : "430600",
  "lat" : "25.67035",
- "lon" : "94.109515"
+ "lon" : "94.109515",
+ "is_metro" :"N"
  },{
  "town_name" : "Dimapur",
  "town_code" : "292500",
  "lat" : "25.905556",
- "lon" : "93.727112"
+ "lon" : "93.727112",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "DL",
+ "state_code" : "DL",
 "statename" : "New Delhi",
  "town" : [
  {
  "town_name" : "Shahdara",
  "town_code" : "533403",
  "lat" : "28.669654",
- "lon" : "77.284184"
+ "lon" : "77.284184",
+ "is_metro" :"N"
  },{
  "town_name" : "Saket",
  "town_code" : "533402",
  "lat" : "28.519006",
- "lon" : "77.21303"
+ "lon" : "77.21303",
+ "is_metro" :"N"
  },{
  "town_name" : "Rajouri Garden",
  "town_code" : "533417",
  "lat" : "28.641636",
- "lon" : "77.124023"
+ "lon" : "77.124023",
+ "is_metro" :"N"
  },{
  "town_name" : "Sadar Bazar",
  "town_code" : "533407",
  "lat" : "28.658828",
- "lon" : "77.216592"
+ "lon" : "77.216592",
+ "is_metro" :"N"
  },{
  "town_name" : "Vasant Vihar",
  "town_code" : "533422",
  "lat" : "28.563416",
- "lon" : "77.162991"
+ "lon" : "77.162991",
+ "is_metro" :"N"
  },{
  "town_name" : "Preet Vihar",
  "town_code" : "533439",
  "lat" : "28.641561",
- "lon" : "77.292509"
+ "lon" : "77.292509",
+ "is_metro" :"N"
  },{
  "town_name" : "Delhi",
  "town_code" : "533409",
  "lat" : "28.632747",
- "lon" : "77.21981"
+ "lon" : "77.21981",
+ "is_metro" :"Y"
  },{
  "town_name" : "Kanjhawala",
  "town_code" : "533405",
  "lat" : "28.726571",
- "lon" : "77.002487"
+ "lon" : "77.002487",
+ "is_metro" :"N"
  },{
  "town_name" : "Delhi",
  "town_code" : "533429",
  "lat" : "28.644159",
- "lon" : "77.241948"
+ "lon" : "77.241948",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "OR",
+ "state_code" : "OR",
 "statename" : "Orrisa",
  "town" : [
  {
  "town_name" : "Cuttack",
  "town_code" : "134500",
  "lat" : "20.462721",
- "lon" : "85.882874"
+ "lon" : "85.882874",
+ "is_metro" :"N"
  },{
  "town_name" : "Koraput",
  "town_code" : "311400",
  "lat" : "18.813124",
- "lon" : "82.712545"
+ "lon" : "82.712545",
+ "is_metro" :"N"
  },{
  "town_name" : "Gajapati",
  "town_code" : "536000",
  "lat" : "18.778876",
- "lon" : "84.093812"
+ "lon" : "84.093812",
+ "is_metro" :"N"
  },{
  "town_name" : "Sundargarh",
  "town_code" : "651100",
  "lat" : "22.115859",
- "lon" : "84.033737"
+ "lon" : "84.033737",
+ "is_metro" :"N"
  },{
  "town_name" : "Sambalpur",
  "town_code" : "607500",
  "lat" : "21.46585",
- "lon" : "83.975029"
+ "lon" : "83.975029",
+ "is_metro" :"N"
  },{
  "town_name" : "Puri",
  "town_code" : "576000",
  "lat" : "19.813222",
- "lon" : "85.831547"
+ "lon" : "85.831547",
+ "is_metro" :"N"
  },{
  "town_name" : "Nayagarh",
  "town_code" : "459000",
  "lat" : "20.116067",
- "lon" : "85.099754"
+ "lon" : "85.099754",
+ "is_metro" :"N"
  },{
  "town_name" : "Bhadrak",
  "town_code" : "071300",
  "lat" : "21.05823",
- "lon" : "86.495705"
+ "lon" : "86.495705",
+ "is_metro" :"N"
  },{
  "town_name" : "Baripada",
  "town_code" : "058800",
  "lat" : "21.936358",
- "lon" : "86.734314"
+ "lon" : "86.734314",
+ "is_metro" :"N"
  },{
  "town_name" : "Dhenkanal",
  "town_code" : "148700",
  "lat" : "20.655916",
- "lon" : "85.604267"
+ "lon" : "85.604267",
+ "is_metro" :"N"
  },{
  "town_name" : "Bargarh",
  "town_code" : "058500",
  "lat" : "21.333513",
- "lon" : "83.616257"
+ "lon" : "83.616257",
+ "is_metro" :"N"
  },{
  "town_name" : "Jharsuguda",
  "town_code" : "234200",
  "lat" : "21.85895",
- "lon" : "84.015541"
+ "lon" : "84.015541",
+ "is_metro" :"N"
  },{
  "town_name" : "Malkangiri",
  "town_code" : "381900",
  "lat" : "18.363486",
- "lon" : "81.895008"
+ "lon" : "81.895008",
+ "is_metro" :"N"
  },{
  "town_name" : "Bhubaneswar",
  "town_code" : "079500",
  "lat" : "20.297622",
- "lon" : "85.824795"
+ "lon" : "85.824795",
+ "is_metro" :"N"
  },{
  "town_name" : "Rayagada",
  "town_code" : "594500",
  "lat" : "19.166654",
- "lon" : "83.416786"
+ "lon" : "83.416786",
+ "is_metro" :"N"
  },{
  "town_name" : "Balangir",
  "town_code" : "050100",
  "lat" : "20.716621",
- "lon" : "83.483219"
+ "lon" : "83.483219",
+ "is_metro" :"N"
  },{
  "town_name" : "Angul",
  "town_code" : "026600",
  "lat" : "20.831219",
- "lon" : "85.097351"
+ "lon" : "85.097351",
+ "is_metro" :"N"
  },{
  "town_name" : "Phulbani",
  "town_code" : "549200",
  "lat" : "20.476713",
- "lon" : "84.231834"
+ "lon" : "84.231834",
+ "is_metro" :"N"
  },{
  "town_name" : "Bhawanipatna",
  "town_code" : "079200",
  "lat" : "19.906219",
- "lon" : "83.172512"
+ "lon" : "83.172512",
+ "is_metro" :"N"
  },{
  "town_name" : "Balasore",
  "town_code" : "050400",
  "lat" : "21.494283",
- "lon" : "86.931553"
+ "lon" : "86.931553",
+ "is_metro" :"N"
  },{
  "town_name" : "Kendujhar",
  "town_code" : "289900",
  "lat" : "21.633176",
- "lon" : "85.583153"
+ "lon" : "85.583153",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "PY",
+ "state_code" : "PY",
 "statename" : "Pondicherry",
  "town" : [
  {
  "town_name" : "Pandakkal",
  "town_code" : "706200",
  "lat" : "11.759458",
- "lon" : "75.535555"
+ "lon" : "75.535555",
+ "is_metro" :"N"
  },{
  "town_name" : "Pondicherry",
  "town_code" : "557000",
  "lat" : "11.9309645",
- "lon" : "79.7851818"
+ "lon" : "79.7851818",
+ "is_metro" :"N"
  },{
  "town_name" : "Karaikal",
  "town_code" : "268000",
  "lat" : "10.925517",
- "lon" : "79.837646"
+ "lon" : "79.837646",
+ "is_metro" :"N"
  },{
  "town_name" : "Yanam",
  "town_code" : "793300",
  "lat" : "16.733044",
- "lon" : "82.21653"
+ "lon" : "82.21653",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "PB",
+ "state_code" : "PB",
 "statename" : "Punjab",
  "town" : [
  {
  "town_name" : "Mansa",
  "town_code" : "301800",
  "lat" : "29.976749",
- "lon" : "75.393082"
+ "lon" : "75.393082",
+ "is_metro" :"N"
  },{
  "town_name" : "Amritsar",
  "town_code" : "024400",
  "lat" : "31.6339793",
- "lon" : "74.8722642"
+ "lon" : "74.8722642",
+ "is_metro" :"N"
  },{
  "town_name" : "Sri Muktsar Sahib",
  "town_code" : "499600",
  "lat" : "30.470277",
- "lon" : "74.51759"
+ "lon" : "74.51759",
+ "is_metro" :"N"
  },{
  "town_name" : "Sangrur",
  "town_code" : "642300",
  "lat" : "30.2457963",
- "lon" : "75.8420716"
+ "lon" : "75.8420716",
+ "is_metro" :"N"
  },{
  "town_name" : "Ludhiana",
  "town_code" : "437800",
  "lat" : "30.900965",
- "lon" : "75.8572758"
+ "lon" : "75.8572758",
+ "is_metro" :"N"
  },{
  "town_name" : "Gurdaspur",
  "town_code" : "268400",
  "lat" : "32.033852",
- "lon" : "75.407127"
+ "lon" : "75.407127",
+ "is_metro" :"N"
  },{
  "town_name" : "Fazilka",
  "town_code" : "236300",
  "lat" : "30.432098",
- "lon" : "74.025467"
+ "lon" : "74.025467",
+ "is_metro" :"N"
  },{
  "town_name" : "Pathankot",
  "town_code" : "569000",
  "lat" : "32.265181",
- "lon" : "75.641893"
+ "lon" : "75.641893",
+ "is_metro" :"N"
  },{
  "town_name" : "Moga",
  "town_code" : "494400",
  "lat" : "30.8164603",
- "lon" : "75.1717093"
+ "lon" : "75.1717093",
+ "is_metro" :"N"
  },{
  "town_name" : "Hoshiarpur",
  "town_code" : "291200",
  "lat" : "31.53",
- "lon" : "75.92"
+ "lon" : "75.92",
+ "is_metro" :"N"
  },{
  "town_name" : "Firozpur",
  "town_code" : "236400",
  "lat" : "30.94228",
- "lon" : "74.615982"
+ "lon" : "74.615982",
+ "is_metro" :"N"
  },{
  "town_name" : "Mohali",
  "town_code" : "495800",
  "lat" : "30.714389",
- "lon" : "76.718164"
+ "lon" : "76.718164",
+ "is_metro" :"N"
  },{
  "town_name" : "Bathinda",
  "town_code" : "101800",
  "lat" : "30.210994",
- "lon" : "74.9454745"
+ "lon" : "74.9454745",
+ "is_metro" :"N"
  },{
  "town_name" : "Patiala",
  "town_code" : "569300",
  "lat" : "30.33",
- "lon" : "76.4"
+ "lon" : "76.4",
+ "is_metro" :"N"
  },{
  "town_name" : "Barnala",
  "town_code" : "082301",
  "lat" : "30.382353",
- "lon" : "75.535675"
+ "lon" : "75.535675",
+ "is_metro" :"N"
  },{
  "town_name" : "Kapurthala",
  "town_code" : "349900",
  "lat" : "31.37492",
- "lon" : "75.384216"
+ "lon" : "75.384216",
+ "is_metro" :"N"
  },{
  "town_name" : "Tarn Taran Sahib",
  "town_code" : "721300",
  "lat" : "31.451657",
- "lon" : "74.9252"
+ "lon" : "74.9252",
+ "is_metro" :"N"
  },{
  "town_name" : "Shahid Bhagat Singh Nagar",
  "town_code" : "480300",
  "lat" : "31.128493",
- "lon" : "76.120907"
+ "lon" : "76.120907",
+ "is_metro" :"N"
  },{
  "town_name" : "Jalandhar",
  "town_code" : "326300",
  "lat" : "31.3260152",
- "lon" : "75.5761829"
+ "lon" : "75.5761829",
+ "is_metro" :"N"
  },{
  "town_name" : "Faridkot",
  "town_code" : "235200",
  "lat" : "30.67",
- "lon" : "74.75"
+ "lon" : "74.75",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "RJ",
+ "state_code" : "RJ",
 "statename" : "Rajasthan",
  "town" : [
  {
  "town_name" : "Nagaur",
  "town_code" : "508100",
  "lat" : "27.198629",
- "lon" : "73.734718"
+ "lon" : "73.734718",
+ "is_metro" :"N"
  },{
  "town_name" : "Dungapur",
  "town_code" : "227100",
  "lat" : "23.842196",
- "lon" : "73.714557"
+ "lon" : "73.714557",
+ "is_metro" :"N"
  },{
  "town_name" : "Bharatpur",
  "town_code" : "101100",
  "lat" : "27.215599",
- "lon" : "77.49015"
+ "lon" : "77.49015",
+ "is_metro" :"N"
  },{
  "town_name" : "Dausa",
  "town_code" : "191200",
  "lat" : "26.88859",
- "lon" : "76.335907"
+ "lon" : "76.335907",
+ "is_metro" :"N"
  },{
  "town_name" : "Chittorgarh",
  "town_code" : "170400",
  "lat" : "24.8887435",
- "lon" : "74.6269216"
+ "lon" : "74.6269216",
+ "is_metro" :"N"
  },{
  "town_name" : "Bikaner",
  "town_code" : "124600",
  "lat" : "28.01989",
- "lon" : "73.317551"
+ "lon" : "73.317551",
+ "is_metro" :"N"
  },{
  "town_name" : "Ajmer",
  "town_code" : "006800",
  "lat" : "26.45",
- "lon" : "74.64"
+ "lon" : "74.64",
+ "is_metro" :"N"
  },{
  "town_name" : "Jodhpur",
  "town_code" : "323500",
  "lat" : "26.2567287",
- "lon" : "73.0170442"
+ "lon" : "73.0170442",
+ "is_metro" :"N"
  },{
  "town_name" : "Jhunjhunu",
  "town_code" : "322600",
  "lat" : "28.124203",
- "lon" : "75.398318"
+ "lon" : "75.398318",
+ "is_metro" :"N"
  },{
  "town_name" : "Karauli",
  "town_code" : "354300",
  "lat" : "26.49682",
- "lon" : "77.027603"
+ "lon" : "77.027603",
+ "is_metro" :"N"
  },{
  "town_name" : "Sirohi",
  "town_code" : "692901",
  "lat" : "24.886909",
- "lon" : "72.847633"
+ "lon" : "72.847633",
+ "is_metro" :"N"
  },{
  "town_name" : "Kota",
  "town_code" : "408501",
  "lat" : "25.1695114",
- "lon" : "75.8539898"
+ "lon" : "75.8539898",
+ "is_metro" :"N"
  },{
  "town_name" : "Dholpur",
  "town_code" : "216600",
  "lat" : "26.691311",
- "lon" : "77.879723"
+ "lon" : "77.879723",
+ "is_metro" :"N"
  },{
  "town_name" : "Churu",
  "town_code" : "176000",
  "lat" : "28.302731",
- "lon" : "74.967049"
+ "lon" : "74.967049",
+ "is_metro" :"N"
  },{
  "town_name" : "Bundi",
  "town_code" : "139600",
  "lat" : "25.43815",
- "lon" : "75.637306"
+ "lon" : "75.637306",
+ "is_metro" :"N"
  },{
  "town_name" : "Ganganagar",
  "town_code" : "700300",
  "lat" : "29.917299",
- "lon" : "73.883028"
+ "lon" : "73.883028",
+ "is_metro" :"N"
  },{
  "town_name" : "Udaipur",
  "town_code" : "737800",
  "lat" : "24.57127",
- "lon" : "73.691544"
+ "lon" : "73.691544",
+ "is_metro" :"N"
  },{
  "town_name" : "Tonk",
  "town_code" : "734000",
  "lat" : "26.16486",
- "lon" : "75.788307"
+ "lon" : "75.788307",
+ "is_metro" :"N"
  },{
  "town_name" : "Sawai Madhopur",
  "town_code" : "616800",
  "lat" : "26.020309",
- "lon" : "76.344299"
+ "lon" : "76.344299",
+ "is_metro" :"N"
  },{
  "town_name" : "Bhilwara",
  "town_code" : "109800",
  "lat" : "25.346251",
- "lon" : "74.636383"
+ "lon" : "74.636383",
+ "is_metro" :"N"
  },{
  "town_name" : "Baran",
  "town_code" : "077100",
  "lat" : "25.094641",
- "lon" : "76.509422"
+ "lon" : "76.509422",
+ "is_metro" :"N"
  },{
  "town_name" : "Banswara",
  "town_code" : "075100",
  "lat" : "23.540541",
- "lon" : "74.442253"
+ "lon" : "74.442253",
+ "is_metro" :"N"
  },{
  "town_name" : "Jaisalmer",
  "town_code" : "304300",
  "lat" : "26.92",
- "lon" : "70.9"
+ "lon" : "70.9",
+ "is_metro" :"N"
  },{
  "town_name" : "Jaipur",
  "town_code" : "304100",
  "lat" : "26.917",
- "lon" : "75.817"
+ "lon" : "75.817",
+ "is_metro" :"N"
  },{
  "town_name" : "Sikar",
  "town_code" : "686900",
  "lat" : "27.60672",
- "lon" : "75.138161"
+ "lon" : "75.138161",
+ "is_metro" :"N"
  },{
  "town_name" : "Pali",
  "town_code" : "553800",
  "lat" : "25.771151",
- "lon" : "73.323174"
+ "lon" : "73.323174",
+ "is_metro" :"N"
  },{
  "town_name" : "Barmer",
  "town_code" : "081900",
  "lat" : "25.75",
- "lon" : "71.38"
+ "lon" : "71.38",
+ "is_metro" :"N"
  },{
  "town_name" : "Alwar",
  "town_code" : "017700",
  "lat" : "27.5618",
- "lon" : "76.608742"
+ "lon" : "76.608742",
+ "is_metro" :"N"
  },{
  "town_name" : "Jalore",
  "town_code" : "306100",
  "lat" : "25.34399",
- "lon" : "72.615753"
+ "lon" : "72.615753",
+ "is_metro" :"N"
  },{
  "town_name" : "Hanumangarh",
  "town_code" : "275400",
  "lat" : "29.61775",
- "lon" : "74.289017"
+ "lon" : "74.289017",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "SK",
+ "state_code" : "SK",
 "statename" : "Sikkim",
  "town" : [
  {
  "town_name" : "Namchi",
  "town_code" : "267900",
  "lat" : "27.166466",
- "lon" : "88.363552"
+ "lon" : "88.363552",
+ "is_metro" :"N"
  },{
  "town_name" : "Geyzing",
  "town_code" : "266800",
  "lat" : "27.289418",
- "lon" : "88.257294"
+ "lon" : "88.257294",
+ "is_metro" :"N"
  },{
  "town_name" : "Gangtok",
  "town_code" : "332900",
  "lat" : "27.3389356",
- "lon" : "88.6065035"
+ "lon" : "88.6065035",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "TN",
+ "state_code" : "TN",
 "statename" : "Tamilnadu",
  "town" : [
  {
  "town_name" : "Erode",
  "town_code" : "174000",
  "lat" : "11.342235",
- "lon" : "77.727477"
+ "lon" : "77.727477",
+ "is_metro" :"N"
  },{
  "town_name" : "Coimbatore",
  "town_code" : "127000",
  "lat" : "11.0168445",
- "lon" : "76.9558321"
+ "lon" : "76.9558321",
+ "is_metro" :"N"
  },{
  "town_name" : "Chennai",
  "town_code" : "357500",
  "lat" : "13.060422",
- "lon" : "80.249583"
+ "lon" : "80.249583",
+ "is_metro" :"Y"
  },{
  "town_name" : "Vellore",
  "town_code" : "757800",
  "lat" : "12.9165167",
- "lon" : "79.1324986"
+ "lon" : "79.1324986",
+ "is_metro" :"N"
  },{
  "town_name" : "Tiruvarur",
  "town_code" : "703900",
  "lat" : "10.772182",
- "lon" : "79.636874"
+ "lon" : "79.636874",
+ "is_metro" :"N"
  },{
  "town_name" : "Salem",
  "town_code" : "606000",
  "lat" : "11.664325",
- "lon" : "78.1460142"
+ "lon" : "78.1460142",
+ "is_metro" :"N"
  },{
  "town_name" : "Perambalur",
  "town_code" : "738300",
  "lat" : "11.2333333",
- "lon" : "78.8833333"
+ "lon" : "78.8833333",
+ "is_metro" :"N"
  },{
  "town_name" : "Nagapattinam",
  "town_code" : "434900",
  "lat" : "10.7666667",
- "lon" : "79.8333333"
+ "lon" : "79.8333333",
+ "is_metro" :"N"
  },{
  "town_name" : "Dindigul",
  "town_code" : "149100",
  "lat" : "10.35672",
- "lon" : "77.976051"
+ "lon" : "77.976051",
+ "is_metro" :"N"
  },{
  "town_name" : "Virudhunagar",
  "town_code" : "771900",
  "lat" : "9.583612",
- "lon" : "77.958344"
+ "lon" : "77.958344",
+ "is_metro" :"N"
  },{
  "town_name" : "Pudukkottai",
  "town_code" : "568000",
  "lat" : "10.3796457",
- "lon" : "78.8213887"
+ "lon" : "78.8213887",
+ "is_metro" :"N"
  },{
  "town_name" : "Namakkal",
  "town_code" : "441000",
  "lat" : "11.2195098",
- "lon" : "78.1677991"
+ "lon" : "78.1677991",
+ "is_metro" :"N"
  },{
  "town_name" : "Thiruvallur",
  "town_code" : "714000",
  "lat" : "13.142549",
- "lon" : " 79.909053"
+ "lon" : " 79.909053",
+ "is_metro" :"N"
  },{
  "town_name" : "Madurai",
  "town_code" : "359000",
  "lat" : "9.9252007",
- "lon" : "78.1197754"
+ "lon" : "78.1197754",
+ "is_metro" :"N"
  },{
  "town_name" : "Tirunelveli",
  "town_code" : "692000",
  "lat" : "8.733",
- "lon" : "77.7"
+ "lon" : "77.7",
+ "is_metro" :"N"
  },{
  "town_name" : "Viluppuram",
  "town_code" : "763000",
  "lat" : "11.954655",
- "lon" : "79.52773"
+ "lon" : "79.52773",
+ "is_metro" :"N"
  },{
  "town_name" : "Udagamandalam",
  "town_code" : "486000",
  "lat" : "11.411828",
- "lon" : "76.695356"
+ "lon" : "76.695356",
+ "is_metro" :"N"
  },{
  "town_name" : "Thoothukudi",
  "town_code" : "719000",
  "lat" : "8.802581",
- "lon" : "78.145142"
+ "lon" : "78.145142",
+ "is_metro" :"N"
  },{
  "town_name" : "Theni",
  "town_code" : "674000",
  "lat" : "10.006377",
- "lon" : "77.472493"
+ "lon" : "77.472493",
+ "is_metro" :"N"
  },{
  "town_name" : "Sivaganga",
  "town_code" : "640000",
  "lat" : "9.845557",
- "lon" : "78.483743"
+ "lon" : "78.483743",
+ "is_metro" :"N"
  },{
  "town_name" : "Nagercoil",
  "town_code" : "438100",
  "lat" : "8.17",
- "lon" : "77.43"
+ "lon" : "77.43",
+ "is_metro" :"N"
  },{
  "town_name" : "Karur",
  "town_code" : "278000",
  "lat" : "10.957338",
- "lon" : "78.080937"
+ "lon" : "78.080937",
+ "is_metro" :"N"
  },{
  "town_name" : "Tiruvannamalai",
  "town_code" : "703000",
  "lat" : "12.2252841",
- "lon" : "79.0746957"
+ "lon" : "79.0746957",
+ "is_metro" :"N"
  },{
  "town_name" : "Tiruppur",
  "town_code" : "697000",
  "lat" : "11.098246",
- "lon" : "77.352695"
+ "lon" : "77.352695",
+ "is_metro" :"N"
  },{
  "town_name" : "Thanjavur",
  "town_code" : "661000",
  "lat" : "10.784946",
- "lon" : "79.140443"
+ "lon" : "79.140443",
+ "is_metro" :"N"
  },{
  "town_name" : "Dharmapuri",
  "town_code" : "147000",
  "lat" : "12.1274065",
- "lon" : "78.1580335"
+ "lon" : "78.1580335",
+ "is_metro" :"N"
  },{
  "town_name" : "Cuddalore",
  "town_code" : "131900",
  "lat" : "11.75",
- "lon" : "79.75"
+ "lon" : "79.75",
+ "is_metro" :"N"
  },{
  "town_name" : "Ariyalur",
  "town_code" : "031100",
  "lat" : "11.13704",
- "lon" : "79.075821"
+ "lon" : "79.075821",
+ "is_metro" :"N"
  },{
  "town_name" : "Kanchipuram",
  "town_code" : "129000",
  "lat" : "12.8341735",
- "lon" : "79.7036402"
+ "lon" : "79.7036402",
+ "is_metro" :"N"
  },{
  "town_name" : "Tiruchirappalli",
  "town_code" : "687000",
  "lat" : "10.7904833",
- "lon" : "78.7046725"
+ "lon" : "78.7046725",
+ "is_metro" :"N"
  },{
  "town_name" : "Ramanathapuram",
  "town_code" : "586500",
  "lat" : "10.9897645",
- "lon" : "76.9844677"
+ "lon" : "76.9844677",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "TG",
+ "state_code" : "TG",
 "statename" : "Telangana",
  "town" : [
  {
  "town_name" : "Hyderabad",
  "town_code" : "222000",
  "lat" : "17.385044",
- "lon" : "78.486671"
+ "lon" : "78.486671",
+ "is_metro" :"Y"
  },{
  "town_name" : "Warangal",
  "town_code" : "780000",
  "lat" : "18.000055",
- "lon" : "79.588167"
+ "lon" : "79.588167",
+ "is_metro" :"N"
  },{
  "town_name" : "Mahabubnagar",
  "town_code" : "361000",
  "lat" : "16.742743",
- "lon" : "77.985735"
+ "lon" : "77.985735",
+ "is_metro" :"N"
  },{
  "town_name" : "Khammam",
  "town_code" : "201100",
  "lat" : "17.25",
- "lon" : "80.15"
+ "lon" : "80.15",
+ "is_metro" :"N"
  },{
  "town_name" : "Sangareddi",
  "town_code" : "608800",
  "lat" : "17.62447",
- "lon" : "78.088303"
+ "lon" : "78.088303",
+ "is_metro" :"N"
  },{
  "town_name" : "Adilabad",
  "town_code" : "001000",
  "lat" : "19.67",
- "lon" : "78.53"
+ "lon" : "78.53",
+ "is_metro" :"N"
  },{
  "town_name" : "Karimnagar",
  "town_code" : "272000",
  "lat" : "18.4385553",
- "lon" : " 79.1288412"
+ "lon" : " 79.1288412",
+ "is_metro" :"N"
  },{
  "town_name" : "Nizamabad",
  "town_code" : "476000",
  "lat" : "18.6725047",
- "lon" : "78.0940867"
+ "lon" : "78.0940867",
+ "is_metro" :"N"
  },{
  "town_name" : "Nalgonda",
  "town_code" : "438700",
  "lat" : "17.052389",
- "lon" : "79.267181"
+ "lon" : "79.267181",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "TR",
+ "state_code" : "TR",
 "statename" : "Tripura",
  "town" : [
  {
  "town_name" : "Agartala",
  "town_code" : "005000",
  "lat" : "23.833349",
- "lon" : "91.278855"
+ "lon" : "91.278855",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "UP",
+ "state_code" : "UP",
 "statename" : "Uttar Pradesh",
  "town" : [
  {
  "town_name" : "Noida",
  "town_code" : "709000",
  "lat" : "28.536878",
- "lon" : "77.390944"
+ "lon" : "77.390944",
+ "is_metro" :"N"
  },{
  "town_name" : "Muzaffarnagar",
  "town_code" : "505000",
  "lat" : "29.4726817",
- "lon" : "77.7085091"
+ "lon" : "77.7085091",
+ "is_metro" :"N"
  },{
  "town_name" : "Moradabad",
  "town_code" : "686400",
  "lat" : "28.83698",
- "lon" : "78.770775"
+ "lon" : "78.770775",
+ "is_metro" :"N"
  },{
  "town_name" : "Meerut",
  "town_code" : "485300",
  "lat" : "28.9844618",
- "lon" : "77.7064137"
+ "lon" : "77.7064137",
+ "is_metro" :"N"
  },{
  "town_name" : "Mainpuri",
  "town_code" : "450100",
  "lat" : "27.23",
- "lon" : "79.02"
+ "lon" : "79.02",
+ "is_metro" :"N"
  },{
  "town_name" : "Barabanki",
  "town_code" : "069000",
  "lat" : "26.927166",
- "lon" : "81.191449"
+ "lon" : "81.191449",
+ "is_metro" :"N"
  },{
  "town_name" : "Agra",
  "town_code" : "003300",
  "lat" : "27.1766701",
- "lon" : "78.0080745"
+ "lon" : "78.0080745",
+ "is_metro" :"N"
  },{
  "town_name" : "Kanpur",
  "town_code" : "528500",
  "lat" : "26.454283",
- "lon" : "80.331662"
+ "lon" : "80.331662",
+ "is_metro" :"N"
  },{
  "town_name" : "Gorakhpur",
  "town_code" : "362500",
  "lat" : "26.75",
- "lon" : "83.3666667"
+ "lon" : "83.3666667",
+ "is_metro" :"N"
  },{
  "town_name" : "Ghaziabad",
  "town_code" : "251200",
  "lat" : "28.6691565",
- "lon" : "77.4537578"
+ "lon" : "77.4537578",
+ "is_metro" :"N"
  },{
  "town_name" : "Mirzapur",
  "town_code" : "675500",
  "lat" : "25.146621",
- "lon" : "82.562414"
+ "lon" : "82.562414",
+ "is_metro" :"N"
  },{
  "town_name" : "Deoria",
  "town_code" : "273100",
  "lat" : "26.5",
- "lon" : "83.79"
+ "lon" : "83.79",
+ "is_metro" :"N"
  },{
  "town_name" : "Budaun",
  "town_code" : "137900",
  "lat" : "28.0333333",
- "lon" : "79.125"
+ "lon" : "79.125",
+ "is_metro" :"N"
  },{
  "town_name" : "Jhansi",
  "town_code" : "320900",
  "lat" : "25.444121",
- "lon" : "78.567604"
+ "lon" : "78.567604",
+ "is_metro" :"N"
  },{
  "town_name" : "Hardoi",
  "town_code" : "390000",
  "lat" : "27.394647",
- "lon" : "80.129931"
+ "lon" : "80.129931",
+ "is_metro" :"N"
  },{
  "town_name" : "Gauriganj",
  "town_code" : "701600",
  "lat" : "26.209817",
- "lon" : "81.692692"
+ "lon" : "81.692692",
+ "is_metro" :"N"
  },{
  "town_name" : "Sultanpur",
  "town_code" : "701800",
  "lat" : "26.25565",
- "lon" : " 82.072212"
+ "lon" : " 82.072212",
+ "is_metro" :"N"
  },{
  "town_name" : "Lucknow",
  "town_code" : "611100",
  "lat" : "26.8465108",
- "lon" : "80.9466832"
+ "lon" : "80.9466832",
+ "is_metro" :"N"
  },{
  "town_name" : "Bareilly",
  "town_code" : "077900",
  "lat" : "28.3670355",
- "lon" : "79.4304381"
+ "lon" : "79.4304381",
+ "is_metro" :"N"
  },{
  "town_name" : "Banda",
  "town_code" : "055900",
  "lat" : "25.4833333",
- "lon" : "80.3333333"
+ "lon" : "80.3333333",
+ "is_metro" :"N"
  },{
  "town_name" : "Balrampur",
  "town_code" : "048700",
  "lat" : "27.428421",
- "lon" : "82.183138"
+ "lon" : "82.183138",
+ "is_metro" :"N"
  },{
  "town_name" : "Jyotiba_Phule_Nagar",
  "town_code" : "024500",
  "lat" : "28.90653",
- "lon" : "78.467518"
+ "lon" : "78.467518",
+ "is_metro" :"N"
  },{
  "town_name" : "Jaunpur",
  "town_code" : "453200",
  "lat" : "25.75228",
- "lon" : "82.699044"
+ "lon" : "82.699044",
+ "is_metro" :"N"
  },{
  "town_name" : "Ghazipur",
  "town_code" : "346100",
  "lat" : "25.591721",
- "lon" : "83.319183"
+ "lon" : "83.319183",
+ "is_metro" :"N"
  },{
  "town_name" : "Varanasi",
  "town_code" : "991000",
  "lat" : "25.3176452",
- "lon" : " 82.9739144"
+ "lon" : " 82.9739144",
+ "is_metro" :"N"
  },{
  "town_name" : "Saharanpur",
  "town_code" : "628800",
  "lat" : "29.97",
- "lon" : "77.55"
+ "lon" : "77.55",
+ "is_metro" :"N"
  },{
  "town_name" : "Robertsganj",
  "town_code" : "619900",
  "lat" : "24.685549",
- "lon" : "83.065713"
+ "lon" : "83.065713",
+ "is_metro" :"N"
  },{
  "town_name" : "Rampur",
  "town_code" : "751700",
  "lat" : "28.802957",
- "lon" : "79.025444"
+ "lon" : "79.025444",
+ "is_metro" :"N"
  },{
  "town_name" : "Mathura",
  "town_code" : "482700",
  "lat" : "27.4924134",
- "lon" : "77.673673"
+ "lon" : "77.673673",
+ "is_metro" :"N"
  },{
  "town_name" : "Bahraich",
  "town_code" : "042800",
  "lat" : "27.572602",
- "lon" : "81.593872"
+ "lon" : "81.593872",
+ "is_metro" :"N"
  },{
  "town_name" : "Bagpat",
  "town_code" : "095800",
  "lat" : "28.9416667",
- "lon" : "77.2166667"
+ "lon" : "77.2166667",
+ "is_metro" :"N"
  },{
  "town_name" : "Raebareli",
  "town_code" : "810000",
  "lat" : "26.2333333",
- "lon" : "81.2333333"
+ "lon" : "81.2333333",
+ "is_metro" :"N"
  },{
  "town_name" : "Pilibhit",
  "town_code" : "579200",
  "lat" : "28.632178",
- "lon" : "79.802987"
+ "lon" : "79.802987",
+ "is_metro" :"N"
  },{
  "town_name" : "Mahamaya-Nagar",
  "town_code" : "278100",
  "lat" : "27.582546",
- "lon" : "78.063149"
+ "lon" : "78.063149",
+ "is_metro" :"N"
  },{
  "town_name" : "Etawah",
  "town_code" : "324200",
  "lat" : "26.7833333",
- "lon" : "79.0166667"
+ "lon" : "79.0166667",
+ "is_metro" :"N"
  },{
  "town_name" : "Etah",
  "town_code" : "323400",
  "lat" : "27.557438",
- "lon" : "78.653801"
+ "lon" : "78.653801",
+ "is_metro" :"N"
  },{
  "town_name" : "Bulandshahr",
  "town_code" : "138900",
  "lat" : "28.408615",
- "lon" : "77.849709"
+ "lon" : "77.849709",
+ "is_metro" :"N"
  },{
  "town_name" : "Bijnor",
  "town_code" : "151600",
  "lat" : "29.370225",
- "lon" : "78.138511"
+ "lon" : "78.138511",
+ "is_metro" :"N"
  },{
  "town_name" : "Auraiya",
  "town_code" : "031400",
  "lat" : "26.46401",
- "lon" : "79.506462"
+ "lon" : "79.506462",
+ "is_metro" :"N"
  },{
  "town_name" : "Aligarh",
  "town_code" : "013700",
  "lat" : "27.89381",
- "lon" : "78.068138"
+ "lon" : "78.068138",
+ "is_metro" :"N"
  },{
  "town_name" : "Fatehpur",
  "town_code" : "327100",
  "lat" : "25.925683",
- "lon" : "80.814423"
+ "lon" : "80.814423",
+ "is_metro" :"N"
  },{
  "town_name" : "Sant_Kabir_Nagar",
  "town_code" : "756400",
  "lat" : "26.776419",
- "lon" : "83.073451"
+ "lon" : "83.073451",
+ "is_metro" :"N"
  },{
  "town_name" : "Pratapgarh",
  "town_code" : "590200",
  "lat" : "25.892187",
- "lon" : "81.93311"
+ "lon" : "81.93311",
+ "is_metro" :"N"
  },{
  "town_name" : "Kushinagar",
  "town_code" : "753800",
  "lat" : "26.745649",
- "lon" : "83.88593"
+ "lon" : "83.88593",
+ "is_metro" :"N"
  },{
  "town_name" : "Chandauli",
  "town_code" : "816200",
  "lat" : "25.262084",
- "lon" : "83.261212"
+ "lon" : "83.261212",
+ "is_metro" :"N"
  },{
  "town_name" : "Ballia",
  "town_code" : "048500",
  "lat" : "25.7705053",
- "lon" : "84.1540659"
+ "lon" : "84.1540659",
+ "is_metro" :"N"
  },{
  "town_name" : "Kaushambi",
  "town_code" : "311900",
  "lat" : "25.362137",
- "lon" : "81.403063"
+ "lon" : "81.403063",
+ "is_metro" :"N"
  },{
  "town_name" : "Gonda",
  "town_code" : "359300",
  "lat" : "27.1775039",
- "lon" : "81.9637095"
+ "lon" : "81.9637095",
+ "is_metro" :"N"
  },{
  "town_name" : "Shahjahanpur",
  "town_code" : "669400",
  "lat" : "27.88",
- "lon" : "79.92"
+ "lon" : "79.92",
+ "is_metro" :"N"
  },{
  "town_name" : "Basti",
  "town_code" : "098400",
  "lat" : "26.793116",
- "lon" : "82.718396"
+ "lon" : "82.718396",
+ "is_metro" :"N"
  },{
  "town_name" : "Firozabad",
  "town_code" : "237500",
  "lat" : "27.1591006",
- "lon" : "78.3957574"
+ "lon" : "78.3957574",
+ "is_metro" :"N"
  },{
  "town_name" : "Faizabad",
  "town_code" : "331500",
  "lat" : "26.779347",
- "lon" : "82.142159"
+ "lon" : "82.142159",
+ "is_metro" :"N"
  },{
  "town_name" : "Sitapur",
  "town_code" : "901600",
  "lat" : "27.57",
- "lon" : "80.68"
+ "lon" : "80.68",
+ "is_metro" :"N"
  },{
  "town_name" : "Orai",
  "town_code" : "543900",
  "lat" : "25.985283",
- "lon" : "79.451825"
+ "lon" : "79.451825",
+ "is_metro" :"N"
  },{
  "town_name" : "Mau",
  "town_code" : "665500",
  "lat" : "25.94174",
- "lon" : "83.562042"
+ "lon" : "83.562042",
+ "is_metro" :"N"
  },{
  "town_name" : "Mahoba",
  "town_code" : "447100",
  "lat" : "25.288645",
- "lon" : "79.872885"
+ "lon" : "79.872885",
+ "is_metro" :"N"
  },{
  "town_name" : "Maharajganj",
  "town_code" : "753300",
  "lat" : "27.147932",
- "lon" : "83.565486"
+ "lon" : "83.565486",
+ "is_metro" :"N"
  },{
  "town_name" : "Lalitpur",
  "town_code" : "427200",
  "lat" : "24.690815",
- "lon" : "78.417068"
+ "lon" : "78.417068",
+ "is_metro" :"N"
  },{
  "town_name" : "Lakhimpur-Kheri",
  "town_code" : "589500",
  "lat" : "27.95271",
- "lon" : "80.777638"
+ "lon" : "80.777638",
+ "is_metro" :"N"
  },{
  "town_name" : "Allahabad",
  "town_code" : "016500",
  "lat" : "25.4358011",
- "lon" : "81.846311"
+ "lon" : "81.846311",
+ "is_metro" :"N"
  },{
  "town_name" : "Akbarpur",
  "town_code" : "818400",
  "lat" : "26.43461",
- "lon" : "82.534078"
+ "lon" : "82.534078",
+ "is_metro" :"N"
  },{
  "town_name" : "Kasganj",
  "town_code" : "360100",
  "lat" : "27.808713",
- "lon" : "78.645875"
+ "lon" : "78.645875",
+ "is_metro" :"N"
  },{
  "town_name" : "Kannauj",
  "town_code" : "894600",
  "lat" : "27.05519",
- "lon" : "79.91808"
+ "lon" : "79.91808",
+ "is_metro" :"N"
  },{
  "town_name" : "Unnao",
  "town_code" : "989700",
  "lat" : "26.548051",
- "lon" : " 80.484606"
+ "lon" : " 80.484606",
+ "is_metro" :"N"
  }]
 },
  {
- "statecode" : "UT",
+ "state_code" : "UT",
 "statename" : "Uttrakhand",
  "town" : [
  {
  "town_name" : "Pithoragarh",
  "town_code" : "554800",
  "lat" : "29.5828604",
- "lon" : "80.2181884"
+ "lon" : "80.2181884",
+ "is_metro" :"N"
  },{
  "town_name" : "Almora",
  "town_code" : "015300",
  "lat" : "29.601785",
- "lon" : "79.654443"
+ "lon" : "79.654443",
+ "is_metro" :"N"
  },{
  "town_name" : "Dehradun",
  "town_code" : "193300",
  "lat" : "30.321434",
- "lon" : "78.031928"
+ "lon" : "78.031928",
+ "is_metro" :"N"
  },{
  "town_name" : "Rudrapur",
  "town_code" : "621200",
  "lat" : "28.987721",
- "lon" : "79.400399"
+ "lon" : "79.400399",
+ "is_metro" :"N"
  },{
  "town_name" : "New Tehri",
  "town_code" : "668700",
  "lat" : "30.377318",
- "lon" : "78.432572"
+ "lon" : "78.432572",
+ "is_metro" :"N"
  },{
  "town_name" : "Nainital",
  "town_code" : "512300",
  "lat" : "29.392971",
- "lon" : "79.454051"
+ "lon" : "79.454051",
+ "is_metro" :"N"
  },{
  "town_name" : "Haridwar",
  "town_code" : "276400",
  "lat" : "29.9456906",
- "lon" : "78.1642478"
- }
- ]
- }
+ "lon" : "78.1642478",
+ "is_metro" :"N"
+ }]
+},
+ {
+ "state_code" : "WB",
+"statename" : "West Bengal",
+ "town" : [
+ {
+ "town_name" : "Midnapore",
+ "town_code" : "674600",
+ "lat" : "22.42087",
+ "lon" : "87.326088",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Bankura",
+ "town_code" : "062500",
+ "lat" : "23.234699",
+ "lon" : "87.072456",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Alipore",
+ "town_code" : "394300",
+ "lat" : "22.531",
+ "lon" : "88.332",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Raiganj",
+ "town_code" : "811300",
+ "lat" : "25.62",
+ "lon" : "88.12",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Kolkata",
+ "town_code" : "200100",
+ "lat" : "22.572646",
+ "lon" : "88.363895",
+ "is_metro" :"Y"
+ },{
+ "town_name" : "Tamluk",
+ "town_code" : "959000",
+ "lat" : "22.29092",
+ "lon" : "87.924149",
+ "is_metro" :"N"
+ },{
+ "town_name" : "English Bazar (Malda)",
+ "town_code" : "644300",
+ "lat" : "25.000401",
+ "lon" : "88.141029",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Baharampur",
+ "town_code" : "113700",
+ "lat" : "24.167555",
+ "lon" : "88.270819",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Cooch Behar",
+ "town_code" : "248100",
+ "lat" : "26.32419",
+ "lon" : "89.45103",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Barasat",
+ "town_code" : "078400",
+ "lat" : "22.715931",
+ "lon" : "88.482536",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Purulia",
+ "town_code" : "806000",
+ "lat" : "23.3333333",
+ "lon" : "86.3666667",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Bardhaman",
+ "town_code" : "192100",
+ "lat" : "23.5039855",
+ "lon" : "87.4207518",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Suri",
+ "town_code" : "952500",
+ "lat" : "23.9010201",
+ "lon" : "87.535976",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Howrah",
+ "town_code" : "219500",
+ "lat" : "22.5957689",
+ "lon" : "88.2636394",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Krishnanagar",
+ "town_code" : "331600",
+ "lat" : "23.4",
+ "lon" : "88.5",
+ "is_metro" :"N"
+ },{
+ "town_name" : "Hoogly",
+ "town_code" : "867600",
+ "lat" : "22.9035984",
+ "lon" : "88.3773462",
+ "is_metro" :"N"
+ } ] }
  ]

@@ -1,7 +1,7 @@
 [
  {
  "state_code" : "AP1",
-"statename" : "Andhra Pradesh",
+"state_name" : "Andhra Pradesh",
  "town" : [
  {
  "town_name" : "Machilipatnam",
@@ -85,7 +85,7 @@
 },
  {
  "state_code" : "AS",
-"statename" : "Assam",
+"state_name" : "Assam",
  "town" : [
  {
  "town_name" : "Nalbari",
@@ -151,7 +151,7 @@
 },
  {
  "state_code" : "BR",
-"statename" : "Bihar",
+"state_name" : "Bihar",
  "town" : [
  {
  "town_name" : "Purnia",
@@ -361,7 +361,7 @@
 },
  {
  "state_code" : "CH",
-"statename" : "Chandigarh",
+"state_name" : "Chandigarh",
  "town" : [
  {
  "town_name" : "Chandigarh",
@@ -373,7 +373,7 @@
 },
  {
  "state_code" : "CT",
-"statename" : "Chhattishgarh",
+"state_name" : "Chhattishgarh",
  "town" : [
  {
  "town_name" : "Raigarh",
@@ -481,7 +481,7 @@
 },
  {
  "state_code" : "DN",
-"statename" : "Dadar and Nagara Haveli",
+"state_name" : "Dadar and Nagara Haveli",
  "town" : [
  {
  "town_name" : "Silvassa",
@@ -493,7 +493,7 @@
 },
  {
  "state_code" : "DD",
-"statename" : "Daman and Diu",
+"state_name" : "Daman and Diu",
  "town" : [
  {
  "town_name" : "Daman",
@@ -505,7 +505,7 @@
 },
  {
  "state_code" : "GA",
-"statename" : "Goa",
+"state_name" : "Goa",
  "town" : [
  {
  "town_name" : "Panaji",
@@ -523,7 +523,7 @@
 },
  {
  "state_code" : "GJ",
-"statename" : "Gujarat",
+"state_name" : "Gujarat",
  "town" : [
  {
  "town_name" : "Kheda",
@@ -661,7 +661,7 @@
 },
  {
  "state_code" : "HR",
-"statename" : "Haryana",
+"state_name" : "Haryana",
  "town" : [
  {
  "town_name" : "Panchkula",
@@ -787,7 +787,7 @@
 },
  {
  "state_code" : "HP",
-"statename" : "Himachal Pradesh",
+"state_name" : "Himachal Pradesh",
  "town" : [
  {
  "town_name" : "Chamba",
@@ -847,7 +847,7 @@
 },
  {
  "state_code" : "JK",
-"statename" : "Jammu and Kashmir",
+"state_name" : "Jammu and Kashmir",
  "town" : [
  {
  "town_name" : "Shopian",
@@ -943,7 +943,7 @@
 },
  {
  "state_code" : "JH",
-"statename" : "Jharkhand",
+"state_name" : "Jharkhand",
  "town" : [
  {
  "town_name" : "Daltonganj",
@@ -1063,7 +1063,7 @@
 },
  {
  "state_code" : "KA",
-"statename" : "Karnataka",
+"state_name" : "Karnataka",
  "town" : [
  {
  "town_name" : "Dharwad",
@@ -1237,7 +1237,7 @@
 },
  {
  "state_code" : "KL",
-"statename" : "Kerala",
+"state_name" : "Kerala",
  "town" : [
  {
  "town_name" : "Thiruvananthapuram",
@@ -1327,7 +1327,7 @@
 },
  {
  "state_code" : "MP",
-"statename" : "Madhya Pradesh",
+"state_name" : "Madhya Pradesh",
  "town" : [
  {
  "town_name" : "Narsinghpur",
@@ -1633,7 +1633,7 @@
 },
  {
  "state_code" : "MH",
-"statename" : "Maharashtra",
+"state_name" : "Maharashtra",
  "town" : [
  {
  "town_name" : "Nandurbar",
@@ -1831,7 +1831,7 @@
 },
  {
  "state_code" : "MN",
-"statename" : "Manipur",
+"state_name" : "Manipur",
  "town" : [
  {
  "town_name" : "Imphal",
@@ -1843,7 +1843,7 @@
 },
  {
  "state_code" : "ML",
-"statename" : "Meghalaya",
+"state_name" : "Meghalaya",
  "town" : [
  {
  "town_name" : "Nongstoin",
@@ -1873,7 +1873,7 @@
 },
  {
  "state_code" : "MZ",
-"statename" : "Mizoram",
+"state_name" : "Mizoram",
  "town" : [
  {
  "town_name" : "Aizawl",
@@ -1885,7 +1885,7 @@
 },
  {
  "state_code" : "NL",
-"statename" : "Nagaland",
+"state_name" : "Nagaland",
  "town" : [
  {
  "town_name" : "Kohima",
@@ -1903,7 +1903,7 @@
 },
  {
  "state_code" : "DL",
-"statename" : "New Delhi",
+"state_name" : "New Delhi",
  "town" : [
  {
  "town_name" : "Shahdara",
@@ -1963,7 +1963,7 @@
 },
  {
  "state_code" : "OR",
-"statename" : "Orrisa",
+"state_name" : "Orrisa",
  "town" : [
  {
  "town_name" : "Cuttack",
@@ -2095,7 +2095,7 @@
 },
  {
  "state_code" : "PY",
-"statename" : "Pondicherry",
+"state_name" : "Pondicherry",
  "town" : [
  {
  "town_name" : "Pandakkal",
@@ -2125,7 +2125,7 @@
 },
  {
  "state_code" : "PB",
-"statename" : "Punjab",
+"state_name" : "Punjab",
  "town" : [
  {
  "town_name" : "Mansa",
@@ -2251,7 +2251,7 @@
 },
  {
  "state_code" : "RJ",
-"statename" : "Rajasthan",
+"state_name" : "Rajasthan",
  "town" : [
  {
  "town_name" : "Nagaur",
@@ -2437,7 +2437,7 @@
 },
  {
  "state_code" : "SK",
-"statename" : "Sikkim",
+"state_name" : "Sikkim",
  "town" : [
  {
  "town_name" : "Namchi",
@@ -2461,7 +2461,7 @@
 },
  {
  "state_code" : "TN",
-"statename" : "Tamilnadu",
+"state_name" : "Tamilnadu",
  "town" : [
  {
  "town_name" : "Erode",
@@ -2653,7 +2653,7 @@
 },
  {
  "state_code" : "TG",
-"statename" : "Telangana",
+"state_name" : "Telangana",
  "town" : [
  {
  "town_name" : "Hyderabad",
@@ -2713,7 +2713,7 @@
 },
  {
  "state_code" : "TR",
-"statename" : "Tripura",
+"state_name" : "Tripura",
  "town" : [
  {
  "town_name" : "Agartala",
@@ -2725,7 +2725,7 @@
 },
  {
  "state_code" : "UP",
-"statename" : "Uttar Pradesh",
+"state_name" : "Uttar Pradesh",
  "town" : [
  {
  "town_name" : "Noida",
@@ -3115,7 +3115,7 @@
 },
  {
  "state_code" : "UT",
-"statename" : "Uttrakhand",
+"state_name" : "Uttrakhand",
  "town" : [
  {
  "town_name" : "Pithoragarh",
@@ -3163,7 +3163,7 @@
 },
  {
  "state_code" : "WB",
-"statename" : "West Bengal",
+"state_name" : "West Bengal",
  "town" : [
  {
  "town_name" : "Midnapore",

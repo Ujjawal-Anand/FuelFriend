@@ -275,7 +275,7 @@ public class SearchViewFragment extends BaseSearchFragment {
     }
 
     private void setupResultsList() {
-        mSearchResultsAdapter = new TownSearchListAdapter();
+        mSearchResultsAdapter = new TownSearchListAdapter(getContext());
         mSearchResultsList.setAdapter(mSearchResultsAdapter);
         mSearchResultsList.setLayoutManager(new LinearLayoutManager(getContext()));
     }

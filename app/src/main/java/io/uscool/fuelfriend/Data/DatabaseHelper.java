@@ -3,6 +3,7 @@ package io.uscool.fuelfriend.Data;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.Resources;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -15,9 +16,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.model.JsonAttributes;
+import io.uscool.fuelfriend.model.State;
 
 /**
  * Created by ujjawal on 4/7/17.
@@ -31,6 +35,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static DatabaseHelper mInstance;
     private final Resources mResources;
+
+    private static List<State> mStateList;
 
     private DatabaseHelper(Context context) {
         super(context, DB_NAME+DB_SUFFIX, null, DB_VERSION);
@@ -50,14 +56,54 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return mInstance;
     }
 
+
+
+    public static List<State> getStates(Context context, boolean fromDatabase) {
+        if(mStateList != null || fromDatabase) {
+            mStateList = loadStates(context);
+        }
+        return mStateList;
+    }
+
+    private static List<State> loadStates(Context context) {
+        Cursor data = getStateCursor(context);
+        List<State> tmpStateList = new ArrayList<>(data.getCount());
+        do {
+            final State state = getState(data);
+            tmpStateList.add(state);
+        } while (data.moveToNext());
+        return tmpStateList;
+    }
+
+    private static State getState(Cursor data) {
+        // magic number based on StateTable projection
+        final String name = data.getString(1);
+        final String code = data.getString(2);
+
+        return new State(name, code);
+    }
+
+    private static Cursor getStateCursor(Context context) {
+        SQLiteDatabase database = getReadableDatabase(context);
+        Cursor data = database.query(StateTable.NAME, StateTable.PROJECTION, null, null, null, null, null);
+        data.moveToFirst();
+        return data;
+    }
+
+    private static SQLiteDatabase getReadableDatabase(Context context) {
+        return getInstance(context).getReadableDatabase();
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         // create the state table first followed by TownTable and others
         // because of the Foreign key dependency
         db.execSQL(StateTable.CREATE);
         db.execSQL(TownTable.CREATE);
-        db.execSQL(HpclDieselPriceTable.CREATE);
-        db.execSQL(HpclPetrolPriceTable.CREATE);
+        preFillDatabase(db);
+//        db.execSQL(HpclDieselPriceTable.CREATE);
+//        db.execSQL(HpclPetrolPriceTable.CREATE);
+
     }
 
     @Override

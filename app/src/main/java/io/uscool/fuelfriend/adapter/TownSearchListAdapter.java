@@ -1,6 +1,7 @@
 package io.uscool.fuelfriend.adapter;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
@@ -20,7 +21,7 @@ import org.json.XML;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.uscool.fuelfriend.MainActivity;
+import io.uscool.fuelfriend.Data.DatabaseHelper;
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.model.TownWrapper;
 import okhttp3.OkHttpClient;
@@ -38,9 +39,14 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
     private static TextView mDieselPrice;
     private static TextView mPetrolPrice;
     private TownWrapper mTownSuggestion;
+    private Context mContext;
 
     public interface OnItemClickListener{
         void onClick(TownWrapper colorWrapper);
+    }
+
+    public TownSearchListAdapter(Context context) {
+        this.mContext = context;
     }
 
     private OnItemClickListener mItemsOnClickListener;
@@ -82,7 +88,10 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
         mTownSuggestion = mDataSet.get(position);
+//        String statecode = DatabaseHelper.getStates(mContext, true).get(0).getCode();
+//           had created just to check newly created StateTable is working or not, it's working, Yay :D
         updatePrice(mTownSuggestion.getStateCode(), mTownSuggestion.getTownName());
+//        updatePrice(statecode, mTownSuggestion.getTownName());
         holder.mTownName.setText(mTownSuggestion.getTownName());
 //        mDieselPrice.setText(townSuggestion.getStateName());
 //        mPetrolPrice.setText(townSuggestion.getStateCode());

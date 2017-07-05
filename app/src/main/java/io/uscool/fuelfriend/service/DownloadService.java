@@ -8,6 +8,13 @@ import android.support.annotation.Nullable;
 import android.os.ResultReceiver;
 import android.util.Log;
 
+import com.google.gson.JsonObject;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.XML;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -52,9 +59,10 @@ public class DownloadService extends IntentService {
          long time = System.currentTimeMillis();
          List<State> stateList = DatabaseHelper.getStates(getApplicationContext(), true);
          for(State state : stateList) {
+             String result = "State : " + state.getName();
              fullUrl = urlPart + state.getCode() + "?" + time;
              try {
-                 String result = downloadData(fullUrl);
+                 result += downloadData(fullUrl);
                  bundle.putString("result", result);
                  receiver.send(STATUS_FINISHED, bundle);
 
@@ -68,7 +76,7 @@ public class DownloadService extends IntentService {
 
     }
 
-    private String downloadData(String requestUrl) throws IOException, DownloadException {
+    private String downloadData(String requestUrl) throws IOException, DownloadException, JSONException {
         InputStream inputStream = null;
         HttpURLConnection urlConnection = null;
 
@@ -89,7 +97,7 @@ public class DownloadService extends IntentService {
         }
     }
 
-    private String getString(InputStream inputStream) throws IOException {
+    private String getString(InputStream inputStream) throws IOException, JSONException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         String response = "";
         String line = "";
@@ -100,7 +108,54 @@ public class DownloadService extends IntentService {
         if(null != inputStream) {
             inputStream.close();
         }
-        return response;
+        return getDataFromXMLString(response);
+    }
+
+    private JSONArray parseXmlToJson(String xmlString) throws JSONException {
+        JSONObject mainObject = XML.toJSONObject(xmlString);
+        JSONObject dataObject = mainObject.getJSONObject("markers");
+        return dataObject.getJSONArray("marker");
+    }
+
+    private String getDataFromXMLString(String xmlString) throws JSONException {
+        JSONObject mainObject = XML.toJSONObject(xmlString);
+        JSONObject dataObject = mainObject.getJSONObject("markers");
+        JSONArray jsonArray = null;
+        try {
+            jsonArray = dataObject.getJSONArray("marker");
+        } catch (JSONException e) {
+            JSONObject dataString = dataObject.getJSONObject("marker");
+            return getDataFromJsonObject(dataString);
+        }
+
+//        JSONArray jsonArray = parseXmlToJson(xmlString);
+        int count = 0;
+        String result = "";
+        for(int i = 0; i<jsonArray.length(); i++) {
+            count++;
+            JSONObject jsonObject = jsonArray.getJSONObject(i);
+            String town = jsonObject.getString("townname");
+            result += count + " " + getDataFromJsonObject(jsonObject);
+//            if(town.equals(townName)) {
+//                mTownSuggestion.setDieselPrice(jsonObject.getString("hsd"));
+//                mTownSuggestion.setPetrolPrice(jsonObject.getString("ms"));
+//                return "Diesel Price = " + mTownSuggestion.getDieselPrice() +
+//                        "\nPetrol Price = " + mTownSuggestion.getPetrolPrice();
+//            }
+
+        }
+        return result;
+//        return jsonArray.toString();
+    }
+
+    private String getDataFromJsonObject(JSONObject dataObject) throws JSONException {
+        String townName = dataObject.getString("townname");
+        String petrolPrice = dataObject.getString("ms");
+        String dieselPrice = dataObject.getString("hsd");
+        String result = "Town : " + townName + "\n"
+                + "Diesel Price : " + dieselPrice + "\n"
+                + "Petrol Price : " + petrolPrice + "\n\n";
+        return result;
     }
 
     @Override

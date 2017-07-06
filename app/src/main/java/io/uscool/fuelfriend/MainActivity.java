@@ -1,5 +1,6 @@
 package io.uscool.fuelfriend;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.design.widget.NavigationView;
@@ -8,7 +9,13 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
 import com.arlib.floatingsearchview.FloatingSearchView;
+
+import io.uscool.fuelfriend.activity.AndroidDatabaseManager;
 import io.uscool.fuelfriend.fragment.BaseSearchFragment;
 import io.uscool.fuelfriend.fragment.SearchViewFragment;
 
@@ -31,6 +38,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         showFragment(new SearchViewFragment());
+
     }
 
     @Override
@@ -58,7 +66,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            Intent dbmanager = new Intent(getApplicationContext(),AndroidDatabaseManager.class);
+            startActivity(dbmanager);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

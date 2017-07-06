@@ -4,6 +4,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.Resources;
 import android.database.Cursor;
+import android.database.MatrixCursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -22,6 +24,7 @@ import java.util.List;
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.model.JsonAttributes;
 import io.uscool.fuelfriend.model.State;
+import io.uscool.fuelfriend.model.Town;
 
 /**
  * Created by ujjawal on 4/7/17.
@@ -37,6 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private final Resources mResources;
 
     private static List<State> mStateList;
+    private static List<Town> mTownList;
 
     private DatabaseHelper(Context context) {
         super(context, DB_NAME+DB_SUFFIX, null, DB_VERSION);
@@ -49,11 +53,60 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @param context
      * @return database instance
      */
-    private static DatabaseHelper getInstance(Context context) {
+    public static DatabaseHelper getInstance(Context context) {
         if(mInstance == null) {
             mInstance = new DatabaseHelper(context.getApplicationContext());
         }
         return mInstance;
+    }
+
+    /*
+    * Helper function for DatabaseManager
+    * Remember to remove it in before going into production
+    * */
+
+    public ArrayList<Cursor> getData(String Query){
+        //get writable database
+        SQLiteDatabase sqlDB = this.getWritableDatabase();
+        String[] columns = new String[] { "message" };
+        //an array list of cursor to save two cursors one has results from the query
+        //other cursor stores error message if any errors are triggered
+        ArrayList<Cursor> alc = new ArrayList<Cursor>(2);
+        MatrixCursor Cursor2= new MatrixCursor(columns);
+        alc.add(null);
+        alc.add(null);
+
+        try{
+            String maxQuery = Query ;
+            //execute the query results will be save in Cursor c
+            Cursor c = sqlDB.rawQuery(maxQuery, null);
+
+            //add value to cursor2
+            Cursor2.addRow(new Object[] { "Success" });
+
+            alc.set(1,Cursor2);
+            if (null != c && c.getCount() > 0) {
+
+                alc.set(0,c);
+                c.moveToFirst();
+
+                return alc ;
+            }
+            return alc;
+        } catch(SQLException sqlEx){
+            Log.d("printing exception", sqlEx.getMessage());
+            //if any exceptions are triggered save the error message to cursor an return the arraylist
+            Cursor2.addRow(new Object[] { ""+sqlEx.getMessage() });
+            alc.set(1,Cursor2);
+            return alc;
+        } catch(Exception ex){
+            Log.d("printing exception", ex.getMessage());
+
+            //if any exceptions are triggered save the error message to cursor an return the arraylist
+            Cursor2.addRow(new Object[] { ""+ex.getMessage() });
+            alc.set(1,Cursor2);
+            return alc;
+        }
     }
 
 
@@ -63,6 +116,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             mStateList = loadStates(context);
         }
         return mStateList;
+    }
+
+    public static List<Town> getTowns(Context context, boolean fromDatabase) {
+        if(mTownList != null || fromDatabase) {
+            mTownList = loadTowns(context);
+        }
+        return mTownList;
     }
 
     private static List<State> loadStates(Context context) {
@@ -75,6 +135,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return tmpStateList;
     }
 
+    private static List<Town> loadTowns(Context context) {
+        Cursor data = getTownCursor(context);
+        List<Town> tmpTownList = new ArrayList<>(data.getCount());
+        do {
+            final Town town = getTown(data);
+            tmpTownList.add(town);
+        } while (data.moveToNext());
+        return  tmpTownList;
+    }
+
+    private static Cursor getStateCursor(Context context) {
+        SQLiteDatabase database = getReadableDatabase(context);
+        Cursor data = database.query(StateTable.NAME,
+                StateTable.PROJECTION, null, null,
+                null, null, null);
+        data.moveToFirst();
+        return data;
+    }
+
+    private static Cursor getTownCursor(Context context) {
+        SQLiteDatabase database = getReadableDatabase(context);
+        Cursor data = database.query(TownTable.NAME, TownTable.PROJECTION, null,
+                null, null, null, null);
+        data.moveToFirst();
+        return data;
+    }
+
     private static State getState(Cursor data) {
         // magic number based on StateTable projection
         final String name = data.getString(1);
@@ -83,12 +170,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return new State(name, code);
     }
 
-    private static Cursor getStateCursor(Context context) {
-        SQLiteDatabase database = getReadableDatabase(context);
-        Cursor data = database.query(StateTable.NAME, StateTable.PROJECTION, null, null, null, null, null);
-        data.moveToFirst();
-        return data;
+    private static Town getTown(Cursor data) {
+        // magic number based on TownTable projection
+        final String name = data.getString(1);
+        final String code = data.getString(2);
+        final String stateCode = data.getString(3);
+        final String latitude = data.getString(4);
+        final String longitude = data.getString(5);
+        final boolean is_metro = (data.getString(6).equals("Y"));
+        return new Town(name, code, stateCode, latitude, longitude, is_metro);
     }
+
+
 
     private static SQLiteDatabase getReadableDatabase(Context context) {
         return getInstance(context).getReadableDatabase();

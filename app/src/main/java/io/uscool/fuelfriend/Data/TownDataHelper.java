@@ -15,6 +15,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import io.uscool.fuelfriend.model.Town;
 import io.uscool.fuelfriend.model.TownSuggestion;
 import io.uscool.fuelfriend.model.TownWrapper;
 
@@ -26,6 +27,8 @@ public class TownDataHelper {
     private static final String TOWN_FILE_NAME = "town.json";
 
     private static List<TownWrapper> mTownWrappers = new ArrayList<>();
+
+
 
     private static List<TownSuggestion> mTownSuggestions =
             new ArrayList<>(Arrays.asList(
@@ -43,8 +46,9 @@ public class TownDataHelper {
 
         List<TownSuggestion> suggestionList = new ArrayList<>();
         TownSuggestion townSuggestion;
-        for (int i = 0; i < mTownSuggestions.size(); i++) {
-            townSuggestion = mTownSuggestions.get(i);
+        List<Town> townList = DatabaseHelper.getTowns(context, false);
+        for (int i = 0; i < townList.size(); i++) {
+            townSuggestion = new TownSuggestion(townList.get(i).getName());
             townSuggestion.setIsHistory(true);
             suggestionList.add(townSuggestion);
             if (suggestionList.size() == count) {

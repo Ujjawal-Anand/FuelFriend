@@ -10,15 +10,17 @@ import android.os.Parcelable;
 public class Town implements Parcelable {
     private String mName; //name of the town
     private String mCode;  // town code
-    private String mLatitude;   // latitude of te town
+    private String mStateCode; // town's state code
+    private String mLatitude;   // latitude of the town
     private String mLongitude;   // longitude of the town
     private boolean mIsMetro;  // is metro ?
 
     public Town() {}
 
-    public Town(String name, String code, String latitude, String longitude, boolean isMetro) {
+    public Town(String name, String code, String stateCode, String latitude, String longitude, boolean isMetro) {
         this.mName = name;
         this.mCode = code;
+        this.mStateCode = stateCode;
         this.mLatitude = latitude;
         this.mLongitude = longitude;
     }
@@ -29,6 +31,10 @@ public class Town implements Parcelable {
 
     public String getCode() {
         return mCode;
+    }
+
+    public String getStateCode() {
+        return mStateCode;
     }
 
     public String getLatitude() {

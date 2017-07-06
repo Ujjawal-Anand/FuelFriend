@@ -24,11 +24,12 @@ import com.arlib.floatingsearchview.util.Util;
 import java.util.List;
 
 
-import io.uscool.fuelfriend.Data.TownDataHelper;
+import io.uscool.fuelfriend.Data.TownSearchHelper;
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.adapter.TownSearchListAdapter;
+import io.uscool.fuelfriend.model.Town;
 import io.uscool.fuelfriend.model.TownSuggestion;
-import io.uscool.fuelfriend.model.TownWrapper;
+
 
 import static android.content.ContentValues.TAG;
 
@@ -86,8 +87,8 @@ public class SearchViewFragment extends BaseSearchFragment {
 
                     //simulates a query call to a data source
                     //with a new query.
-                    TownDataHelper.findSuggestions(getActivity(), newQuery, 5,
-                            FIND_SUGGESTION_SIMULATION_DELAY, new TownDataHelper.OnFindSuggestionsListener() {
+                    TownSearchHelper.findSuggestions(getContext(), newQuery, 5,
+                            FIND_SUGGESTION_SIMULATION_DELAY, new TownSearchHelper.OnFindSuggestionsListener() {
 
                                 @Override
                                 public void onResults(List<TownSuggestion> results) {
@@ -112,11 +113,11 @@ public class SearchViewFragment extends BaseSearchFragment {
             public void onSuggestionClicked(final SearchSuggestion searchSuggestion) {
 
                 TownSuggestion townSuggestion = (TownSuggestion) searchSuggestion;
-                TownDataHelper.findTown(getActivity(), townSuggestion.getBody(),
-                        new TownDataHelper.OnFindColorsListener() {
+                TownSearchHelper.findTown(getActivity(), townSuggestion.getBody(),
+                        new TownSearchHelper.OnFindColorsListener() {
 
                             @Override
-                            public void onResults(List<TownWrapper> results) {
+                            public void onResults(List<Town> results) {
                                 mSearchResultsAdapter.swapData(results);
                             }
 
@@ -134,11 +135,11 @@ public class SearchViewFragment extends BaseSearchFragment {
             public void onSearchAction(String query) {
                 mLastQuery = query;
 
-                TownDataHelper.findTown(getActivity(), query,
-                        new TownDataHelper.OnFindColorsListener() {
+                TownSearchHelper.findTown(getActivity(), query,
+                        new TownSearchHelper.OnFindColorsListener() {
 
                             @Override
-                            public void onResults(List<TownWrapper> results) {
+                            public void onResults(List<Town> results) {
                                 mSearchResultsAdapter.swapData(results);
                             }
 
@@ -152,7 +153,7 @@ public class SearchViewFragment extends BaseSearchFragment {
             public void onFocus() {
 
                 //show suggestions when search bar gains focus (typically history suggestions)
-                mSearchView.swapSuggestions(TownDataHelper.getHistory(getActivity(), 3));
+                mSearchView.swapSuggestions(TownSearchHelper.getHistory(getContext(), 4));
 
                 Log.d(TAG, "onFocus()");
             }

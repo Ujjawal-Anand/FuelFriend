@@ -23,7 +23,7 @@ import java.util.List;
 
 import io.uscool.fuelfriend.Data.DatabaseHelper;
 import io.uscool.fuelfriend.R;
-import io.uscool.fuelfriend.model.TownWrapper;
+import io.uscool.fuelfriend.model.Town;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -33,16 +33,16 @@ import okhttp3.Response;
  */
 
 public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAdapter.ViewHolder>{
-    private List<TownWrapper> mDataSet = new ArrayList<>();
+    private List<Town> mDataSet = new ArrayList<>();
 
     private int mLastAnimatedItemPosition = -1;
     private static TextView mDieselPrice;
     private static TextView mPetrolPrice;
-    private TownWrapper mTownSuggestion;
+    private Town mTownSuggestion;
     private Context mContext;
 
     public interface OnItemClickListener{
-        void onClick(TownWrapper colorWrapper);
+        void onClick(Town colorWrapper);
     }
 
     public TownSearchListAdapter(Context context) {
@@ -68,7 +68,7 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
         }
     }
 
-    public void swapData(List<TownWrapper> mNewDataSet) {
+    public void swapData(List<Town> mNewDataSet) {
         mDataSet = mNewDataSet;
         notifyDataSetChanged();
     }
@@ -90,9 +90,9 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
         mTownSuggestion = mDataSet.get(position);
 //        String statecode = DatabaseHelper.getStates(mContext, true).get(0).getCode();
 //           had created just to check newly created StateTable is working or not, it's working, Yay :D
-        updatePrice(mTownSuggestion.getStateCode(), mTownSuggestion.getTownName());
+        updatePrice(mTownSuggestion.getStateCode(), mTownSuggestion.getName());
 //        updatePrice(statecode, mTownSuggestion.getTownName());
-        holder.mTownName.setText(mTownSuggestion.getTownName());
+        holder.mTownName.setText(mTownSuggestion.getName());
 //        mDieselPrice.setText(townSuggestion.getStateName());
 //        mPetrolPrice.setText(townSuggestion.getStateCode());
 
@@ -162,20 +162,20 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
 
         }
 
-        private String getDataFromXMLString(String xmlString, String townName) throws JSONException {
+      /*  private String getDataFromXMLString(String xmlString, String townName) throws JSONException {
             JSONArray jsonArray = parseXmlToJson(xmlString);
             for(int i = 0; i<jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 String town = jsonObject.getString("townname");
                 if(town.equals(townName)) {
-                    mTownSuggestion.setDieselPrice(jsonObject.getString("hsd"));
+                    mTownSuggestion.setDi(jsonObject.getString("hsd"));
                     mTownSuggestion.setPetrolPrice(jsonObject.getString("ms"));
                     return "Diesel Price = " + mTownSuggestion.getDieselPrice() +
                             "\nPetrol Price = " + mTownSuggestion.getPetrolPrice();
                 }
             }
             return null;
-        }
+        }*/
 
 
         @Override

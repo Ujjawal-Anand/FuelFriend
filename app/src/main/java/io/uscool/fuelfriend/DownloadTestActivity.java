@@ -57,6 +57,10 @@ public class DownloadTestActivity extends AppCompatActivity implements DownloadR
                 setProgressBarIndeterminateVisibility(false);
                 String resultSr = resultData.getString("result");
                 mResults.add(resultSr);
+                String dataString = resultData.getString("data");
+                if(dataString  != null) {
+                    mResults.add(dataString);
+                }
 
                 /* Update ListView with result */
                 arrayAdapter = new ArrayAdapter(DownloadTestActivity.this, android.R.layout.simple_list_item_2, android.R.id.text1, mResults);

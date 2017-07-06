@@ -8,8 +8,6 @@ import android.support.annotation.Nullable;
 import android.os.ResultReceiver;
 import android.util.Log;
 
-import com.google.gson.JsonObject;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,11 +34,19 @@ public class DownloadService extends IntentService {
     public static final int STATUS_FINISHED = 1;
     public static final int STATUS_ERROR = 2;
     public static String fullUrl = "";
+    
+    private static double lowestDiesel = 100;
+    private static String lowestDieselTown = "";
+    private static double lowestPetrol = 100;
+    private static String lowestPetrolTown = "";
+    private static double highestDiesel = 40;
+    private static String highestDiesleTown = "";
+    private static double highestPetrol = 40;
+    private static String highestPetrolTown = "";
+
 
     public static final String TAG = "DownloadService";
 
-
-    private Context mContext;
     public DownloadService() {
         super(DownloadService.class.getName());
     }
@@ -58,7 +64,8 @@ public class DownloadService extends IntentService {
          String urlPart = "http://hproroute.hpcl.co.in/StateDistrictMap_4/fetchmshsdprice.jsp?param=T&statecode=";
          long time = System.currentTimeMillis();
          List<State> stateList = DatabaseHelper.getStates(getApplicationContext(), true);
-         for(State state : stateList) {
+         for(int i = 0; i< stateList.size(); i++) {
+             State state = stateList.get(i);
              String result = "State : " + state.getName();
              fullUrl = urlPart + state.getCode() + "?" + time;
              try {
@@ -72,6 +79,16 @@ public class DownloadService extends IntentService {
              }
 
          }
+         String dataString = "Lowest Diesel Price In India : " + lowestDiesel
+                             + "\nTown Name : " + lowestDieselTown
+                            + "\nLowest Petrol Price In India : " + lowestPetrol
+                            + "\nTown Name : " + lowestPetrolTown
+                            + "\nHighest Diesel Price In India : " + highestDiesel
+                            + "\nTown Name : " + highestDiesleTown
+                            + "\nHighest Petrol Price In India : " + highestPetrol
+                            + "\nTown Name : " + highestPetrolTown;
+         bundle.putString("data", dataString);
+         receiver.send(STATUS_FINISHED, bundle);
          Log.d(TAG, "service stopping");
 
     }
@@ -117,7 +134,8 @@ public class DownloadService extends IntentService {
         return dataObject.getJSONArray("marker");
     }
 
-    private String getDataFromXMLString(String xmlString) throws JSONException {
+    private String getDataFromXMLString(String xmlString) 
+                                               throws JSONException {
         JSONObject mainObject = XML.toJSONObject(xmlString);
         JSONObject dataObject = mainObject.getJSONObject("markers");
         JSONArray jsonArray = null;
@@ -150,12 +168,33 @@ public class DownloadService extends IntentService {
 
     private String getDataFromJsonObject(JSONObject dataObject) throws JSONException {
         String townName = dataObject.getString("townname");
-        String petrolPrice = dataObject.getString("ms");
-        String dieselPrice = dataObject.getString("hsd");
+        double petrolPrice = dataObject.getDouble("ms");
+        double dieselPrice = dataObject.getDouble("hsd");
+
+        analysePrice(petrolPrice,townName,dieselPrice);
         String result = "Town : " + townName + "\n"
                 + "Diesel Price : " + dieselPrice + "\n"
                 + "Petrol Price : " + petrolPrice + "\n\n";
         return result;
+    }
+    
+    private void analysePrice(double petrolPrice, String townName, double dieselPrice) {
+        if(petrolPrice < lowestPetrol) {
+            lowestPetrol = petrolPrice;
+            lowestPetrolTown = townName;
+        }
+        if(dieselPrice < lowestDiesel) {
+            lowestDiesel = dieselPrice;
+            lowestDieselTown = townName;
+        }
+        if(petrolPrice > highestPetrol) {
+            highestPetrol = petrolPrice;
+            highestPetrolTown = townName;
+        }
+        if(dieselPrice > highestDiesel) {
+            highestDiesel = dieselPrice;
+            highestDiesleTown = townName;
+        }
     }
 
     @Override

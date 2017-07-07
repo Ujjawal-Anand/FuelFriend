@@ -1,4 +1,4 @@
-package io.uscool.fuelfriend;
+package io.uscool.fuelfriend.activity;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.service.DownloadResultReceiver;
 import io.uscool.fuelfriend.service.DownloadService;
 

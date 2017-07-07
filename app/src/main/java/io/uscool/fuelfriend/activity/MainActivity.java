@@ -1,4 +1,4 @@
-package io.uscool.fuelfriend;
+package io.uscool.fuelfriend.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.view.MenuItem;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
 
-import io.uscool.fuelfriend.activity.AndroidDatabaseManagerActivity;
+import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.fragment.BaseSearchFragment;
 import io.uscool.fuelfriend.fragment.SearchViewFragment;
 
@@ -67,6 +67,8 @@ public class MainActivity extends AppCompatActivity
             Intent dbmanager = new Intent(getApplicationContext(),AndroidDatabaseManagerActivity.class);
             startActivity(dbmanager);
         } else if (id == R.id.nav_gallery) {
+            Intent serviceActivity = new Intent(getApplicationContext(), DownloadTestActivity.class);
+            startActivity(serviceActivity);
 
         } else if (id == R.id.nav_slideshow) {
 

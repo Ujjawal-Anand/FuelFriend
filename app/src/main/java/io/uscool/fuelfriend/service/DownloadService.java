@@ -23,6 +23,7 @@ import java.net.URL;
 import java.util.List;
 
 import io.uscool.fuelfriend.Data.DatabaseHelper;
+import io.uscool.fuelfriend.model.FuelPrice;
 import io.uscool.fuelfriend.model.State;
 
 /**
@@ -168,11 +169,32 @@ public class DownloadService extends IntentService {
 
     private String getDataFromJsonObject(JSONObject dataObject) throws JSONException {
         String townName = dataObject.getString("townname");
-        double petrolPrice = dataObject.getDouble("ms");
-        double dieselPrice = dataObject.getDouble("hsd");
+        String townCode = dataObject.getString("towncode");
+        if(townCode.length() < 6) {
+            // getString method is omitting leading 0's from certain townCodes
+            // like if towncode is 055344 its reading 55344
+            // this hack adds those missing 0's giving the fact that
+            // length of towncode is always 6
+            String strToAdd = "";
+            for(int i =0 ; i < 6-townCode.length(); i++) {
+                strToAdd += "0";
+            }
+            townCode = strToAdd+townCode;
+        }
+        String petrolPrice = dataObject.getString("ms");
+        String dieselPrice = dataObject.getString("hsd");
+//        double petrolPrice = dataObject.getDouble("ms");
+//        double dieselPrice = dataObject.getDouble("hsd");
+        DatabaseHelper.updateFuelPrice(getApplicationContext(),
+                new FuelPrice(townCode,dieselPrice),
+                true);
+        DatabaseHelper.updateFuelPrice(getApplicationContext(),
+                new FuelPrice(townCode,petrolPrice),
+                false);
 
-        analysePrice(petrolPrice,townName,dieselPrice);
-        String result = "Town : " + townName + "\n"
+        analysePrice(Double.valueOf(petrolPrice),townName,Double.valueOf(dieselPrice));
+        String result = "\nTown : " + townName + "\n"
+                + "Town Code : "  + townCode + "\n"
                 + "Diesel Price : " + dieselPrice + "\n"
                 + "Petrol Price : " + petrolPrice + "\n\n";
         return result;

@@ -13,6 +13,7 @@ public interface HpclPetrolPriceTable extends PriceBaseTable {
     String CREATE = "CREATE TABLE " + NAME + " ("
             + COLUMN_ID + " INTEGER PRIMARY KEY, "
             +  COLUMN_TOWN_CODE + " REFERENCES " + TownTable.NAME + "(" + TownTable.COLUMN_CODE + "), "
+            +  COLUMN_TOWN_NAME + " REFERENCES " + TownTable.NAME + "(" + TownTable.COLUMN_NAME + "), "
             + COLUMN_PRICE_MON + " TEXT, "
             + COLUMN_PRICE_TUES + " TEXT, "
             + COLUMN_PRICE_WED + " TEXT, "

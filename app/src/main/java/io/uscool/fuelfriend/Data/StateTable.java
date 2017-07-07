@@ -17,7 +17,7 @@ public interface StateTable {
     String[] PROJECTION = new String[]{COLUMN_ID, COLUMN_NAME, COLUMN_CODE};
 
     String CREATE = "CREATE TABLE " + NAME + " ("
-            + COLUMN_ID + " INTEGER PRIMARY KEY, "
+            + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
             + COLUMN_NAME + " TEXT NOT NULL, "
             + COLUMN_CODE + " TEXT NOT NULL);";
 }

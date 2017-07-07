@@ -3,7 +3,6 @@ package io.uscool.fuelfriend.Data;
 /**
  * Created by ujjawal on 3/7/17.
  *
- * Base table for any price related table
  */
 
 public interface PriceBaseTable {

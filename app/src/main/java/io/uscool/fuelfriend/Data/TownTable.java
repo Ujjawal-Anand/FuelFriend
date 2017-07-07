@@ -23,7 +23,7 @@ public interface TownTable {
                                        COLUMN_LONGITUDE, COLUMN_IS_METRO};
 
     String CREATE = "CREATE TABLE " + NAME + " ("
-            + COLUMN_ID + " INTEGER PRIMARY KEY, "
+            + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
             + COLUMN_NAME + " TEXT NOT NULL, "
             + COLUMN_CODE + " TEXT NOT NULL, "
             +  COLUMN_STATE_ID + " REFERENCES " + StateTable.NAME + "(" + StateTable.COLUMN_CODE + "), "

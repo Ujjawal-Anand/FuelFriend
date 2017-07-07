@@ -1,7 +1,7 @@
 package io.uscool.fuelfriend.adapter;
 
 import android.app.Activity;
-import android.graphics.Color;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,38 +20,43 @@ import org.json.XML;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.uscool.fuelfriend.MainActivity;
 import io.uscool.fuelfriend.R;
-import io.uscool.fuelfriend.model.TownWrapper;
+import io.uscool.fuelfriend.model.Town;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 /**
  * Created by ujjawal on 1/7/17.
+ *
  */
 
 public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAdapter.ViewHolder>{
-    private List<TownWrapper> mDataSet = new ArrayList<>();
+    private List<Town> mDataSet = new ArrayList<>();
 
     private int mLastAnimatedItemPosition = -1;
     private static TextView mDieselPrice;
     private static TextView mPetrolPrice;
-    private TownWrapper mTownSuggestion;
+    private Town mTownSuggestion;
+    private Context mContext;
 
     public interface OnItemClickListener{
-        void onClick(TownWrapper colorWrapper);
+        void onClick(Town colorWrapper);
+    }
+
+    public TownSearchListAdapter(Context context) {
+        this.mContext = context;
     }
 
     private OnItemClickListener mItemsOnClickListener;
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView mTownName;
+    protected static class ViewHolder extends RecyclerView.ViewHolder {
+        private final TextView mTownName;
 //        public final TextView mDieselPrice;
 //        public final TextView mPetrolPrice;
-        public final View mTextContainer;
+        private final View mTextContainer;
 
-        public ViewHolder(View view) {
+        private ViewHolder(View view) {
             super(view);
 
             mTownName = (TextView) view.findViewById(R.id.town_name);
@@ -62,7 +67,7 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
         }
     }
 
-    public void swapData(List<TownWrapper> mNewDataSet) {
+    public void swapData(List<Town> mNewDataSet) {
         mDataSet = mNewDataSet;
         notifyDataSetChanged();
     }
@@ -82,8 +87,11 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
         mTownSuggestion = mDataSet.get(position);
-        updatePrice(mTownSuggestion.getStateCode(), mTownSuggestion.getTownName());
-        holder.mTownName.setText(mTownSuggestion.getTownName());
+//        String statecode = DatabaseHelper.getStates(mContext, true).get(0).getCode();
+//           had created just to check newly created StateTable is working or not, it's working, Yay :D
+        updatePrice(mTownSuggestion.getStateCode(), mTownSuggestion.getName());
+//        updatePrice(statecode, mTownSuggestion.getTownName());
+        holder.mTownName.setText(mTownSuggestion.getName());
 //        mDieselPrice.setText(townSuggestion.getStateName());
 //        mPetrolPrice.setText(townSuggestion.getStateCode());
 
@@ -116,7 +124,7 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
                 .start();
     }
 
-    protected void updatePrice(String stateCode, String townName) {
+    private void updatePrice(String stateCode, String townName) {
         String urlPart = "http://hproroute.hpcl.co.in/StateDistrictMap_4/fetchmshsdprice.jsp?param=T&statecode=";
         urlPart += stateCode;
         long time = System.currentTimeMillis();
@@ -125,7 +133,7 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
         okHttpHandler.execute(fullUrl, townName);
     }
 
-    public class OkHttpHandler extends AsyncTask<String, Void, String> {
+    public static class OkHttpHandler extends AsyncTask<String, Void, String> {
 
         OkHttpClient client = new OkHttpClient();
         private int dieselPrice;
@@ -153,20 +161,20 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
 
         }
 
-        private String getDataFromXMLString(String xmlString, String townName) throws JSONException {
+      /*  private String getDataFromXMLString(String xmlString, String townName) throws JSONException {
             JSONArray jsonArray = parseXmlToJson(xmlString);
             for(int i = 0; i<jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 String town = jsonObject.getString("townname");
                 if(town.equals(townName)) {
-                    mTownSuggestion.setDieselPrice(jsonObject.getString("hsd"));
+                    mTownSuggestion.setDi(jsonObject.getString("hsd"));
                     mTownSuggestion.setPetrolPrice(jsonObject.getString("ms"));
                     return "Diesel Price = " + mTownSuggestion.getDieselPrice() +
                             "\nPetrol Price = " + mTownSuggestion.getPetrolPrice();
                 }
             }
             return null;
-        }
+        }*/
 
 
         @Override

@@ -16,9 +16,15 @@ public class FuelPrice implements Parcelable {
         this.mTownCode = townCode;
         this.mPrice = price;
     }
-    
 
-    
+    public String getPrice() {
+        return mPrice;
+    }
+
+    public String getTownCode() {
+        return mTownCode;
+    }
+
     // parcelling part
 
     public FuelPrice(Parcel in) {

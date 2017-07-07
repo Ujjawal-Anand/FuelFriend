@@ -183,10 +183,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return new Town(name, code, stateCode, latitude, longitude, is_metro);
     }
 
+    public static void updateFuelPrice(Context context, FuelPrice fuelPrice, boolean isDiesel) {
+        SQLiteDatabase writableDatabase = getWritableDatabase(context);
+        ContentValues priceValues = createContentValuesFor(fuelPrice.getPrice());
+        String TABLE_NAME = isDiesel ? HpclDieselPriceTable.NAME : HpclPetrolPriceTable.NAME;
+        writableDatabase.update(TABLE_NAME, priceValues, HpclDieselPriceTable.COLUMN_TOWN_CODE
+                                   + "=?", new String[]{fuelPrice.getTownCode()});
+    }
+
+    private static ContentValues createContentValuesFor(String fuelPrice) {
+        ContentValues values = new ContentValues();
+        values.put(HpclDieselPriceTable.COLUMN_PRICE_MON, fuelPrice);
+        return values;
+    }
+
 
 
     private static SQLiteDatabase getReadableDatabase(Context context) {
         return getInstance(context).getReadableDatabase();
+    }
+
+    private static SQLiteDatabase getWritableDatabase(Context context) {
+        return getInstance(context).getWritableDatabase();
     }
 
     @Override

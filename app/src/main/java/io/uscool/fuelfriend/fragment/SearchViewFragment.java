@@ -35,6 +35,7 @@ import static android.content.ContentValues.TAG;
 
 /**
  * Created by ujjawal on 30/6/17.
+ *
  */
 
 public class SearchViewFragment extends BaseSearchFragment {
@@ -287,10 +288,8 @@ public class SearchViewFragment extends BaseSearchFragment {
         //to close, then we don't want to close the activity. if mSearchView.setSearchFocused(false)
         //returns false, we know that the search was already closed so the call didn't change the focus
         //state and it makes sense to call supper onBackPressed() and close the activity
-        if (!mSearchView.setSearchFocused(false)) {
-            return false;
-        }
-        return true;
+
+        return (!mSearchView.setSearchFocused(false));
     }
 
     private void setupDrawer() {

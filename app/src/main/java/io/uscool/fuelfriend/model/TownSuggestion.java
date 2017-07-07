@@ -5,8 +5,11 @@ import android.os.Parcelable;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 
+
 /**
- * Created by ujjawal on 1/7/17.
+ * Created by ujjawal on 1/7/17
+ * The following class has been used to show user Town suggestion
+ * when they click on search box or type something and a related match is found
  */
 
 public class TownSuggestion implements SearchSuggestion {
@@ -18,7 +21,7 @@ public class TownSuggestion implements SearchSuggestion {
         this.mTownName = suggestion;
     }
 
-    public TownSuggestion(Parcel source) {
+    private TownSuggestion(Parcel source) {
         this.mTownName = source.readString();
         this.mIsHistory = source.readInt() != 0;
     }

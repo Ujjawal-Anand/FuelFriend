@@ -2,6 +2,7 @@ package io.uscool.fuelfriend.model;
 
 /**
  * Created by ujjawal on 4/7/17.
+ *
  */
 
 public interface JsonAttributes {

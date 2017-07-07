@@ -3,19 +3,17 @@ package io.uscool.fuelfriend;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
 
-import io.uscool.fuelfriend.activity.AndroidDatabaseManager;
+import io.uscool.fuelfriend.activity.AndroidDatabaseManagerActivity;
 import io.uscool.fuelfriend.fragment.BaseSearchFragment;
 import io.uscool.fuelfriend.fragment.SearchViewFragment;
 
@@ -24,7 +22,7 @@ public class MainActivity extends AppCompatActivity
         implements BaseSearchFragment.BaseSearchFragmentCallbacks, NavigationView.OnNavigationItemSelectedListener {
 
 
-    private final String TAG = "MainActivity";
+//    private final String TAG = "MainActivity";
 
     private DrawerLayout mDrawerLayout;
 
@@ -61,12 +59,12 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            Intent dbmanager = new Intent(getApplicationContext(),AndroidDatabaseManager.class);
+            Intent dbmanager = new Intent(getApplicationContext(),AndroidDatabaseManagerActivity.class);
             startActivity(dbmanager);
         } else if (id == R.id.nav_gallery) {
 

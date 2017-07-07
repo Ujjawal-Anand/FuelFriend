@@ -7,6 +7,7 @@ import com.arlib.floatingsearchview.FloatingSearchView;
 
 /**
  * Created by ujjawal on 30/6/17.
+ *
  */
 
 public abstract class BaseSearchFragment extends Fragment {

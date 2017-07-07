@@ -15,6 +15,7 @@ import io.uscool.fuelfriend.model.TownSuggestion;
 
 /**
  * Created by ujjawal on 1/7/17.
+ *
  */
 
 public class TownSearchHelper {
@@ -51,7 +52,7 @@ public class TownSearchHelper {
         return suggestionList;
     }
 
-    public static void resetSuggestionsHistory() {
+    private static void resetSuggestionsHistory() {
         for (TownSuggestion townSuggestion : mTownSuggestions) {
             townSuggestion.setIsHistory(false);
         }
@@ -155,11 +156,9 @@ public class TownSearchHelper {
     private static void initTownWrapperList(Context context) {
 
         if (mTownList.isEmpty()) {
-            List<Town> townList = DatabaseHelper.getTowns(context, true);
-            for(Town town: townList) {
-                mTownList.add(town);
-            }
-
+//            To do => do this on new Handler(), as the current way might result in app not
+//            responding error
+            mTownList = DatabaseHelper.getTowns(context, true);
         }
     }
 }

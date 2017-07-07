@@ -2,7 +2,6 @@ package io.uscool.fuelfriend.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -21,7 +20,6 @@ import org.json.XML;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.uscool.fuelfriend.Data.DatabaseHelper;
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.model.Town;
 import okhttp3.OkHttpClient;
@@ -30,6 +28,7 @@ import okhttp3.Response;
 
 /**
  * Created by ujjawal on 1/7/17.
+ *
  */
 
 public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAdapter.ViewHolder>{
@@ -51,13 +50,13 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
 
     private OnItemClickListener mItemsOnClickListener;
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView mTownName;
+    protected static class ViewHolder extends RecyclerView.ViewHolder {
+        private final TextView mTownName;
 //        public final TextView mDieselPrice;
 //        public final TextView mPetrolPrice;
-        public final View mTextContainer;
+        private final View mTextContainer;
 
-        public ViewHolder(View view) {
+        private ViewHolder(View view) {
             super(view);
 
             mTownName = (TextView) view.findViewById(R.id.town_name);
@@ -125,7 +124,7 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
                 .start();
     }
 
-    protected void updatePrice(String stateCode, String townName) {
+    private void updatePrice(String stateCode, String townName) {
         String urlPart = "http://hproroute.hpcl.co.in/StateDistrictMap_4/fetchmshsdprice.jsp?param=T&statecode=";
         urlPart += stateCode;
         long time = System.currentTimeMillis();
@@ -134,7 +133,7 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
         okHttpHandler.execute(fullUrl, townName);
     }
 
-    public class OkHttpHandler extends AsyncTask<String, Void, String> {
+    public static class OkHttpHandler extends AsyncTask<String, Void, String> {
 
         OkHttpClient client = new OkHttpClient();
         private int dieselPrice;

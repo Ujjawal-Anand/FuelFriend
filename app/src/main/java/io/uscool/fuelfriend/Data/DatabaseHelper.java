@@ -28,6 +28,7 @@ import io.uscool.fuelfriend.model.Town;
 
 /**
  * Created by ujjawal on 4/7/17.
+ * Helper class to store and retrieve data from database
  */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
@@ -50,7 +51,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     /**
      * Database access point
      * Singleton instance
-     * @param context
+     * @param context context of the activity
      * @return database instance
      */
     public static DatabaseHelper getInstance(Context context) {
@@ -71,15 +72,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = new String[] { "message" };
         //an array list of cursor to save two cursors one has results from the query
         //other cursor stores error message if any errors are triggered
-        ArrayList<Cursor> alc = new ArrayList<Cursor>(2);
+        ArrayList<Cursor> alc = new ArrayList<>(2);
         MatrixCursor Cursor2= new MatrixCursor(columns);
         alc.add(null);
         alc.add(null);
 
         try{
-            String maxQuery = Query ;
+//            String maxQuery = Query ;
             //execute the query results will be save in Cursor c
-            Cursor c = sqlDB.rawQuery(maxQuery, null);
+            Cursor c = sqlDB.rawQuery(Query, null);
 
             //add value to cursor2
             Cursor2.addRow(new Object[] { "Success" });

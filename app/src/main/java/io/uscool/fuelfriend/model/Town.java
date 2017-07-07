@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 /**
  * Created by ujjawal on 6/7/17.
+ * Town model
  */
 
 public class Town implements Parcelable {

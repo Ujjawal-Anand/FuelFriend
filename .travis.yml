@@ -13,6 +13,10 @@ branches:
   only:
     - master
     - dev
+
+notifications:
+  email: false
+
     
 before_script:
   - echo yes | android update sdk --no-ui --all --filter platform-tools,tools

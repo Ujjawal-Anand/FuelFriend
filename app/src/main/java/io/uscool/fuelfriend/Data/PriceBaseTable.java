@@ -8,19 +8,20 @@ package io.uscool.fuelfriend.Data;
 public interface PriceBaseTable {
     String COLUMN_ID = "_id";
     String COLUMN_TOWN_CODE = "town_code";
-    String COLUMN_PRICE_MON = "price_on_mon";
-    String COLUMN_PRICE_TUES = "price_on_tues";
-    String COLUMN_PRICE_WED = "price_on_wed";
-    String COLUMN_PRICE_THU = "price_on_thu";
-    String COLUMN_PRICE_FRI = "price_on_fri";
-    String COLUMN_PRICE_SAT = "price_on_sat";
-    String COLUMN_PRICE_SUN = "price_on_sun";
+    String COLUMN_TOWN_NAME = "town_name";
+    String COLUMN_PRICE_DAY1 = "day_1";
+    String COLUMN_PRICE_DAY2 = "day_2";
+    String COLUMN_PRICE_DAY3 = "day_3";
+    String COLUMN_PRICE_DAY4 = "day_4";
+    String COLUMN_PRICE_DAY5 = "day_5";
+    String COLUMN_PRICE_DAY6 = "day_6";
+    String COLUMN_PRICE_DAY7 = "day_7";
 
 
 
 
 
-    String[] PROJECTION = new String[]{COLUMN_ID, COLUMN_TOWN_CODE,  COLUMN_PRICE_MON,
-            COLUMN_PRICE_TUES, COLUMN_PRICE_WED, COLUMN_PRICE_THU, COLUMN_PRICE_FRI,
-            COLUMN_PRICE_SAT, COLUMN_PRICE_SUN};
+    String[] PROJECTION = new String[]{COLUMN_ID, COLUMN_TOWN_CODE, COLUMN_TOWN_NAME, COLUMN_PRICE_DAY1,
+            COLUMN_PRICE_DAY2, COLUMN_PRICE_DAY3, COLUMN_PRICE_DAY4, COLUMN_PRICE_DAY5,
+            COLUMN_PRICE_DAY6, COLUMN_PRICE_DAY7};
 }

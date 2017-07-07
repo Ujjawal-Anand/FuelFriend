@@ -188,12 +188,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues priceValues = createContentValuesFor(fuelPrice.getPrice());
         String TABLE_NAME = isDiesel ? HpclDieselPriceTable.NAME : HpclPetrolPriceTable.NAME;
         writableDatabase.update(TABLE_NAME, priceValues, HpclDieselPriceTable.COLUMN_TOWN_CODE
-                                   + "=?", new String[]{fuelPrice.getTownCode()});
+                + "=?", new String[]{fuelPrice.getTownCode()});
     }
 
     private static ContentValues createContentValuesFor(String fuelPrice) {
         ContentValues values = new ContentValues();
-        values.put(HpclDieselPriceTable.COLUMN_PRICE_MON, fuelPrice);
+        values.put(HpclDieselPriceTable.COLUMN_PRICE_DAY1, fuelPrice);
         return values;
     }
 
@@ -234,7 +234,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 db.endTransaction();
             }
         } catch (IOException | JSONException e) {
-         Log.e(TAG, "preFillDatabse", e);
+            Log.e(TAG, "preFillDatabse", e);
         }
     }
 
@@ -277,22 +277,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         for(int i = 0; i < towns.length(); i++) {
             town = towns.getJSONObject(i);
             values.clear();
-            values.put(TownTable.COLUMN_CODE, town.getString(JsonAttributes.TOWN_CODE));
-            values.put(TownTable.COLUMN_NAME, town.getString(JsonAttributes.TOWN_NAME));
+            String townCode =  town.getString(JsonAttributes.TOWN_CODE);
+            String townName = town.getString(JsonAttributes.TOWN_NAME);
+            values.put(TownTable.COLUMN_CODE,townName);
+            values.put(TownTable.COLUMN_NAME, townCode);
             values.put(TownTable.COLUMN_STATE_ID, stateCode);
             values.put(TownTable.COLUMN_LATITUDE, town.getString(JsonAttributes.TOWN_LATITUDE));
             values.put(TownTable.COLUMN_LONGITUDE, town.getString(JsonAttributes.TOWN_LONGITUDE));
             values.put(TownTable.COLUMN_IS_METRO, town.getString(JsonAttributes.TOWN_IS_METRO));
             db.insert(TownTable.NAME, null, values);
-            fillHpclDieselAndPetrolForTown(db, values, town.getString(JsonAttributes.TOWN_CODE));
+            fillHpclDieselAndPetrolForTown(db, values, townCode, townName);
         }
     }
 
-  private void fillHpclDieselAndPetrolForTown(SQLiteDatabase db, ContentValues values,
-                                              String townCode) {
+    private void fillHpclDieselAndPetrolForTown(SQLiteDatabase db, ContentValues values,
+                                                String townCode, String townName) {
         values.clear();
         values.put(HpclDieselPriceTable.COLUMN_TOWN_CODE, townCode);
+        values.put(HpclDieselPriceTable.COLUMN_TOWN_NAME, townName);
         db.insert(HpclDieselPriceTable.NAME, null, values);
         db.insert(HpclPetrolPriceTable.NAME, null, values);
-  }
+    }
 }

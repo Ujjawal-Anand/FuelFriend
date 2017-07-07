@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.uscool.fuelfriend.R;
+import io.uscool.fuelfriend.model.FuelPrice;
 import io.uscool.fuelfriend.model.JsonAttributes;
 import io.uscool.fuelfriend.model.State;
 import io.uscool.fuelfriend.model.Town;
@@ -194,9 +195,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // because of the Foreign key dependency
         db.execSQL(StateTable.CREATE);
         db.execSQL(TownTable.CREATE);
+        db.execSQL(HpclDieselPriceTable.CREATE);
+        db.execSQL(HpclPetrolPriceTable.CREATE);
         preFillDatabase(db);
-//        db.execSQL(HpclDieselPriceTable.CREATE);
-//        db.execSQL(HpclPetrolPriceTable.CREATE);
 
     }
 
@@ -265,6 +266,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             values.put(TownTable.COLUMN_LONGITUDE, town.getString(JsonAttributes.TOWN_LONGITUDE));
             values.put(TownTable.COLUMN_IS_METRO, town.getString(JsonAttributes.TOWN_IS_METRO));
             db.insert(TownTable.NAME, null, values);
+            fillHpclDieselAndPetrolForTown(db, values, town.getString(JsonAttributes.TOWN_CODE));
         }
     }
+
+  private void fillHpclDieselAndPetrolForTown(SQLiteDatabase db, ContentValues values,
+                                              String townCode) {
+        values.clear();
+        values.put(HpclDieselPriceTable.COLUMN_TOWN_CODE, townCode);
+        db.insert(HpclDieselPriceTable.NAME, null, values);
+        db.insert(HpclPetrolPriceTable.NAME, null, values);
+  }
 }

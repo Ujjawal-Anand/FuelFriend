@@ -2,7 +2,6 @@ package io.uscool.fuelfriend.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,19 +11,12 @@ import android.widget.TextView;
 
 import com.arlib.floatingsearchview.util.Util;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.XML;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import io.uscool.fuelfriend.Data.DatabaseHelper;
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.model.Town;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 /**
  * Created by ujjawal on 1/7/17.
@@ -89,11 +81,16 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
         mTownSuggestion = mDataSet.get(position);
 //        String statecode = DatabaseHelper.getStates(mContext, true).get(0).getCode();
 //           had created just to check newly created StateTable is working or not, it's working, Yay :D
-        updatePrice(mTownSuggestion.getStateCode(), mTownSuggestion.getName());
+//        updatePrice(mTownSuggestion.getStateCode(), mTownSuggestion.getName());
 //        updatePrice(statecode, mTownSuggestion.getTownName());
+//        updateFuelPrice(mTownSuggestion.getCode(), true, mDieselPrice);
         holder.mTownName.setText(mTownSuggestion.getName());
 //        mDieselPrice.setText(townSuggestion.getStateName());
 //        mPetrolPrice.setText(townSuggestion.getStateCode());
+
+
+
+
 
         if(mLastAnimatedItemPosition < position){
             animateItem(holder.itemView);
@@ -124,16 +121,31 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
                 .start();
     }
 
-    private void updatePrice(String stateCode, String townName) {
+ private void updateFuelPrice(final String townCode, final boolean isDiesel, final TextView textView) {
+
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+              String  fuelPrice = DatabaseHelper.getCurrentFuelPriceForGiven(mContext, townCode, isDiesel);
+              if(fuelPrice == null) {
+                  fuelPrice = "No Data Available";
+              }
+              textView.append(fuelPrice);
+            }
+        };
+     new Thread(runnable).start();
+ }
+
+  /*  private void updatePrice(String stateCode, String townName) {
         String urlPart = "http://hproroute.hpcl.co.in/StateDistrictMap_4/fetchmshsdprice.jsp?param=T&statecode=";
         urlPart += stateCode;
         long time = System.currentTimeMillis();
         String fullUrl = urlPart+"?"+time;
         OkHttpHandler okHttpHandler= new OkHttpHandler();
         okHttpHandler.execute(fullUrl, townName);
-    }
+    }*/
 
-    public static class OkHttpHandler extends AsyncTask<String, Void, String> {
+  /*  public static class OkHttpHandler extends AsyncTask<String, Void, String> {
 
         OkHttpClient client = new OkHttpClient();
         private int dieselPrice;
@@ -161,7 +173,7 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
 
         }
 
-      /*  private String getDataFromXMLString(String xmlString, String townName) throws JSONException {
+      *//*  private String getDataFromXMLString(String xmlString, String townName) throws JSONException {
             JSONArray jsonArray = parseXmlToJson(xmlString);
             for(int i = 0; i<jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
@@ -174,7 +186,7 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
                 }
             }
             return null;
-        }*/
+        }*//*
 
 
         @Override
@@ -207,6 +219,6 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
             }
         }
     }
-
+*/
 
 }

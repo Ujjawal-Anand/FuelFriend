@@ -14,11 +14,11 @@ public interface HpclPetrolPriceTable extends PriceBaseTable {
             + COLUMN_ID + " INTEGER PRIMARY KEY, "
             +  COLUMN_TOWN_CODE + " REFERENCES " + TownTable.NAME + "(" + TownTable.COLUMN_CODE + "), "
             +  COLUMN_TOWN_NAME + " REFERENCES " + TownTable.NAME + "(" + TownTable.COLUMN_NAME + "), "
-            + COLUMN_PRICE_DAY1 + " TEXT, "
-            + COLUMN_PRICE_DAY2 + " TEXT, "
-            + COLUMN_PRICE_DAY3 + " TEXT, "
-            + COLUMN_PRICE_DAY4 + " TEXT, "
-            + COLUMN_PRICE_DAY5 + " TEXT, "
-            + COLUMN_PRICE_DAY6 + " TEXT, "
-            + COLUMN_PRICE_DAY7 + " TEXT);";
+            + COLUMN_PRICE_CURRENT + " TEXT, "
+            + COLUMN_PRICE_LAST1 + " TEXT, "
+            + COLUMN_PRICE_LAST2 + " TEXT, "
+            + COLUMN_PRICE_LAST3 + " TEXT, "
+            + COLUMN_PRICE_LAST4 + " TEXT, "
+            + COLUMN_PRICE_LAST5 + " TEXT, "
+            + COLUMN_PRICE_LAST6 + " TEXT);";
 }

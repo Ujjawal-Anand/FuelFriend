@@ -189,7 +189,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      */
     private static ContentValues createContentValuesFor(String fuelPrice) {
         ContentValues values = new ContentValues();
-        values.put(HpclDieselPriceTable.COLUMN_PRICE_DAY1, fuelPrice);
+        values.put(HpclDieselPriceTable.COLUMN_PRICE_CURRENT, fuelPrice);
         return values;
     }
 

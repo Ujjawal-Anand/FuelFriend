@@ -62,57 +62,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return mInstance;
     }
 
-    /*
-    * Helper function for DatabaseManager
-    * Remember to remove it in before going into production
-    * */
-
-    public ArrayList<Cursor> getData(String Query){
-        //get writable database
-        SQLiteDatabase sqlDB = this.getWritableDatabase();
-        String[] columns = new String[] { "message" };
-        //an array list of cursor to save two cursors one has results from the query
-        //other cursor stores error message if any errors are triggered
-        ArrayList<Cursor> alc = new ArrayList<>(2);
-        MatrixCursor Cursor2= new MatrixCursor(columns);
-        alc.add(null);
-        alc.add(null);
-
-        try{
-//            String maxQuery = Query ;
-            //execute the query results will be save in Cursor c
-            Cursor c = sqlDB.rawQuery(Query, null);
-
-            //add value to cursor2
-            Cursor2.addRow(new Object[] { "Success" });
-
-            alc.set(1,Cursor2);
-            if (null != c && c.getCount() > 0) {
-
-                alc.set(0,c);
-                c.moveToFirst();
-
-                return alc ;
-            }
-            return alc;
-        } catch(SQLException sqlEx){
-            Log.d("printing exception", sqlEx.getMessage());
-            //if any exceptions are triggered save the error message to cursor an return the arraylist
-            Cursor2.addRow(new Object[] { ""+sqlEx.getMessage() });
-            alc.set(1,Cursor2);
-            return alc;
-        } catch(Exception ex){
-            Log.d("printing exception", ex.getMessage());
-
-            //if any exceptions are triggered save the error message to cursor an return the arraylist
-            Cursor2.addRow(new Object[] { ""+ex.getMessage() });
-            alc.set(1,Cursor2);
-            return alc;
-        }
-    }
-
-
-
+    /**
+     * function to retrieve list of states from state table
+     * @param context context of this is running in
+     * @param fromDatabase <code>true</code> if a data refresh is needed, else <code>false</code>
+     * @return All states stored in database
+     */
     public static List<State> getStates(Context context, boolean fromDatabase) {
         if(mStateList != null || fromDatabase) {
             mStateList = loadStates(context);
@@ -120,11 +75,40 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return mStateList;
     }
 
+    /**
+     * function to retrieve list of towns from state table
+     * @param context context of this is running in
+     * @param fromDatabase <code>true</code> if a data refresh is needed, else <code>false</code>
+     * @return All towns stored in database
+     */
     public static List<Town> getTowns(Context context, boolean fromDatabase) {
         if(mTownList != null || fromDatabase) {
             mTownList = loadTowns(context);
         }
         return mTownList;
+    }
+
+    /**
+     * use this function to get the Fuel price of current day
+     * @param context context of this is running in
+     * @param towncode towncode of town you want to get fuel price
+     * @param isDiesel <code>true</code> if you want to know diesel price else <code>false</code>
+     *                for petrol price
+     * @return <code>isDiesel?currentDieselPrice:currentPetrolPrice</code>
+     */
+    public static String getCurrentFuelPriceForGiven(Context context, String towncode, boolean isDiesel) {
+        SQLiteDatabase db = getReadableDatabase(context);
+        String selectionArgs[] = {towncode};
+        final String TABLE_NAME = isDiesel?HpclDieselPriceTable.NAME:HpclPetrolPriceTable.NAME;
+        Cursor data = db.query(TABLE_NAME, PriceBaseTable.PROJECTION, PriceBaseTable.COLUMN_TOWN_CODE
+        + "=?", selectionArgs, null, null, null);
+        if(data != null) {
+            data.moveToFirst();
+            String price = data.getString(3);
+            data.close();
+            return price; // magic number based on table projection
+        }
+        return null;
     }
 
     private static List<State> loadStates(Context context) {
@@ -147,6 +131,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return  tmpTownList;
     }
 
+    /**
+     * Gets all states wrapped in a {@link Cursor} positioned at it's first element.
+     *
+     * @param context The context this is running in.
+     * @return All states stored in the database.
+     */
     private static Cursor getStateCursor(Context context) {
         SQLiteDatabase database = getReadableDatabase(context);
         Cursor data = database.query(StateTable.NAME,
@@ -156,6 +146,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return data;
     }
 
+    /**
+     * Gets all towns wrapped in a {@link Cursor} positioned at it's first element.
+     *
+     * @param context The context this is running in.
+     * @return All towns stored in the database.
+     */
     private static Cursor getTownCursor(Context context) {
         SQLiteDatabase database = getReadableDatabase(context);
         Cursor data = database.query(TownTable.NAME, TownTable.PROJECTION, null,
@@ -164,6 +160,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return data;
     }
 
+    /**
+     * Gets a state from the given position of the cursor provided.
+     *
+     * @param data The Cursor containing the data.
+     * @return The found category.
+     */
     private static State getState(Cursor data) {
         // magic number based on StateTable projection
         final String name = data.getString(1);
@@ -171,7 +173,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return new State(name, code);
     }
-
+    /**
+     * Gets a town from the given position of the cursor provided.
+     *
+     * @param data The Cursor containing the data.
+     * @return The found category.
+     */
     private static Town getTown(Cursor data) {
         // magic number based on TownTable projection
         final String name = data.getString(1);
@@ -183,20 +190,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return new Town(name, code, stateCode, latitude, longitude, is_metro);
     }
 
+    /**
+     * Updates the Fuel price table in the database
+     * @param context context of this is running in
+     * @param fuelPrice data to update in table
+     * @param isDiesel <code>true</code> if DieselPriceTable has to be updated
+     *                 else <code>false</code> if PetrolPriceTable has to be updated
+     */
     public static void updateFuelPrice(Context context, FuelPrice fuelPrice, boolean isDiesel) {
         SQLiteDatabase writableDatabase = getWritableDatabase(context);
         ContentValues priceValues = createContentValuesFor(fuelPrice.getPrice());
         String TABLE_NAME = isDiesel ? HpclDieselPriceTable.NAME : HpclPetrolPriceTable.NAME;
         writableDatabase.update(TABLE_NAME, priceValues, HpclDieselPriceTable.COLUMN_TOWN_CODE
-                                   + "=?", new String[]{fuelPrice.getTownCode()});
+                + "=?", new String[]{fuelPrice.getTownCode()});
     }
-
+    /**
+     * Creates the content values to update Fuel Price(petrol and diesel both) in the database.
+     *
+     * @param fuelPrice the price of fuel
+     * @return ContentValues containing updatable data.
+     */
     private static ContentValues createContentValuesFor(String fuelPrice) {
         ContentValues values = new ContentValues();
-        values.put(HpclDieselPriceTable.COLUMN_PRICE_MON, fuelPrice);
+        values.put(HpclDieselPriceTable.COLUMN_PRICE_CURRENT, fuelPrice);
         return values;
     }
-
 
 
     private static SQLiteDatabase getReadableDatabase(Context context) {
@@ -234,7 +252,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 db.endTransaction();
             }
         } catch (IOException | JSONException e) {
-         Log.e(TAG, "preFillDatabse", e);
+            Log.e(TAG, "preFillDatabse", e);
         }
     }
 
@@ -290,12 +308,63 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-  private void fillHpclDieselAndPetrolForTown(SQLiteDatabase db, ContentValues values,
-                                              String townCode, String townName) {
+    private void fillHpclDieselAndPetrolForTown(SQLiteDatabase db, ContentValues values,
+                                                String townCode, String townName) {
         values.clear();
         values.put(HpclDieselPriceTable.COLUMN_TOWN_CODE, townCode);
         values.put(HpclDieselPriceTable.COLUMN_TOWN_NAME, townName);
         db.insert(HpclDieselPriceTable.NAME, null, values);
         db.insert(HpclPetrolPriceTable.NAME, null, values);
-  }
+    }
+
+
+      /*
+    * Helper function for DatabaseManager
+    * Remember to remove it in before going into production
+    * */
+
+    public ArrayList<Cursor> getData(String Query){
+        //get writable database
+        SQLiteDatabase sqlDB = this.getWritableDatabase();
+        String[] columns = new String[] { "message" };
+        //an array list of cursor to save two cursors one has results from the query
+        //other cursor stores error message if any errors are triggered
+        ArrayList<Cursor> alc = new ArrayList<>(2);
+        MatrixCursor Cursor2= new MatrixCursor(columns);
+        alc.add(null);
+        alc.add(null);
+
+        try{
+//            String maxQuery = Query ;
+            //execute the query results will be save in Cursor c
+            Cursor c = sqlDB.rawQuery(Query, null);
+
+            //add value to cursor2
+            Cursor2.addRow(new Object[] { "Success" });
+
+            alc.set(1,Cursor2);
+            if (null != c && c.getCount() > 0) {
+
+                alc.set(0,c);
+                c.moveToFirst();
+
+                return alc ;
+            }
+            return alc;
+        } catch(SQLException sqlEx){
+            Log.d("printing exception", sqlEx.getMessage());
+            //if any exceptions are triggered save the error message to cursor an return the arraylist
+            Cursor2.addRow(new Object[] { ""+sqlEx.getMessage() });
+            alc.set(1,Cursor2);
+            return alc;
+        } catch(Exception ex){
+            Log.d("printing exception", ex.getMessage());
+
+            //if any exceptions are triggered save the error message to cursor an return the arraylist
+            Cursor2.addRow(new Object[] { ""+ex.getMessage() });
+            alc.set(1,Cursor2);
+            return alc;
+        }
+    }
+
 }

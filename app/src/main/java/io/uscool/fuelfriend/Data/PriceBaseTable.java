@@ -9,19 +9,19 @@ public interface PriceBaseTable {
     String COLUMN_ID = "_id";
     String COLUMN_TOWN_CODE = "town_code";
     String COLUMN_TOWN_NAME = "town_name";
-    String COLUMN_PRICE_MON = "price_on_mon";
-    String COLUMN_PRICE_TUES = "price_on_tues";
-    String COLUMN_PRICE_WED = "price_on_wed";
-    String COLUMN_PRICE_THU = "price_on_thu";
-    String COLUMN_PRICE_FRI = "price_on_fri";
-    String COLUMN_PRICE_SAT = "price_on_sat";
-    String COLUMN_PRICE_SUN = "price_on_sun";
+    String COLUMN_PRICE_CURRENT = "current"; //column to save the current day data
+    String COLUMN_PRICE_LAST1 = "last_1";    // column to save last day data
+    String COLUMN_PRICE_LAST2 = "last_2";    // column to save 2nd last day data and so on
+    String COLUMN_PRICE_LAST3 = "last_3";
+    String COLUMN_PRICE_LAST4 = "last_4";
+    String COLUMN_PRICE_LAST5 = "last_5";
+    String COLUMN_PRICE_LAST6 = "last_6";
 
 
 
 
 
-    String[] PROJECTION = new String[]{COLUMN_ID, COLUMN_TOWN_CODE, COLUMN_TOWN_NAME,  COLUMN_PRICE_MON,
-            COLUMN_PRICE_TUES, COLUMN_PRICE_WED, COLUMN_PRICE_THU, COLUMN_PRICE_FRI,
-            COLUMN_PRICE_SAT, COLUMN_PRICE_SUN};
+    String[] PROJECTION = new String[]{COLUMN_ID, COLUMN_TOWN_CODE, COLUMN_TOWN_NAME, COLUMN_PRICE_CURRENT,
+            COLUMN_PRICE_LAST1, COLUMN_PRICE_LAST2, COLUMN_PRICE_LAST3, COLUMN_PRICE_LAST4,
+            COLUMN_PRICE_LAST5, COLUMN_PRICE_LAST6};
 }

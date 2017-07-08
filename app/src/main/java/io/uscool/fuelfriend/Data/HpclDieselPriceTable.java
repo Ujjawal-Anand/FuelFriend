@@ -13,12 +13,11 @@ public interface HpclDieselPriceTable extends PriceBaseTable {
     String CREATE = "CREATE TABLE " + NAME + " ("
             + COLUMN_ID + " INTEGER PRIMARY KEY, "
             +  COLUMN_TOWN_CODE + " REFERENCES " + TownTable.NAME + "(" + TownTable.COLUMN_CODE + "), "
-            +  COLUMN_TOWN_NAME + " REFERENCES " + TownTable.NAME + "(" + TownTable.COLUMN_NAME + "), "
-            + COLUMN_PRICE_MON + " TEXT, "
-            + COLUMN_PRICE_TUES + " TEXT, "
-            + COLUMN_PRICE_WED + " TEXT, "
-            + COLUMN_PRICE_THU + " TEXT, "
-            + COLUMN_PRICE_FRI + " TEXT, "
-            + COLUMN_PRICE_SAT + " TEXT, "
-            + COLUMN_PRICE_SUN + " TEXT);";
+            + COLUMN_PRICE_CURRENT + " TEXT, "
+            + COLUMN_PRICE_LAST1 + " TEXT, "
+            + COLUMN_PRICE_LAST2 + " TEXT, "
+            + COLUMN_PRICE_LAST3 + " TEXT, "
+            + COLUMN_PRICE_LAST4 + " TEXT, "
+            + COLUMN_PRICE_LAST5 + " TEXT, "
+            + COLUMN_PRICE_LAST6 + " TEXT);";
 }

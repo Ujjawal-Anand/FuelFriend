@@ -212,6 +212,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      */
     private static ContentValues createContentValuesFor(String fuelPrice) {
         ContentValues values = new ContentValues();
+        values.clear();
         values.put(HpclDieselPriceTable.COLUMN_PRICE_CURRENT, fuelPrice);
         return values;
     }
@@ -252,7 +253,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 db.endTransaction();
             }
         } catch (IOException | JSONException e) {
-            Log.e(TAG, "preFillDatabse", e);
+            Log.e(TAG, "preFillDatabase", e);
         }
     }
 
@@ -297,8 +298,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             values.clear();
             String townCode =  town.getString(JsonAttributes.TOWN_CODE);
             String townName = town.getString(JsonAttributes.TOWN_NAME);
-            values.put(TownTable.COLUMN_CODE,townName);
-            values.put(TownTable.COLUMN_NAME, townCode);
+            values.put(TownTable.COLUMN_CODE,townCode);
+            values.put(TownTable.COLUMN_NAME, townName);
             values.put(TownTable.COLUMN_STATE_ID, stateCode);
             values.put(TownTable.COLUMN_LATITUDE, town.getString(JsonAttributes.TOWN_LATITUDE));
             values.put(TownTable.COLUMN_LONGITUDE, town.getString(JsonAttributes.TOWN_LONGITUDE));

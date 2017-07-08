@@ -83,7 +83,7 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
 //           had created just to check newly created StateTable is working or not, it's working, Yay :D
 //        updatePrice(mTownSuggestion.getStateCode(), mTownSuggestion.getName());
 //        updatePrice(statecode, mTownSuggestion.getTownName());
-//        updateFuelPrice(mTownSuggestion.getCode(), true, mDieselPrice);
+        updateFuelPrice(mTownSuggestion.getCode(), true, mDieselPrice);
         holder.mTownName.setText(mTownSuggestion.getName());
 //        mDieselPrice.setText(townSuggestion.getStateName());
 //        mPetrolPrice.setText(townSuggestion.getStateCode());

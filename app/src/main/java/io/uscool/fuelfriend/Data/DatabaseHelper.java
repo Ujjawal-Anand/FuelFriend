@@ -88,6 +88,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return mTownList;
     }
 
+    /**
+     * use this function to get the Fuel price of current day
+     * @param context context of this is running in
+     * @param towncode towncode of town you want to get fuel price
+     * @param isDiesel <code>true</code> if you want to know diesel price else <code>false</code>
+     *                for petrol price
+     * @return <code>isDiesel?currentDieselPrice:currentPetrolPrice</code>
+     */
+    public static String getCurrentFuelPriceForGiven(Context context, String towncode, boolean isDiesel) {
+        SQLiteDatabase db = getReadableDatabase(context);
+        String selectionArgs[] = {towncode};
+        final String TABLE_NAME = isDiesel?HpclDieselPriceTable.NAME:HpclPetrolPriceTable.NAME;
+        Cursor data = db.query(TABLE_NAME, PriceBaseTable.PROJECTION, PriceBaseTable.COLUMN_TOWN_CODE
+        + "=?", selectionArgs, null, null, null);
+        if(data != null) {
+            data.moveToFirst();
+            String price = data.getString(3);
+            data.close();
+            return price; // magic number based on table projection
+        }
+        return null;
+    }
+
     private static List<State> loadStates(Context context) {
         Cursor data = getStateCursor(context);
         List<State> tmpStateList = new ArrayList<>(data.getCount());

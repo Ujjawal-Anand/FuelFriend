@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            Intent dbmanager = new Intent(getApplicationContext(),AndroidDatabaseManagerActivity.class);
-            startActivity(dbmanager);
+//            Intent dbmanager = new Intent(getApplicationContext(),AndroidDatabaseManagerActivity.class);
+//            startActivity(dbmanager);
         } else if (id == R.id.nav_gallery) {
             Intent serviceActivity = new Intent(getApplicationContext(), DownloadTestActivity.class);
             startActivity(serviceActivity);

@@ -12,20 +12,13 @@ import android.widget.TextView;
 
 import com.arlib.floatingsearchview.util.Util;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.XML;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import io.uscool.fuelfriend.Data.DatabaseHelper;
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.model.Town;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+
 
 /**
  * Created by ujjawal on 1/7/17.

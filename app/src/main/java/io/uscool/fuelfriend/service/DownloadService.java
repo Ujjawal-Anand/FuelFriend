@@ -20,6 +20,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import io.uscool.fuelfriend.Data.DatabaseHelper;
@@ -183,13 +187,18 @@ public class DownloadService extends IntentService {
         }
         String petrolPrice = dataObject.getString("ms");
         String dieselPrice = dataObject.getString("hsd");
-//        double petrolPrice = dataObject.getDouble("ms");
-//        double dieselPrice = dataObject.getDouble("hsd");
+
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+        Date d = new Date();
+        String dayOfTheWeek = sdf.format(d);
+
+
         DatabaseHelper.updateFuelPrice(getApplicationContext(),
-                new FuelPrice(townCode,dieselPrice),
+                new FuelPrice(townCode,dieselPrice), dayOfTheWeek,
                 true);
+
         DatabaseHelper.updateFuelPrice(getApplicationContext(),
-                new FuelPrice(townCode,petrolPrice),
+                new FuelPrice(townCode,petrolPrice), dayOfTheWeek,
                 false);
 
         analysePrice(Double.valueOf(petrolPrice),townName,Double.valueOf(dieselPrice));

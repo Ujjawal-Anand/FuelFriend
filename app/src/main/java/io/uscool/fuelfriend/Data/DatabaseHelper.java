@@ -194,15 +194,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * Updates the Fuel price table in the database
      * @param context context of this is running in
      * @param fuelPrice data to update in table
+     * @param columnName name of the column you want to create
      * @param isDiesel <code>true</code> if DieselPriceTable has to be updated
      *                 else <code>false</code> if PetrolPriceTable has to be updated
      */
-    public static void updateFuelPrice(Context context, FuelPrice fuelPrice, boolean isDiesel) {
+    public static void updateFuelPrice(Context context, FuelPrice fuelPrice,
+                                       final String columnName, boolean isDiesel) {
         SQLiteDatabase writableDatabase = getWritableDatabase(context);
-        ContentValues priceValues = createContentValuesFor(fuelPrice.getPrice());
         String TABLE_NAME = isDiesel ? HpclDieselPriceTable.NAME : HpclPetrolPriceTable.NAME;
+
+        if(!(existsColumnInTable(writableDatabase, TABLE_NAME, columnName))) {
+            writableDatabase.execSQL("ALTER TABLE " + TABLE_NAME + " ADD COLUMN " + columnName + " TEXT");
+        }
+
+        ContentValues priceValues = createContentValuesFor(columnName, fuelPrice.getPrice());
         writableDatabase.update(TABLE_NAME, priceValues, HpclDieselPriceTable.COLUMN_TOWN_CODE
-                + "=?", new String[]{fuelPrice.getTownCode()});
+                    + "=?", new String[]{fuelPrice.getTownCode()});
     }
     /**
      * Creates the content values to update Fuel Price(petrol and diesel both) in the database.
@@ -210,10 +217,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @param fuelPrice the price of fuel
      * @return ContentValues containing updatable data.
      */
-    private static ContentValues createContentValuesFor(String fuelPrice) {
+    private static ContentValues createContentValuesFor(String columnName, String fuelPrice) {
         ContentValues values = new ContentValues();
         values.clear();
-        values.put(HpclDieselPriceTable.COLUMN_PRICE_CURRENT, fuelPrice);
+        values.put(columnName, fuelPrice);
         return values;
     }
 
@@ -224,6 +231,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static SQLiteDatabase getWritableDatabase(Context context) {
         return getInstance(context).getWritableDatabase();
+    }
+
+    private static boolean existsColumnInTable(SQLiteDatabase inDatabase, String inTable, String columnToCheck) {
+        Cursor mCursor = null;
+        try {
+            // Query 1 row
+            mCursor = inDatabase.rawQuery("SELECT " + columnToCheck + " FROM " + inTable, null);
+
+            // getColumnIndex() gives us the index (0 to ...) of the column - otherwise we get a -1
+            return  true;
+
+        } catch (Exception Exp) {
+            // Something went wrong. Missing the database? The table?
+            Log.d("existsColumnInTable", "When checking whether a column exists in the table, an error occurred: " + Exp.getMessage());
+            return false;
+        } finally {
+            if (mCursor != null) mCursor.close();
+        }
     }
 
     @Override

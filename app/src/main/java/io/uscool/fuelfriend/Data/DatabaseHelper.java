@@ -18,8 +18,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.model.FuelPrice;
@@ -94,21 +97,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @param towncode towncode of town you want to get fuel price
      * @param isDiesel <code>true</code> if you want to know diesel price else <code>false</code>
      *                for petrol price
+     * @param columnName name of column from which you want to retrieve data
+     *                    pass null to get the data from column containing price of current day.
      * @return <code>isDiesel?currentDieselPrice:currentPetrolPrice</code>
      */
-    public static String getCurrentFuelPriceForGiven(Context context, String towncode, boolean isDiesel) {
+    public static String getCurrentFuelPriceForGiven(Context context, String towncode, boolean isDiesel,
+                                                     String columnName) {
+        if(columnName == null) {
+            columnName = getCurrentDay();
+        }
         SQLiteDatabase db = getReadableDatabase(context);
         String selectionArgs[] = {towncode};
         final String TABLE_NAME = isDiesel?HpclDieselPriceTable.NAME:HpclPetrolPriceTable.NAME;
-        Cursor data = db.query(TABLE_NAME, PriceBaseTable.PROJECTION, PriceBaseTable.COLUMN_TOWN_CODE
+        final String[] PROJECTION = {PriceBaseTable.COLUMN_TOWN_CODE, columnName};
+        Cursor data = db.query(TABLE_NAME, PROJECTION, PriceBaseTable.COLUMN_TOWN_CODE
                 + "=?", selectionArgs, null, null, null);
         if(data != null) {
             data.moveToFirst();
-            String price = data.getString(3);
+            String price = data.getString(1);
             data.close();
             return price; // magic number based on table projection
         }
         return null;
+    }
+
+    private static String getCurrentDay() {
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE", Locale.ENGLISH);
+        Date d = new Date();
+        return sdf.format(d);
     }
 
     private static List<State> loadStates(Context context) {

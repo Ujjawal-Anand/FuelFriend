@@ -101,7 +101,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String selectionArgs[] = {towncode};
         final String TABLE_NAME = isDiesel?HpclDieselPriceTable.NAME:HpclPetrolPriceTable.NAME;
         Cursor data = db.query(TABLE_NAME, PriceBaseTable.PROJECTION, PriceBaseTable.COLUMN_TOWN_CODE
-        + "=?", selectionArgs, null, null, null);
+                + "=?", selectionArgs, null, null, null);
         if(data != null) {
             data.moveToFirst();
             String price = data.getString(3);

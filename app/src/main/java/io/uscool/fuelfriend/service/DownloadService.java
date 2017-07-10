@@ -25,6 +25,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import io.uscool.fuelfriend.Data.DatabaseHelper;
 import io.uscool.fuelfriend.model.FuelPrice;
@@ -188,7 +189,7 @@ public class DownloadService extends IntentService {
         String petrolPrice = dataObject.getString("ms");
         String dieselPrice = dataObject.getString("hsd");
 
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE", Locale.ENGLISH);
         Date d = new Date();
         String dayOfTheWeek = sdf.format(d);
 

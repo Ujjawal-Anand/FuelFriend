@@ -140,7 +140,7 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
             String preString = isDiesel?"Diesel Price : ": "Petrol Price : ";
             try {
             return preString + DatabaseHelper.getCurrentFuelPriceForGiven(mContext, townCode,
-                    isDiesel, "Sunday");
+                    isDiesel, null);
 
             }catch (Exception e){
                 e.printStackTrace();

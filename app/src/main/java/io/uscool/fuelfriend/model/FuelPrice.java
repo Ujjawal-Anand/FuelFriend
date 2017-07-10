@@ -9,16 +9,32 @@ import android.os.Parcelable;
  */
 
 public class FuelPrice implements Parcelable {
-    private String mPrice;
+    private String mDieselPrice;
+    private String mPetrolPrice;
     private String mTownCode;
+    private String mTownName;
     
-    public FuelPrice(String townCode, String price) {
+    public FuelPrice(String townCode, String dieselPrice, String petrolPrice) {
         this.mTownCode = townCode;
-        this.mPrice = price;
+        this.mDieselPrice = dieselPrice;
+        this.mPetrolPrice = petrolPrice;
     }
 
-    public String getPrice() {
-        return mPrice;
+    public FuelPrice(String townCode, String townName, String dieselPrice, String petrolPrice) {
+        this.mTownName = townName;
+        new FuelPrice(townCode, dieselPrice, petrolPrice);
+    }
+
+    public String getDieselPrice() {
+        return mDieselPrice;
+    }
+
+    public String getPetrolPrice() {
+        return mPetrolPrice;
+    }
+
+    public String getTownName() {
+        return mTownName;
     }
 
     public String getTownCode() {
@@ -29,12 +45,16 @@ public class FuelPrice implements Parcelable {
 
     public FuelPrice(Parcel in) {
         this.mTownCode = in.readString();
-        this.mPrice = in.readString();
+        this.mTownName = in.readString();
+        this.mDieselPrice = in.readString();
+        this.mPetrolPrice = in.readString();
     }
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(mTownCode);
-        parcel.writeString(mPrice);
+        parcel.writeString(mTownName);
+        parcel.writeString(mDieselPrice);
+        parcel.writeString(mPetrolPrice);
     }
 
     @Override

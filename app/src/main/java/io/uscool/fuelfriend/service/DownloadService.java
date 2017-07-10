@@ -1,7 +1,6 @@
 package io.uscool.fuelfriend.service;
 
 import android.app.IntentService;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -20,12 +19,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import io.uscool.fuelfriend.Data.DatabaseHelper;
 import io.uscool.fuelfriend.model.FuelPrice;
@@ -50,6 +45,8 @@ public class DownloadService extends IntentService {
     private static double highestPetrol = 40;
     private static String highestPetrolTown = "";
 
+    private static List<FuelPrice> mFuelPriceList;
+
 
     public static final String TAG = "DownloadService";
 
@@ -70,6 +67,8 @@ public class DownloadService extends IntentService {
          String urlPart = "http://hproroute.hpcl.co.in/StateDistrictMap_4/fetchmshsdprice.jsp?param=T&statecode=";
          long time = System.currentTimeMillis();
          List<State> stateList = DatabaseHelper.getStates(getApplicationContext(), true);
+         mFuelPriceList = new ArrayList<>();
+
          for(int i = 0; i< stateList.size(); i++) {
              State state = stateList.get(i);
              String result = "State : " + state.getName();
@@ -94,6 +93,7 @@ public class DownloadService extends IntentService {
                             + "\nHighest Petrol Price In India : " + highestPetrol
                             + "\nTown Name : " + highestPetrolTown;
          bundle.putString("data", dataString);
+         DatabaseHelper.updateFuelPrice(getApplicationContext(), mFuelPriceList);
          receiver.send(STATUS_FINISHED, bundle);
          Log.d(TAG, "service stopping");
 
@@ -189,18 +189,9 @@ public class DownloadService extends IntentService {
         String petrolPrice = dataObject.getString("ms");
         String dieselPrice = dataObject.getString("hsd");
 
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE", Locale.ENGLISH);
-        Date d = new Date();
-        String dayOfTheWeek = sdf.format(d);
-
-
-        DatabaseHelper.updateFuelPrice(getApplicationContext(),
-                new FuelPrice(townCode,dieselPrice), dayOfTheWeek,
-                true);
-
-        DatabaseHelper.updateFuelPrice(getApplicationContext(),
-                new FuelPrice(townCode,petrolPrice), dayOfTheWeek,
-                false);
+        mFuelPriceList.add(new FuelPrice(townCode, dieselPrice, petrolPrice));
+//        DatabaseHelper.updateFuelPrice(getApplicationContext(),
+//                new FuelPrice(townCode,dieselPrice, petrolPrice));
 
         analysePrice(Double.valueOf(petrolPrice),townName,Double.valueOf(dieselPrice));
         String result = "\nTown : " + townName + "\n"

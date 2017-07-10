@@ -209,23 +209,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     /**
      * Updates the Fuel price table in the database
      * @param context context of this is running in
-     * @param fuelPrice data to update in table
-     * @param columnName name of the column you want to create
-     * @param isDiesel <code>true</code> if DieselPriceTable has to be updated
-     *                 else <code>false</code> if PetrolPriceTable has to be updated
+     * @param fuelPriceList List containing {@link FuelPrice}
      */
-    public static void updateFuelPrice(Context context, FuelPrice fuelPrice,
-                                       final String columnName, boolean isDiesel) {
+    public static void updateFuelPrice(Context context, List<FuelPrice> fuelPriceList) {
         SQLiteDatabase writableDatabase = getWritableDatabase(context);
-        String TABLE_NAME = isDiesel ? HpclDieselPriceTable.NAME : HpclPetrolPriceTable.NAME;
-
-        if(!(existsColumnInTable(writableDatabase, TABLE_NAME, columnName))) {
-            writableDatabase.execSQL("ALTER TABLE " + TABLE_NAME + " ADD COLUMN " + columnName + " TEXT");
+        for(FuelPrice fuelPrice: fuelPriceList ) {
+            updatePriceInTable(writableDatabase, HpclDieselPriceTable.NAME, fuelPrice.getTownCode(),
+                    fuelPrice.getDieselPrice());
+            updatePriceInTable(writableDatabase, HpclPetrolPriceTable.NAME, fuelPrice.getTownCode(),
+                    fuelPrice.getPetrolPrice());
         }
+    }
 
-        ContentValues priceValues = createContentValuesFor(columnName, fuelPrice.getPrice());
+    private static void updatePriceInTable(SQLiteDatabase writableDatabase, final String TABLE_NAME, String townCode, String price) {
+        final String COLUMN_NAME = getCurrentDay();
+        ContentValues priceValues = createContentValuesFor(COLUMN_NAME, price);
+        createColumnInTable(writableDatabase, TABLE_NAME, COLUMN_NAME);
         writableDatabase.update(TABLE_NAME, priceValues, HpclDieselPriceTable.COLUMN_TOWN_CODE
-                    + "=?", new String[]{fuelPrice.getTownCode()});
+                + "=?", new String[]{townCode});
+
+    }
+
+    private static void createColumnInTable(SQLiteDatabase db, final String TABLE_NAME, final String COLUMN_NAME) {
+        if(!(existsColumnInTable(db, TABLE_NAME, COLUMN_NAME))) {
+            db.execSQL("ALTER TABLE " + TABLE_NAME + " ADD COLUMN " + COLUMN_NAME + " TEXT");
+        }
     }
     /**
      * Creates the content values to update Fuel Price(petrol and diesel both) in the database.

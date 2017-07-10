@@ -12,19 +12,13 @@ import android.widget.TextView;
 
 import com.arlib.floatingsearchview.util.Util;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.XML;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import io.uscool.fuelfriend.Data.DatabaseHelper;
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.model.Town;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+
 
 /**
  * Created by ujjawal on 1/7/17.
@@ -32,13 +26,18 @@ import okhttp3.Response;
  */
 
 public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAdapter.ViewHolder>{
+
+    public static final String IS_DIESEL = "0";
+    public static final String IS_PETROL = "1";
+
     private List<Town> mDataSet = new ArrayList<>();
 
     private int mLastAnimatedItemPosition = -1;
+
     private static TextView mDieselPrice;
     private static TextView mPetrolPrice;
     private Town mTownSuggestion;
-    private Context mContext;
+    private static Context mContext;
 
     public interface OnItemClickListener{
         void onClick(Town colorWrapper);
@@ -47,6 +46,7 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
     public TownSearchListAdapter(Context context) {
         this.mContext = context;
     }
+
 
     private OnItemClickListener mItemsOnClickListener;
 
@@ -89,7 +89,8 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
         mTownSuggestion = mDataSet.get(position);
 //        String statecode = DatabaseHelper.getStates(mContext, true).get(0).getCode();
 //           had created just to check newly created StateTable is working or not, it's working, Yay :D
-        updatePrice(mTownSuggestion.getStateCode(), mTownSuggestion.getName());
+        updatePrice(mTownSuggestion.getCode(), IS_DIESEL);
+        updatePrice(mTownSuggestion.getCode(), IS_PETROL);
 //        updatePrice(statecode, mTownSuggestion.getTownName());
         holder.mTownName.setText(mTownSuggestion.getName());
 //        mDieselPrice.setText(townSuggestion.getStateName());
@@ -124,71 +125,22 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
                 .start();
     }
 
-    private void updatePrice(String stateCode, String townName) {
-        String urlPart = "http://hproroute.hpcl.co.in/StateDistrictMap_4/fetchmshsdprice.jsp?param=T&statecode=";
-        urlPart += stateCode;
-        long time = System.currentTimeMillis();
-        String fullUrl = urlPart+"?"+time;
-        OkHttpHandler okHttpHandler= new OkHttpHandler();
-        okHttpHandler.execute(fullUrl, townName);
+    private void updatePrice(String townCode, String fuelType) {
+        DataHandler dataHandler= new DataHandler();
+        dataHandler.execute(townCode, fuelType);
     }
 
-    public static class OkHttpHandler extends AsyncTask<String, Void, String> {
-
-        OkHttpClient client = new OkHttpClient();
-        private int dieselPrice;
-        private int petrolPrice;
-        private int townCode;
-        private int lan;
-        private int lat;
-
-        private JSONArray parseXmlToJson(String xmlString) throws JSONException {
-            JSONObject mainObject = XML.toJSONObject(xmlString);
-            JSONObject dataObject = mainObject.getJSONObject("markers");
-            return dataObject.getJSONArray("marker");
-        }
-
-        private String parseXml(String xmlString, String townName) {
-            String[] separated = xmlString.split("townname=\"" + townName + "\"");
-            String petrolPrice;
-            String dieselPrice;
-            String subString = separated[1].split("ms=")[1];
-            String[] str2 = subString.split("hsd");
-            petrolPrice = str2[0];
-            dieselPrice = str2[1].split("is_metro")[0];
-            return "Petrol Price = "+ petrolPrice +
-                    "\nDiesel Price" + dieselPrice;
-
-        }
-
-      /*  private String getDataFromXMLString(String xmlString, String townName) throws JSONException {
-            JSONArray jsonArray = parseXmlToJson(xmlString);
-            for(int i = 0; i<jsonArray.length(); i++) {
-                JSONObject jsonObject = jsonArray.getJSONObject(i);
-                String town = jsonObject.getString("townname");
-                if(town.equals(townName)) {
-                    mTownSuggestion.setDi(jsonObject.getString("hsd"));
-                    mTownSuggestion.setPetrolPrice(jsonObject.getString("ms"));
-                    return "Diesel Price = " + mTownSuggestion.getDieselPrice() +
-                            "\nPetrol Price = " + mTownSuggestion.getPetrolPrice();
-                }
-            }
-            return null;
-        }*/
-
-
+    public static class DataHandler extends AsyncTask<String, Void, String> {
+        boolean isDiesel;
         @Override
         protected String doInBackground(String...params) {
-
-            Request.Builder builder = new Request.Builder();
-            builder.url(params[0]);
-            String townName = params[1];
-            Request request = builder.build();
-
+            String townCode = params[0];
+            String fuelType = params[1];
+            isDiesel = fuelType.equals(IS_DIESEL);
+            String preString = isDiesel?"Diesel Price : ": "Petrol Price : ";
             try {
-                Response response = client.newCall(request).execute();
-                return parseXml(response.body().string(), townName);
-//                return getDataFromXMLString(response.body().string(), townName);
+            return preString + DatabaseHelper.getCurrentFuelPriceForGiven(mContext, townCode,
+                    isDiesel, null);
 
             }catch (Exception e){
                 e.printStackTrace();
@@ -200,10 +152,15 @@ public class TownSearchListAdapter extends RecyclerView.Adapter<TownSearchListAd
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             if(s != null) {
-                mDieselPrice.setText(s);
+                if(isDiesel) {
+                    mDieselPrice.setText(s);
+                }
+                else {
+                    mPetrolPrice.setText(s);
+                }
             }
             else {
-                mDieselPrice.setText("Return text is null");
+                mDieselPrice.setText("No Data Available");
             }
         }
     }

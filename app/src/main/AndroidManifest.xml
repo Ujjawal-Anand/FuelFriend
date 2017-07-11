@@ -26,9 +26,14 @@
             android:name=".service.DownloadService"
             android:exported="false" />
 
-        <activity android:name=".activity.DownloadTestActivity">
+        <service
+            android:name=".service.MySimpleService"
+            android:exported="false" />
 
-        </activity>
+        <receiver
+            android:name=".service.AlarmReceiver"
+            android:process=":remote"/>
+
         <!--<activity android:name=".activity.AndroidDatabaseManagerActivity"/>-->
     </application>
 

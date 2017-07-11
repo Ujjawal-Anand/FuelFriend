@@ -84,8 +84,6 @@ public class MainActivity extends AppCompatActivity
 //            Intent dbmanager = new Intent(getApplicationContext(),AndroidDatabaseManagerActivity.class);
 //            startActivity(dbmanager);
         } else if (id == R.id.nav_gallery) {
-            Intent serviceActivity = new Intent(getApplicationContext(), DownloadTestActivity.class);
-            startActivity(serviceActivity);
 
         } else if (id == R.id.nav_slideshow) {
 

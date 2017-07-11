@@ -1,5 +1,8 @@
 package io.uscool.fuelfriend.activity;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -11,6 +14,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -19,6 +23,7 @@ import com.arlib.floatingsearchview.FloatingSearchView;
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.fragment.BaseSearchFragment;
 import io.uscool.fuelfriend.fragment.SearchViewFragment;
+import io.uscool.fuelfriend.service.AlarmReceiver;
 import io.uscool.fuelfriend.service.DownloadResultReceiver;
 import io.uscool.fuelfriend.service.DownloadService;
 
@@ -37,7 +42,8 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startDownloadService();
+//        startDownloadService();
+        onStartAlarm();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -55,6 +61,21 @@ public class MainActivity extends AppCompatActivity
 
         startService(intent);
     }
+
+    public void onStartAlarm() {
+        // Construct an intent that will execute the AlarmReceiver
+        Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
+        intent.putExtra("receiver", mReceiver);
+        // Create a PendingIntent to be triggered when the alarm goes off
+        PendingIntent alarmPendingIntent = PendingIntent.getBroadcast(this, AlarmReceiver.REQUEST_CODE,
+                intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        // Setup periodic alarm every 5 seconds
+        long firstMillis = System.currentTimeMillis(); // first run of alarm is immediate
+        int intervalMillis = 5000*12*60*8; // 5 hours
+        AlarmManager alarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+        alarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, firstMillis, intervalMillis, alarmPendingIntent);
+    }
+
 
     @Override
     public void onAttachSearchViewToDrawer(FloatingSearchView searchView) {
@@ -81,8 +102,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-//            Intent dbmanager = new Intent(getApplicationContext(),AndroidDatabaseManagerActivity.class);
-//            startActivity(dbmanager);
+            Intent dbmanager = new Intent(getApplicationContext(),AndroidDatabaseManagerActivity.class);
+            startActivity(dbmanager);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

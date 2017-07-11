@@ -34,7 +34,7 @@
             android:name=".service.AlarmReceiver"
             android:process=":remote"/>
 
-        <!--<activity android:name=".activity.AndroidDatabaseManagerActivity"/>-->
+        <activity android:name=".activity.AndroidDatabaseManagerActivity"/>
     </application>
 
 </manifest>

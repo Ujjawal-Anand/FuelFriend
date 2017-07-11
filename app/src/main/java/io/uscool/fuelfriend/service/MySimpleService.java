@@ -62,7 +62,7 @@ public class MySimpleService extends IntentService {
         sleep(3000);
         initDownload(rec);
         // Let's also create notification
-        createNotification(val);
+//        createNotification(val);
     }
 
     private void initDownload(ResultReceiver receiver) {
@@ -78,17 +78,17 @@ public class MySimpleService extends IntentService {
             State state = stateList.get(i);
             fullUrl = urlPart + state.getCode() + "?" + time;
             downloadData(fullUrl);
-            receiver.send(STATUS_RUNNING, bundle);
+//            receiver.send(STATUS_RUNNING, bundle);
             }
             DatabaseHelper.updateFuelPrice(getApplicationContext(), mFuelPriceList);
-            receiver.send(STATUS_FINISHED, bundle);
+//            receiver.send(STATUS_FINISHED, bundle);
 
         } catch (Exception e) {
-                bundle.putString(Intent.EXTRA_TEXT, e.toString());
-                receiver.send(STATUS_ERROR, bundle);
+//                bundle.putString(Intent.EXTRA_TEXT, e.toString());
+//                receiver.send(STATUS_ERROR, bundle);
         }
 
-        receiver.send(STATUS_FINISHED, bundle);
+//        receiver.send(STATUS_FINISHED, bundle);
     }
 
     private void downloadData(String requestUrl) throws IOException, DownloadException, JSONException{

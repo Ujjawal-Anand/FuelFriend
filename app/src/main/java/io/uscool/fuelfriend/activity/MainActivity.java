@@ -29,7 +29,7 @@ import io.uscool.fuelfriend.service.DownloadService;
 
 
 public class MainActivity extends AppCompatActivity
-        implements BaseSearchFragment.BaseSearchFragmentCallbacks, NavigationView.OnNavigationItemSelectedListener, DownloadResultReceiver.Receiver {
+        implements BaseSearchFragment.BaseSearchFragmentCallbacks, NavigationView.OnNavigationItemSelectedListener {
 
 
 //    private final String TAG = "MainActivity";
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        startDownloadService();
+        setupServiceReceiver();
         onStartAlarm();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity
         showFragment(new SearchViewFragment());
 
     }
-    private void startDownloadService() {
+  /*  private void startDownloadService() {
         mReceiver = new DownloadResultReceiver(new Handler());
         mReceiver.setReceiver(this);
 
@@ -61,10 +62,27 @@ public class MainActivity extends AppCompatActivity
 
         startService(intent);
     }
+*/
+    public void setupServiceReceiver() {
+        mReceiver = new DownloadResultReceiver(new Handler());
+        // This is where we specify what happens when data is received from the
+        // service
+        mReceiver.setReceiver(new DownloadResultReceiver.Receiver() {
+            @Override
+            public void onReceiveResult(int resultCode, Bundle resultData) {
+                if (resultCode == RESULT_OK) {
+                    String resultValue = resultData.getString("resultValue");
+                    Toast.makeText(MainActivity.this, resultValue, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
 
     public void onStartAlarm() {
         // Construct an intent that will execute the AlarmReceiver
         Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
+        mReceiver = new DownloadResultReceiver(new Handler());
+//        mReceiver.setReceiver(this);
         intent.putExtra("receiver", mReceiver);
         // Create a PendingIntent to be triggered when the alarm goes off
         PendingIntent alarmPendingIntent = PendingIntent.getBroadcast(this, AlarmReceiver.REQUEST_CODE,
@@ -120,7 +138,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
+   /* @Override
     public void onReceiveResult(int resultCode, Bundle resultData) {
         switch (resultCode) {
             case DownloadService.STATUS_RUNNING:
@@ -128,17 +146,17 @@ public class MainActivity extends AppCompatActivity
                 setProgressBarIndeterminateVisibility(true);
                 break;
             case DownloadService.STATUS_FINISHED:
-                /* Hide progress & extract result from bundle */
+                *//* Hide progress & extract result from bundle *//*
                 setProgressBarIndeterminateVisibility(false);
 //                Toast.makeText(this, "Service Completed Successfully",
 //                        Toast.LENGTH_SHORT).show();
 
                 break;
             case DownloadService.STATUS_ERROR:
-                /* Handle the error */
+                *//* Handle the error *//*
                 String error = resultData.getString(Intent.EXTRA_TEXT);
                 Toast.makeText(this, error, Toast.LENGTH_LONG).show();
                 break;
         }
-    }
+    }*/
 }

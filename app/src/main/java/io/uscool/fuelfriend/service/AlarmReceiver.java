@@ -15,7 +15,7 @@ public class AlarmReceiver extends BroadcastReceiver {
     // Triggered by the Alarm periodically (starts the service to run task)
     @Override
     public void onReceive(Context context, Intent intent) {
-        Intent i = new Intent(context, MySimpleService.class);
+        Intent i = new Intent(context, DownloadService.class);
         ResultReceiver receiver = intent.getParcelableExtra("receiver");
         i.putExtra("receiver", receiver);
         context.startService(i);

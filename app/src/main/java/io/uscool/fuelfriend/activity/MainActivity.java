@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity
                 intent, PendingIntent.FLAG_UPDATE_CURRENT);
         // Setup periodic alarm every 5 seconds
         long firstMillis = System.currentTimeMillis(); // first run of alarm is immediate
-        int intervalMillis = 5000*12*60*8; // 5 hours
+        int intervalMillis = 5000*12*60*2; // 2 hours
         AlarmManager alarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
         alarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, firstMillis, intervalMillis, alarmPendingIntent);
     }

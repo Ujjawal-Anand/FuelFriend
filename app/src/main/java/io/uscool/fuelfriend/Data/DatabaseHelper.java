@@ -8,6 +8,7 @@ import android.database.MatrixCursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -106,19 +107,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if(columnName == null) {
             columnName = getCurrentDay();
         }
-        SQLiteDatabase db = getReadableDatabase(context);
         String selectionArgs[] = {towncode};
-        final String TABLE_NAME = isDiesel?HpclDieselPriceTable.NAME:HpclPetrolPriceTable.NAME;
         final String[] PROJECTION = {PriceBaseTable.COLUMN_TOWN_CODE, columnName};
+        return getFuelData(context, selectionArgs, PROJECTION, isDiesel).get(0);
+    }
+
+    private static List<String> getFuelData(Context context, final String[] SelectionArgs,
+                                            final String[] PROJECTION, boolean isDiesel) {
+        SQLiteDatabase db = getReadableDatabase(context);
+        final String TABLE_NAME = isDiesel?HpclDieselPriceTable.NAME:HpclPetrolPriceTable.NAME;
+
         Cursor data = db.query(TABLE_NAME, PROJECTION, PriceBaseTable.COLUMN_TOWN_CODE
-                + "=?", selectionArgs, null, null, null);
+                + "=?", SelectionArgs, null, null, null);
+        List<String> dataList = new ArrayList<>();
         if(data != null) {
             data.moveToFirst();
-            String price = data.getString(1);
+            do {
+                String price = data.getString(1);
+                dataList.add(price);
+            } while (data.moveToNext());
             data.close();
-            return price; // magic number based on table projection
-        }
-        return null;
+
+        } else { dataList.add("No Data Found"); }
+        return dataList;
     }
 
     private static String getCurrentDay() {

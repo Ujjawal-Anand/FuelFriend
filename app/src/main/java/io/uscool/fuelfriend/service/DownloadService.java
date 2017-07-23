@@ -23,27 +23,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.uscool.fuelfriend.Data.DatabaseHelper;
+import io.uscool.fuelfriend.helper.PreferenceHelper;
 import io.uscool.fuelfriend.model.FuelPrice;
 import io.uscool.fuelfriend.model.State;
 
 /**
  * Created by ujjawal on 5/7/17.
+ *
  */
 
 public class DownloadService extends IntentService {
-    public static final int STATUS_RUNNING = 0;
+//    public static final int STATUS_RUNNING = 0;
     public static final int STATUS_FINISHED = 1;
     public static final int STATUS_ERROR = 2;
     public static String fullUrl = "";
-    
-    private static double lowestDiesel = 100;
-    private static String lowestDieselTown = "";
-    private static double lowestPetrol = 100;
-    private static String lowestPetrolTown = "";
-    private static double highestDiesel = 40;
-    private static String highestDiesleTown = "";
-    private static double highestPetrol = 40;
-    private static String highestPetrolTown = "";
 
     private static List<FuelPrice> mFuelPriceList;
 
@@ -61,42 +54,38 @@ public class DownloadService extends IntentService {
 
      @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-         final ResultReceiver receiver = intent.getParcelableExtra("receiver");
-         Bundle bundle = new Bundle();
 
-         String urlPart = "http://hproroute.hpcl.co.in/StateDistrictMap_4/fetchmshsdprice.jsp?param=T&statecode=";
-         long time = System.currentTimeMillis();
-         List<State> stateList = DatabaseHelper.getStates(getApplicationContext(), true);
-         mFuelPriceList = new ArrayList<>();
+        if(!PreferenceHelper.isSynced(getApplicationContext())) {
 
-         for(int i = 0; i< stateList.size(); i++) {
-             State state = stateList.get(i);
-             String result = "State : " + state.getName();
-             fullUrl = urlPart + state.getCode() + "?" + time;
-             try {
-                 result += downloadData(fullUrl);
-                 bundle.putString("result", result);
-                 receiver.send(STATUS_FINISHED, bundle);
+            final ResultReceiver receiver = intent.getParcelableExtra("receiver");
+            Bundle bundle = new Bundle();
 
-             } catch (Exception e) {
-                 bundle.putString(Intent.EXTRA_TEXT, e.toString());
-                 receiver.send(STATUS_ERROR, bundle);
-             }
+            String urlPart = "http://hproroute.hpcl.co.in/StateDistrictMap_4/fetchmshsdprice.jsp?param=T&statecode=";
+            long time = System.currentTimeMillis();
+            List<State> stateList = DatabaseHelper.getStates(getApplicationContext(), true);
+            mFuelPriceList = new ArrayList<>();
 
-         }
-         String dataString = "Lowest Diesel Price In India : " + lowestDiesel
-                             + "\nTown Name : " + lowestDieselTown
-                            + "\nLowest Petrol Price In India : " + lowestPetrol
-                            + "\nTown Name : " + lowestPetrolTown
-                            + "\nHighest Diesel Price In India : " + highestDiesel
-                            + "\nTown Name : " + highestDiesleTown
-                            + "\nHighest Petrol Price In India : " + highestPetrol
-                            + "\nTown Name : " + highestPetrolTown;
-         bundle.putString("data", dataString);
-         DatabaseHelper.updateFuelPrice(getApplicationContext(), mFuelPriceList);
-         receiver.send(STATUS_FINISHED, bundle);
-         Log.d(TAG, "service stopping");
+            for (int i = 0; i < stateList.size(); i++) {
+                State state = stateList.get(i);
+                String result = "State : " + state.getName();
+                fullUrl = urlPart + state.getCode() + "?" + time;
+                try {
+                    result += downloadData(fullUrl);
+                    bundle.putString("result", result);
+                    receiver.send(STATUS_FINISHED, bundle);
 
+                } catch (Exception e) {
+                    bundle.putString(Intent.EXTRA_TEXT, e.toString());
+                    receiver.send(STATUS_ERROR, bundle);
+                }
+
+            }
+
+            DatabaseHelper.updateFuelPrice(getApplicationContext(), mFuelPriceList);
+            PreferenceHelper.setCurrentDataDownloadDate(getApplicationContext());
+            receiver.send(STATUS_FINISHED, bundle);
+            Log.d(TAG, "service stopping");
+        }
     }
 
     private String downloadData(String requestUrl) throws IOException, DownloadException, JSONException {
@@ -132,12 +121,6 @@ public class DownloadService extends IntentService {
             inputStream.close();
         }
         return getDataFromXMLString(response);
-    }
-
-    private JSONArray parseXmlToJson(String xmlString) throws JSONException {
-        JSONObject mainObject = XML.toJSONObject(xmlString);
-        JSONObject dataObject = mainObject.getJSONObject("markers");
-        return dataObject.getJSONArray("marker");
     }
 
     private String getDataFromXMLString(String xmlString) 
@@ -193,31 +176,10 @@ public class DownloadService extends IntentService {
 //        DatabaseHelper.updateFuelPrice(getApplicationContext(),
 //                new FuelPrice(townCode,dieselPrice, petrolPrice));
 
-        analysePrice(Double.valueOf(petrolPrice),townName,Double.valueOf(dieselPrice));
-        String result = "\nTown : " + townName + "\n"
+        return  "\nTown : " + townName + "\n"
                 + "Town Code : "  + townCode + "\n"
                 + "Diesel Price : " + dieselPrice + "\n"
                 + "Petrol Price : " + petrolPrice + "\n\n";
-        return result;
-    }
-    
-    private void analysePrice(double petrolPrice, String townName, double dieselPrice) {
-        if(petrolPrice < lowestPetrol) {
-            lowestPetrol = petrolPrice;
-            lowestPetrolTown = townName;
-        }
-        if(dieselPrice < lowestDiesel) {
-            lowestDiesel = dieselPrice;
-            lowestDieselTown = townName;
-        }
-        if(petrolPrice > highestPetrol) {
-            highestPetrol = petrolPrice;
-            highestPetrolTown = townName;
-        }
-        if(dieselPrice > highestDiesel) {
-            highestDiesel = dieselPrice;
-            highestDiesleTown = townName;
-        }
     }
 
     @Override
@@ -225,13 +187,13 @@ public class DownloadService extends IntentService {
         super.onCreate();
     }
 
-    public class DownloadException extends Exception {
-        public DownloadException(String message) {
+    private class DownloadException extends Exception {
+        private DownloadException(String message) {
             super(message);
         }
-        public DownloadException(String message, Throwable cause) {
+       /* public DownloadException(String message, Throwable cause) {
             super(message, cause);
-        }
+        }*/
     }
 
 

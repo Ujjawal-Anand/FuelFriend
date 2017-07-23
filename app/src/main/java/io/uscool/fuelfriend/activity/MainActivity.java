@@ -23,6 +23,7 @@ import com.arlib.floatingsearchview.FloatingSearchView;
 import io.uscool.fuelfriend.R;
 import io.uscool.fuelfriend.fragment.BaseSearchFragment;
 import io.uscool.fuelfriend.fragment.SearchViewFragment;
+import io.uscool.fuelfriend.helper.PreferenceHelper;
 import io.uscool.fuelfriend.service.AlarmReceiver;
 import io.uscool.fuelfriend.service.DownloadResultReceiver;
 import io.uscool.fuelfriend.service.DownloadService;
@@ -65,6 +66,11 @@ public class MainActivity extends AppCompatActivity
 */
     public void setupServiceReceiver() {
         mReceiver = new DownloadResultReceiver(new Handler());
+        Intent intent = new Intent(getApplicationContext(), DownloadService.class);
+        intent.putExtra("receiver", mReceiver);
+        if(!PreferenceHelper.isSynced(getApplicationContext())) {
+            startService(intent);
+        }
         // This is where we specify what happens when data is received from the
         // service
         mReceiver.setReceiver(new DownloadResultReceiver.Receiver() {
